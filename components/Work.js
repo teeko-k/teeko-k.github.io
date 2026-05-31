@@ -20,7 +20,9 @@ export default function Work() {
 
     const section = sectionRef.current
     if (section) {
-      section.querySelectorAll('.fade-section').forEach((el) => observer.observe(el))
+      section
+        .querySelectorAll('.fade-section')
+        .forEach((el) => observer.observe(el))
     }
     return () => observer.disconnect()
   }, [])
@@ -31,16 +33,16 @@ export default function Work() {
       <div className="fade-section flex items-end justify-between mb-16">
         <div>
           <span
-            className="font-mono text-amber text-xs"
+            className="font-mono text-dimmed-ink text-sm"
             style={{ letterSpacing: '0.3em' }}
           >
             01 — Work
           </span>
           <h2
-            className="font-display text-5xl md:text-6xl font-light mt-3 text-bold-ink"
+            className="font-sans text-5xl md:text-6xl mt-3 text-bold-ink"
             style={{ letterSpacing: '-0.01em' }}
           >
-            Selected projects
+            Featured Projects
           </h2>
         </div>
         <Link
@@ -55,7 +57,12 @@ export default function Work() {
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1}
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
           </svg>
         </Link>
       </div>
@@ -163,10 +170,23 @@ function ProjectCard({ project, index }) {
           >
             {project.client}
           </span>
-          <span className="flex items-center gap-2 font-mono text-xs text-accent-color opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ letterSpacing: '0.15em' }}>
+          <span
+            className="flex items-center gap-2 font-mono text-xs text-accent-color opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style={{ letterSpacing: '0.15em' }}
+          >
             View case study
-            <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg
+              className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </span>
         </div>

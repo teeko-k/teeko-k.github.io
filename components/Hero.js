@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="flex flex-col items-center gap-1">
             <div
               className="w-[2px] h-12 relative overflow-hidden"
-              style={{ background: 'rgba(66,66,66,0.3)' }}
+              style={{ background: 'rgba(66,66,66,0.15)' }}
             >
               <div
                 className="absolute top-0 w-full"

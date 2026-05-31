@@ -106,7 +106,7 @@ export default function Header() {
         className={`fixed top-0 left-0 right-0 border-b z-50 flex items-center justify-between px-8 md:px-12 py-6 transition-all duration-500 ${scrolled && !isOpen ? 'bg-ash-grey' : 'bg-transparent'}`}
         style={{
           top: 'env(safe-area-inset-top)',
-          borderColor: isOpen ? 'transparent' : 'rgba(25,25,25,0.3)',
+          borderColor: scrolled ? 'rgba(25,25,25,0.3)' : 'transparent',
         }}
       >
         {/* Logo */}
