@@ -1,0 +1,453 @@
+'use client'
+
+import Link from 'next/link'
+import Image from 'next/image'
+import { useEffect, useRef } from 'react'
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ProjectPage — renders a full case study from a project data object.
+// Used by app/work/[slug]/page.js
+// ─────────────────────────────────────────────────────────────────────────────
+export default function ProjectPage({ project, prev, next }) {
+  const bodyRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('visible')
+        })
+      },
+      { threshold: 0.08 },
+    )
+    if (bodyRef.current) {
+      bodyRef.current
+        .querySelectorAll('.fade-section')
+        .forEach((el) => observer.observe(el))
+    }
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <main className="grain relative min-h-screen">
+      {/* ── Navigation back ──────────────────────────────────────────────── */}
+      <div
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-12 py-6 border-b bg-ash-grey"
+        style={{ borderColor: 'rgba(25,25,25,0.15)' }}
+      >
+        <Link
+          href="/#work"
+          className="flex items-center gap-3 text-dimmed-ink hover:text-accent-color transition-colors duration-300 font-sans text-sm font-light group"
+          style={{ letterSpacing: '0.05em' }}
+        >
+          <svg
+            className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              d="M7 16l-4-4m0 0l4-4m-4 4h18"
+            />
+          </svg>
+          Back to work
+        </Link>
+
+        <span
+          className="font-mono text-dimmed-ink text-xs hidden md:block"
+          style={{ letterSpacing: '0.2em', opacity: 0.35 }}
+        >
+          Ahmed 'Tiko' K.
+        </span>
+
+        <Link
+          href="/#contact"
+          className="font-mono text-xs text-accent-color transition-colors duration-300 hidden md:block"
+          style={{ letterSpacing: '0.2em' }}
+        >
+          Get in touch →
+        </Link>
+      </div>
+
+      {/* ── Hero ─────────────────────────────────────────────────────────── */}
+      <div
+        className="relative pt-24 pb-0 overflow-hidden"
+        style={{ minHeight: '70vh' }}
+      >
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            src={project.thumbnail}
+            alt={project.title}
+            fill
+            priority
+            className="object-cover"
+            style={{ filter: 'brightness(0.45) saturate(0.6)' }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(to bottom, rgba(195,195,195,0.1) 0%, rgba(195,195,195,0.85) 100%)',
+            }}
+          />
+        </div>
+
+        {/* Hero content */}
+        <div
+          className="relative z-10 px-8 md:px-12 pt-16 pb-24 max-w-6xl mx-auto flex flex-col justify-end h-full"
+          style={{ minHeight: '65vh' }}
+        >
+          <div className="mt-auto">
+            {/* Index + tags */}
+            <div className="flex items-center gap-4 mb-6 flex-wrap">
+              <span
+                className="font-mono text-dimmed-ink text-xs opacity-40"
+                style={{ letterSpacing: '0.3em' }}
+              >
+                {project.index}
+              </span>
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="font-mono text-xs px-3 py-1 border text-dimmed-ink"
+                  style={{
+                    letterSpacing: '0.15em',
+                    borderColor: 'rgba(25,25,25,0.2)',
+                    fontSize: '10px',
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <h1
+              className="font-display font-light text-bold-ink mb-4"
+              style={{
+                fontSize: 'clamp(2.5rem, 7vw, 5.5rem)',
+                letterSpacing: '-0.02em',
+                lineHeight: 1.0,
+              }}
+            >
+              {project.title}
+            </h1>
+            <p
+              className="font-display italic font-light text-dimmed-ink"
+              style={{
+                fontSize: 'clamp(1.1rem, 3vw, 2rem)',
+                letterSpacing: '-0.01em',
+                opacity: 0.7,
+              }}
+            >
+              {project.subtitle}
+            </p>
+
+            {/* Meta row */}
+            <div
+              className="flex flex-wrap gap-8 mt-10 pt-8 border-t"
+              style={{ borderColor: 'rgba(25,25,25,0.15)' }}
+            >
+              {[
+                { label: 'Client', value: project.client },
+                { label: 'Role', value: project.role },
+                { label: 'Duration', value: project.duration },
+                { label: 'Year', value: project.year },
+              ].map((m) => (
+                <div key={m.label}>
+                  <p
+                    className="font-mono text-dimmed-ink text-xs mb-1"
+                    style={{ letterSpacing: '0.2em', opacity: 0.4 }}
+                  >
+                    {m.label}
+                  </p>
+                  <p
+                    className="font-sans text-dimmed-ink text-sm font-light"
+                    style={{ letterSpacing: '0.03em' }}
+                  >
+                    {m.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Body ─────────────────────────────────────────────────────────── */}
+      <div ref={bodyRef} className="px-8 md:px-12 pb-32 max-w-6xl mx-auto">
+        {/* Overview */}
+        <div
+          className="fade-section grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 py-20 border-b"
+          style={{ borderColor: 'rgba(25,25,25,0.08)' }}
+        >
+          <div className="md:col-span-3">
+            <span
+              className="font-mono text-xs text-dimmed-ink block"
+              style={{ letterSpacing: '0.25em', opacity: 0.4 }}
+            >
+              Overview
+            </span>
+          </div>
+          <div className="md:col-span-9">
+            <p
+              className="font-display font-light text-bold-ink leading-snug"
+              style={{
+                fontSize: 'clamp(1.3rem, 2.5vw, 1.9rem)',
+                letterSpacing: '-0.01em',
+              }}
+            >
+              {project.overview}
+            </p>
+          </div>
+        </div>
+
+        {/* Challenge */}
+        <div
+          className="fade-section grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 py-20 border-b"
+          style={{ borderColor: 'rgba(25,25,25,0.08)' }}
+        >
+          <div className="md:col-span-3">
+            <span
+              className="font-mono text-xs text-dimmed-ink block"
+              style={{ letterSpacing: '0.25em', opacity: 0.4 }}
+            >
+              The challenge
+            </span>
+          </div>
+          <div className="md:col-span-9">
+            <p
+              className="font-sans font-light text-dimmed-ink leading-relaxed"
+              style={{ fontSize: '16px' }}
+            >
+              {project.challenge}
+            </p>
+          </div>
+        </div>
+
+        {/* First image (if exists) */}
+        {project.images?.[0] && (
+          <div className="fade-section py-12">
+            <div
+              className="relative overflow-hidden"
+              style={{ aspectRatio: '16/9' }}
+            >
+              <Image
+                src={project.images[0].src}
+                alt={project.images[0].caption ?? project.title}
+                fill
+                className="object-cover"
+                style={{ filter: 'brightness(0.85) saturate(0.85)' }}
+              />
+            </div>
+            {project.images[0].caption && (
+              <p
+                className="font-mono text-dimmed-ink text-xs mt-4"
+                style={{ letterSpacing: '0.15em', opacity: 0.4 }}
+              >
+                ↑ {project.images[0].caption}
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Approach */}
+        {project.approach && (
+          <div
+            className="fade-section py-20 border-b"
+            style={{ borderColor: 'rgba(25,25,25,0.08)' }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-12">
+              <div className="md:col-span-3">
+                <span
+                  className="font-mono text-xs text-dimmed-ink block"
+                  style={{ letterSpacing: '0.25em', opacity: 0.4 }}
+                >
+                  Approach
+                </span>
+              </div>
+            </div>
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 gap-px"
+              style={{ background: 'rgba(25,25,25,0.08)' }}
+            >
+              {project.approach.map((item, i) => (
+                <div key={i} className="bg-ash-grey p-8 md:p-10">
+                  <div className="flex items-start gap-4 mb-4">
+                    <span
+                      className="font-mono text-xs text-dimmed-ink mt-1"
+                      style={{ letterSpacing: '0.2em', opacity: 0.3 }}
+                    >
+                      0{i + 1}
+                    </span>
+                    <h3
+                      className="font-display text-xl font-light text-bold-ink"
+                      style={{ letterSpacing: '-0.01em' }}
+                    >
+                      {item.step}
+                    </h3>
+                  </div>
+                  <p
+                    className="font-sans font-light text-dimmed-ink text-sm leading-relaxed"
+                    style={{ opacity: 0.7 }}
+                  >
+                    {item.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Second image (if exists) */}
+        {project.images?.[1] && (
+          <div className="fade-section py-12">
+            <div
+              className="relative overflow-hidden"
+              style={{ aspectRatio: '16/9' }}
+            >
+              <Image
+                src={project.images[1].src}
+                alt={project.images[1].caption ?? project.title}
+                fill
+                className="object-cover"
+                style={{ filter: 'brightness(0.85) saturate(0.85)' }}
+              />
+            </div>
+            {project.images[1].caption && (
+              <p
+                className="font-mono text-dimmed-ink text-xs mt-4"
+                style={{ letterSpacing: '0.15em', opacity: 0.4 }}
+              >
+                ↑ {project.images[1].caption}
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Outcome */}
+        <div
+          className="fade-section grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 py-20 border-b"
+          style={{ borderColor: 'rgba(25,25,25,0.08)' }}
+        >
+          <div className="md:col-span-3">
+            <span
+              className="font-mono text-xs text-dimmed-ink block"
+              style={{ letterSpacing: '0.25em', opacity: 0.4 }}
+            >
+              Outcome
+            </span>
+          </div>
+          <div className="md:col-span-9">
+            <p
+              className="font-display font-light text-bold-ink leading-snug"
+              style={{
+                fontSize: 'clamp(1.3rem, 2.5vw, 1.9rem)',
+                letterSpacing: '-0.01em',
+              }}
+            >
+              {project.outcome}
+            </p>
+          </div>
+        </div>
+
+        {/* Tools */}
+        <div
+          className="fade-section py-16 border-b"
+          style={{ borderColor: 'rgba(25,25,25,0.08)' }}
+        >
+          <p
+            className="font-mono text-xs text-dimmed-ink mb-6"
+            style={{ letterSpacing: '0.25em', opacity: 0.4 }}
+          >
+            Tools & methods
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {project.tools.map((tool) => (
+              <span
+                key={tool}
+                className="font-mono text-xs text-dimmed-ink px-4 py-2 border"
+                style={{
+                  letterSpacing: '0.15em',
+                  borderColor: 'rgba(25,25,25,0.18)',
+                  fontSize: '11px',
+                }}
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Prev / Next navigation */}
+        <div
+          className="fade-section grid grid-cols-1 md:grid-cols-2 gap-px mt-0"
+          style={{ background: 'rgba(25,25,25,0.08)' }}
+        >
+          {prev ? (
+            <Link
+              href={`/work/${prev.slug}`}
+              className="group bg-ash-grey p-10 flex flex-col gap-2 hover:bg-white/40 transition-colors duration-300"
+            >
+              <span
+                className="font-mono text-xs text-dimmed-ink"
+                style={{ letterSpacing: '0.2em', opacity: 0.35 }}
+              >
+                ← Previous
+              </span>
+              <span
+                className="font-display text-2xl font-light text-bold-ink group-hover:text-accent-color transition-colors duration-300"
+                style={{ letterSpacing: '-0.01em' }}
+              >
+                {prev.title}
+              </span>
+            </Link>
+          ) : (
+            <div className="bg-ash-grey p-10" />
+          )}
+
+          {next ? (
+            <Link
+              href={`/work/${next.slug}`}
+              className="group bg-ash-grey p-10 flex flex-col gap-2 items-end text-right hover:bg-white/40 transition-colors duration-300"
+            >
+              <span
+                className="font-mono text-xs text-dimmed-ink"
+                style={{ letterSpacing: '0.2em', opacity: 0.35 }}
+              >
+                Next →
+              </span>
+              <span
+                className="font-display text-2xl font-light text-bold-ink group-hover:text-accent-color transition-colors duration-300"
+                style={{ letterSpacing: '-0.01em' }}
+              >
+                {next.title}
+              </span>
+            </Link>
+          ) : (
+            <Link
+              href="/#work"
+              className="group bg-ash-grey p-10 flex flex-col gap-2 items-end text-right hover:bg-white/40 transition-colors duration-300"
+            >
+              <span
+                className="font-mono text-xs text-dimmed-ink"
+                style={{ letterSpacing: '0.2em', opacity: 0.35 }}
+              >
+                All work →
+              </span>
+              <span
+                className="font-display text-2xl font-light text-bold-ink group-hover:text-accent-color transition-colors duration-300"
+                style={{ letterSpacing: '-0.01em' }}
+              >
+                Back to portfolio
+              </span>
+            </Link>
+          )}
+        </div>
+      </div>
+    </main>
+  )
+}
