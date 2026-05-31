@@ -92,7 +92,7 @@ export default function About() {
               03 — About
             </span>
             <h2
-              className="font-sans text-4xl md:text-5xl font-light mt-4 mb-8 text-bold-ink leading-tight"
+              className="font-sans font-semibold text-4xl md:text-5xl mt-4 mb-8 text-bold-ink leading-tight"
               style={{ letterSpacing: '-0.01em' }}
             >
               Designing for people, not screens

@@ -28,7 +28,7 @@ export default function Hero() {
         {/* Main heading */}
         <h1 className="font-display w-[80%] lg:w-[70%] font-light leading-none mb-8">
           <span
-            className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-7xl font-sans text-bold-ink"
+            className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-7xl font-sans font-semibold text-bold-ink"
             style={{ letterSpacing: '-0.02em' }}
           >
             {/* Capturing */}

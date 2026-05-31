@@ -30,7 +30,7 @@ html {
 body {
   background-color: var(--ash-grey);
   color: var(--dimmed-ink);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Gabarito', sans-serif;
   overflow-x: hidden;
   padding-top: env(safe-area-inset-top);
   background-color: var(--ash-grey);

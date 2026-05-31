@@ -10,7 +10,7 @@ module.exports = {
       fontFamily: {
         display: ['Cormorant Garamond', 'Georgia', 'serif'],
         mono: ['Geist Mono', 'Courier New', 'monospace'],
-        sans: ['DM Sans', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['Gabarito', 'Helvetica', 'Arial', 'sans-serif'],
       },
       colors: {
         obsidian: '#231d16',

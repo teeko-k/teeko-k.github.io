@@ -39,7 +39,7 @@ export default function Work() {
             01 — Work
           </span>
           <h2
-            className="font-sans text-5xl md:text-6xl mt-3 text-bold-ink"
+            className="font-sans font-semibold text-5xl md:text-6xl mt-3 text-bold-ink"
             style={{ letterSpacing: '-0.01em' }}
           >
             Featured Projects
