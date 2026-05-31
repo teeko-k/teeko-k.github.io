@@ -6,6 +6,12 @@ export const metadata = {
     'UX/UI | Product design | Designing products people actually want to use, across every screen and every scale',
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

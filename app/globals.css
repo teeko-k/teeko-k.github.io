@@ -34,6 +34,11 @@ body {
   overflow-x: hidden;
 }
 
+header {
+  padding-top: max(1.5rem, env(safe-area-inset-top));
+}
+
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 2px;
