@@ -13,7 +13,7 @@
   --amber-dim: #8a6f47;
   --ash-grey: #c3c3c3;
   --bold-ink: #111111;
-  --dimmed-ink: #282628;
+  --dimmed-ink: #505050;
   --accent-color: #251bf3;
 }
 
@@ -32,10 +32,14 @@ body {
   color: var(--dimmed-ink);
   font-family: 'DM Sans', sans-serif;
   overflow-x: hidden;
+  padding-top: env(safe-area-inset-top);
+  background-color: var(--ash-grey);
+
 }
 
 header {
-  padding-top: max(1.5rem, env(safe-area-inset-top));
+  top: env(safe-area-inset-top);
+  padding-top: 1.5rem;
 }
 
 

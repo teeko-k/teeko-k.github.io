@@ -20,7 +20,7 @@ module.exports = {
         amber: '#c9a96e',
         'amber-dim': '#8a6f47',
         'ash-grey': '#c3c3c3',
-        'dimmed-ink': '#282628',
+        'dimmed-ink': '#505050',
         'bold-ink': '#111111',
         'accent-color': '#251bf3',
       },

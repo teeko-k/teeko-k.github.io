@@ -96,10 +96,18 @@ export default function Header() {
 
   return (
     <>
+      {/* Notch fill */}
+      <div
+        className="fixed top-0 left-0 right-0 z-50 bg-ash-grey"
+        style={{ height: 'env(safe-area-inset-top)' }}
+      />
       {/* Sticky Header */}
       <header
         className={`fixed top-0 left-0 right-0 border-b z-50 flex items-center justify-between px-8 md:px-12 py-6 transition-all duration-500 ${scrolled && !isOpen ? 'bg-ash-grey' : 'bg-transparent'}`}
-        style={{ borderColor: isOpen ? 'transparent' : 'rgba(25,25,25,0.3)' }}
+        style={{
+          top: 'env(safe-area-inset-top)',
+          borderColor: isOpen ? 'transparent' : 'rgba(25,25,25,0.3)',
+        }}
       >
         {/* Logo */}
         <a
@@ -203,12 +211,12 @@ export default function Header() {
                       {link.sub}
                     </span>
                     <span
-                      className="font-display text-4xl md:text-6xl lg:text-7xl font-light leading-none transition-all duration-300"
+                      className="font-sans text-4xl md:text-6xl lg:text-7xl font-light leading-none transition-all duration-300"
                       style={{
                         color:
                           hoveredLink === i
                             ? 'var(--accent-color)'
-                            : 'var(--dimmed-ink)',
+                            : 'var(--bold-ink)',
                         letterSpacing: hoveredLink === i ? '-0.01em' : '0.01em',
                       }}
                     >

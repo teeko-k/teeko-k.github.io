@@ -33,16 +33,16 @@ export default function About() {
       className="py-32 px-8 md:px-12 relative"
     >
       {/* Ambient separator */}
-      <div
+      {/* <div
         className="absolute top-0 left-8 right-8 md:left-12 md:right-12 h-px"
         style={{
           background:
             'linear-gradient(to right, transparent, rgba(201,169,110,0.3), transparent)',
         }}
-      />
+      /> */}
 
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
           {/* Image */}
           <div className="fade-section relative">
             <div
@@ -86,47 +86,62 @@ export default function About() {
           {/* Text */}
           <div className="fade-section">
             <span
-              className="font-mono text-dimmed-ink text-xs"
+              className="font-mono text-dimmed-ink text-sm"
               style={{ letterSpacing: '0.3em' }}
             >
               03 — About
             </span>
             <h2
-              className="font-display text-4xl md:text-5xl font-light mt-4 mb-8 text-bold-ink leading-tight"
+              className="font-sans text-4xl md:text-5xl font-light mt-4 mb-8 text-bold-ink leading-tight"
               style={{ letterSpacing: '-0.01em' }}
             >
-              Details, decisions
-              <br />
-              <span className="italic">, and what's in between</span>
+              Designing for people, not screens
             </h2>
 
             <div
               className="space-y-5 font-sans text-dimmed-ink font-light leading-relaxed"
-              style={{ fontSize: '15px' }}
+              style={{ fontSize: '18px' }}
             >
               <p>
-                Hi, I’m Ahmed. I’m a product designer in Melbourne. I’ve spent
-                years attempting to make complex things feel less complex. For
-                real people. Across real products.
+                My interest in design started long before I ever called myself a
+                designer.
               </p>
               <p>
-                I really like the human side of it, figuring out why people do
-                the things they do and what design decisions are going to make
-                things click. I also work in photography, film, and 3D, not as
-                side hobbies but as ways of seeing. They’ve influenced the way I
-                think about light and story and what makes something feel worth
-                looking at.
+                I've always been curious about people. Why certain things feel
+                effortless while others create friction. Why we make the
+                decisions we do. Why some experiences leave an impression while
+                others are quickly forgotten.
               </p>
               <p>
-                I hike. I travel. I collect perspectives. If you want to work
-                together, I’d love to hear from you.
+                Over the last 15 years, that curiosity has shaped my career in
+                product design. I've worked across complex products and problem
+                spaces, helping teams turn ambiguity into experiences that feel
+                clear, intuitive, and useful.
+              </p>
+              <p>
+                What continues to draw me to the work isn't the screens
+                themselves, but the people on the other side of them.
+                Understanding their goals, behaviours, and motivations is often
+                where the most meaningful design decisions begin.
+              </p>
+              <p>
+                That same curiosity extends beyond product design. Through
+                photography, filmmaking, and 3D, I've developed a deeper
+                appreciation for observation, storytelling, and the details that
+                influence how people experience the world around them.
+              </p>
+              <p>
+                Whether I'm designing a product, framing a photograph, or
+                exploring somewhere new with a camera, I'm usually chasing the
+                same thing: understanding people a little better than I did
+                yesterday.
               </p>
             </div>
 
             {/* Stats */}
             <div
               className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t"
-              style={{ borderColor: 'rgba(245,240,235,0.08)' }}
+              style={{ borderColor: 'rgba(113, 113, 113, 0.3)' }}
             >
               {[
                 { value: '15+', label: 'Years' },

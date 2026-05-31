@@ -72,34 +72,31 @@ export default function Contact() {
           {/* Left */}
           <div className="fade-section">
             <span
-              className="font-mono text-dimmed-ink text-xs"
+              className="font-mono text-dimmed-ink text-sm"
               style={{ letterSpacing: '0.3em' }}
             >
               04 — Contact
             </span>
             <h2
-              className="font-display text-5xl md:text-6xl font-light mt-4 mb-8 text-bold-ink leading-tight"
+              className="font-sans text-5xl md:text-6xl font-light mt-4 mb-8 text-bold-ink leading-tight"
               style={{ letterSpacing: '-0.01em' }}
             >
-              Let's make
-              <br />
-              <span className="italic">something together</span>
+              Get in touch
             </h2>
 
             <p
               className="font-sans text-dimmed-ink font-light leading-relaxed mb-10"
-              style={{ fontSize: '15px', maxWidth: '380px' }}
+              style={{ fontSize: '18px', maxWidth: '380px' }}
             >
-              Available for commercial commissions, editorial assignments, and
-              creative collaborations. I'm always open to interesting
-              conversations.
+              If you're working on an interesting problem, building something
+              new, or simply want to connect, I'd be happy to hear from you.
             </p>
 
             {/* Direct links */}
             <div className="space-y-4">
               <a
                 href="mailto:a.taher.kassem@gmail.com"
-                className="flex items-center gap-4 text-dimmed-ink hover:text-amber transition-colors duration-300 group"
+                className="flex items-center gap-4 text-dimmed-ink hover:text-accent-color transition-colors duration-300 group"
               >
                 <svg
                   className="w-4 h-4 opacity-50"
@@ -122,23 +119,25 @@ export default function Contact() {
                 </span>
               </a>
               <a
-                href="https://instagram.com/akassphoto"
+                href="https://www.linkedin.com/in/ahmedtkassem/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 text-dimmed-ink hover:text-amber transition-colors duration-300 group"
+                className="flex items-center gap-4 text-dimmed-ink hover:text-accent-color transition-colors duration-300 group"
               >
                 <svg
                   className="w-4 h-4 opacity-50"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                  <g transform="scale(0.04)">
+                    <path d="M116.504,500.219V170.654H6.975v329.564H116.504L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z" />
+                  </g>
                 </svg>
                 <span
                   className="font-sans font-light text-sm"
                   style={{ letterSpacing: '0.05em' }}
                 >
-                  @akassphoto
+                  LinkedIn
                 </span>
               </a>
             </div>
