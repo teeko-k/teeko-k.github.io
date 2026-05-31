@@ -38,8 +38,7 @@ body {
 }
 
 header {
-  top: env(safe-area-inset-top);
-  padding-top: 1.5rem;
+  padding-top: max(1.5rem, env(safe-area-inset-top));
 }
 
 
