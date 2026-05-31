@@ -105,7 +105,8 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 border-b z-50 flex items-center justify-between px-8 md:px-12 py-6 transition-all duration-500 bg-ash-grey`}
         style={{
-          top: 'env(safe-area-inset-top)',
+          top: 0,
+          paddingTop: 'max(1.5rem, env(safe-area-inset-top))',
           borderColor: scrolled ? 'rgba(25,25,25,0.3)' : 'transparent',
         }}
       >
