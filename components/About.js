@@ -35,13 +35,13 @@ export default function About() {
       className="py-32 px-8 md:px-12 relative"
     >
       {/* Ambient separator */}
-      {/* <div
+      <div
         className="absolute top-0 left-8 right-8 md:left-12 md:right-12 h-px"
         style={{
           background:
-            'linear-gradient(to right, transparent, rgba(201,169,110,0.3), transparent)',
+            'linear-gradient(to right, transparent, rgba(33,33,33,0.3), transparent)',
         }}
-      /> */}
+      />
 
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">

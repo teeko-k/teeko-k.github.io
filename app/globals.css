@@ -43,7 +43,10 @@ body {
   overflow-x: hidden;
   /* padding-top: env(safe-area-inset-top); */
   /* background-color: var(--ash-grey); */
+}
 
+main {
+  padding-top: 80px; /* Space for fixed header */
 }
 
 /* header {

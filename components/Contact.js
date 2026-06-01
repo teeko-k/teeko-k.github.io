@@ -54,7 +54,7 @@ export default function Contact() {
         className="absolute top-0 left-8 right-8 md:left-12 md:right-12 h-px"
         style={{
           background:
-            'linear-gradient(to right, transparent, rgba(201,169,110,0.3), transparent)',
+            'linear-gradient(to right, transparent, rgba(33,33,33,0.3), transparent)',
         }}
       />
 
