@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
     <footer
-      className="py-10 px-8 md:px-12 border-t flex flex-col md:flex-row items-center justify-between gap-4"
-      style={{ borderColor: 'rgba(245,240,235,0.06)' }}
+      className="py-10 px-8 md:px-12 border-t flex flex-col md:flex-row items-center justify-center gap-4"
+      style={{ borderColor: 'rgba(60,60,60,0.2)' }}
     >
       <p
         className="font-mono text-bold-ink text-xs"
@@ -10,7 +10,7 @@ export default function Footer() {
       >
         © 2026 Ahmed Kassem. All rights reserved.
       </p>
-      <div className="flex items-center gap-8">
+      {/* <div className="flex items-center gap-8">
         <a
           href="https://www.linkedin.com/in/ahmedtkassem"
           target="_blank"
@@ -35,7 +35,7 @@ export default function Footer() {
         >
           Artstation
         </a>
-      </div>
+      </div> */}
     </footer>
   )
 }
