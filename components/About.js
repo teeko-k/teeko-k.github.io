@@ -44,7 +44,7 @@ export default function About() {
       />
 
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-[1.1fr_1fr_0.9fr] gap-16 md:gap-24 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] 2xl:grid-cols-[1.1fr_1fr_0.9fr] gap-16 md:gap-24 items-start">
           {/* Image */}
           <div className="fade-section relative">
             <div
@@ -86,7 +86,7 @@ export default function About() {
           </div>
 
           {/* Text */}
-          <div className="fade-section">
+          <div className="fade-section md:col-start-2 md:row-start-1">
             <span
               className="font-mono text-dimmed-ink text-sm"
               style={{ letterSpacing: '0.3em' }}
@@ -94,7 +94,7 @@ export default function About() {
               03 — About
             </span>
             <h2
-              className="font-sans font-semibold text-4xl md:text-5xl mt-4 mb-8 text-bold-ink leading-tight"
+              className="font-sans font-semibold text-4xl md:text-5xl 2xl:text-6xl mt-4 mb-8 text-bold-ink leading-tight"
               style={{ letterSpacing: '-0.01em' }}
             >
               Designing for people, not screens
@@ -145,7 +145,7 @@ export default function About() {
           </div>
 
           {/* Career Timeline */}
-          <div className="fade-section md:col-span-2 2xl:col-span-1">
+          <div className="fade-section md:col-start-2 md:row-start-2 2xl:col-start-3 2xl:row-start-1">
             <ExperienceTimeline />
           </div>
         </div>

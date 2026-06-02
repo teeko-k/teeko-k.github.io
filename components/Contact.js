@@ -80,7 +80,7 @@ export default function Contact() {
               04 — Contact
             </span>
             <h2
-              className="font-sans font-semibold text-5xl md:text-6xl mt-4 mb-8 text-bold-ink leading-tight"
+              className="font-sans font-semibold text-5xl 2xl:text-6xl mt-4 mb-8 text-bold-ink leading-tight"
               style={{ letterSpacing: '-0.01em' }}
             >
               Get in touch

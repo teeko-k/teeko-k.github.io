@@ -7,7 +7,7 @@ export default function Hero() {
   // const videoRef = useRef(null)
 
   return (
-    <section className="relative h-screen 2xl:h-[75vh] flex flex-col justify-end overflow-hidden">
+    <section className="relative h-screen 2xl:h-[85vh] flex flex-col justify-end overflow-hidden">
       {/* <div className="absolute inset-0 bg-ash-grey">
         <div className="relative w-full h-full md:h-auto md:aspect-video opacity-80"></div>
       </div> */}
