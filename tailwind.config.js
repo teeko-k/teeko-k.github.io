@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '2xl': '2000px',
+      },
       fontFamily: {
         display: ['Cormorant Garamond', 'Georgia', 'serif'],
         mono: ['Geist Mono', 'Courier New', 'monospace'],
