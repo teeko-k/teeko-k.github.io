@@ -69,7 +69,7 @@ export default function Contact() {
         }}
       />
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
           {/* Left */}
           <div className="fade-section">
@@ -105,7 +105,7 @@ export default function Contact() {
           {/* Right — Form */}
           <div className="fade-section">
             <form
-              className="space-y-8"
+              className="space-y-8 max-w-md"
               onSubmit={(e) => {
                 e.preventDefault()
                 alert('Message sent! (wire up your endpoint)')

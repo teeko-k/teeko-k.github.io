@@ -22,7 +22,7 @@ module.exports = {
         'dim-white': '#b8b0a8',
         amber: '#c9a96e',
         'amber-dim': '#8a6f47',
-        'ash-grey': '#d9d9d9',
+        'ash-grey': '#f3efef',
         'dimmed-ink': '#505050',
         'bold-ink': '#111111',
         'accent-color': '#251bf3',

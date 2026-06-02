@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer
-      className="py-10 px-8 md:px-12 border-t flex flex-col md:flex-row items-center justify-center gap-4"
+      className="py-10 px-8 md:px-12 border-t flex flex-col md:flex-row items-center justify-start gap-4"
       style={{ borderColor: 'rgba(60,60,60,0.2)' }}
     >
       <p

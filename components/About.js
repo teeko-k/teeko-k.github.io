@@ -44,7 +44,7 @@ export default function About() {
       />
 
       <div className="max-w-full 2xl:max-w-full 2xl:w-full 2xl:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] 2xl:grid-cols-[1.1fr_1fr_0.9fr] gap-16 md:gap-24 items-start 2xl:h-full">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] 2xl:grid-cols-[1fr_2fr_0.9fr] gap-16 md:gap-24 items-start 2xl:h-full">
           {/* Image */}
           <div className="fade-section relative">
             <div
