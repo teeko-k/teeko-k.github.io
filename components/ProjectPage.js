@@ -37,7 +37,7 @@ export default function ProjectPage({ project, prev, next }) {
       >
         <Link
           href="/#work"
-          className="flex items-center gap-3 text-dimmed-ink hover:text-accent-color transition-colors duration-300 font-sans text-sm font-light group"
+          className="flex items-center gap-3 text-dimmed-ink hover:text-accent-color transition-colors duration-300 font-sans text-md font-light group"
           style={{ letterSpacing: '0.05em' }}
         >
           <svg
@@ -101,14 +101,19 @@ export default function ProjectPage({ project, prev, next }) {
           style={{ minHeight: '65vh' }}
         >
           <div className="mt-auto">
-            {/* Index + tags */}
+            <h1
+              className="font-sans font-semibold text-white mb-4"
+              style={{
+                fontSize: 'clamp(2.5rem, 7vw, 5.5rem)',
+                letterSpacing: '-0.02em',
+                lineHeight: 1.0,
+              }}
+            >
+              {project.title}
+            </h1>
+
+            {/* Tags */}
             <div className="flex items-center gap-4 mb-6 flex-wrap">
-              <span
-                className="font-mono text-white text-sm opacity-40"
-                style={{ letterSpacing: '0.3em' }}
-              >
-                {project.index}
-              </span>
               {project.tags.map((tag) => (
                 <span
                   key={tag}
@@ -123,16 +128,6 @@ export default function ProjectPage({ project, prev, next }) {
               ))}
             </div>
 
-            <h1
-              className="font-sans font-semibold text-white mb-4"
-              style={{
-                fontSize: 'clamp(2.5rem, 7vw, 5.5rem)',
-                letterSpacing: '-0.02em',
-                lineHeight: 1.0,
-              }}
-            >
-              {project.title}
-            </h1>
             <p
               className="font-sans italic font-light text-white"
               style={{
@@ -214,7 +209,7 @@ export default function ProjectPage({ project, prev, next }) {
           </div>
           <div className="md:col-span-9">
             <p
-              className="font-sans font-light text-dimmed-ink leading-relaxed"
+              className="font-sans font-light text-bold-ink leading-relaxed"
               style={{ fontSize: '16px' }}
             >
               {project.challenge}
@@ -257,7 +252,7 @@ export default function ProjectPage({ project, prev, next }) {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-12">
               <div className="md:col-span-3">
                 <span
-                  className="font-mono text-sm text-dimmed-ink block"
+                  className="font-mono text-sm text-bold-ink block"
                   style={{ letterSpacing: '0.25em', opacity: 0.4 }}
                 >
                   Approach
@@ -272,7 +267,7 @@ export default function ProjectPage({ project, prev, next }) {
                 <div key={i} className="bg-ash-grey p-8 md:p-10">
                   <div className="flex items-start gap-4 mb-4">
                     <span
-                      className="font-mono text-sm text-dimmed-ink mt-1"
+                      className="font-mono text-sm text-bold-ink mt-1"
                       style={{ letterSpacing: '0.2em', opacity: 0.3 }}
                     >
                       0{i + 1}
@@ -285,7 +280,7 @@ export default function ProjectPage({ project, prev, next }) {
                     </h3>
                   </div>
                   <p
-                    className="font-sans font-light text-dimmed-ink text-sm leading-relaxed"
+                    className="font-sans font-light text-bold-ink text-sm leading-relaxed"
                     style={{ opacity: 0.7 }}
                   >
                     {item.detail}

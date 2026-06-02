@@ -18,7 +18,7 @@ export default function ProjectCard({ project, index }) {
     >
       {/* Image */}
       <div
-        className="relative overflow-hidden"
+        className={`relative overflow-hidden bg-${project.accent}`}
         style={{
           aspectRatio: '3/2',
           borderRadius: '16px 16px 0 0',
