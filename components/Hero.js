@@ -7,7 +7,7 @@ export default function Hero() {
   // const videoRef = useRef(null)
 
   return (
-    <section className="relative h-screen flex flex-col justify-end overflow-hidden">
+    <section className="relative h-screen 2xl:h-[75vh] flex flex-col justify-end overflow-hidden">
       {/* <div className="absolute inset-0 bg-ash-grey">
         <div className="relative w-full h-full md:h-auto md:aspect-video opacity-80"></div>
       </div> */}
@@ -28,7 +28,7 @@ export default function Hero() {
         {/* Main heading */}
         <h1 className="font-display w-[70%] lg:w-[80%] 2xl:w-[60%] font-light leading-none mb-8">
           <span
-            className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-6xl 2xl:text-8xl font-sans font-semibold text-bold-ink"
+            className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-6xl 2xl:text-9xl font-sans font-semibold text-bold-ink"
             style={{ letterSpacing: '-0.02em' }}
           >
             {/* Capturing */}

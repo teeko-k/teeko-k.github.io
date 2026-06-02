@@ -44,7 +44,7 @@ export default function About() {
       />
 
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-[1.1fr_1fr_0.9fr] gap-16 md:gap-24 items-start">
           {/* Image */}
           <div className="fade-section relative">
             <div
@@ -140,11 +140,13 @@ export default function About() {
               </p>
             </div>
 
-            {/* Career Timeline */}
-            <ExperienceTimeline />
-
             {/* Stats */}
             <StatsSection />
+          </div>
+
+          {/* Career Timeline */}
+          <div className="fade-section md:col-span-2 2xl:col-span-1">
+            <ExperienceTimeline />
           </div>
         </div>
       </div>
