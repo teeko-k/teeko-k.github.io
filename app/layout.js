@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="bg-ash-grey pt-20 text-dimmed-ink antialiased">
+      <body className="bg-ash-grey text-dimmed-ink antialiased">
         {children}
       </body>
     </html>

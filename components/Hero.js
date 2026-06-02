@@ -26,14 +26,14 @@ export default function Hero() {
         </div>
 
         {/* Main heading */}
-        <h1 className="font-display w-[70%] lg:w-[80%] font-light leading-none mb-8">
+        <h1 className="font-display w-[70%] lg:w-[80%] max-2xl:w-[60%] font-light leading-none mb-8">
           <span
-            className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-6xl font-sans font-semibold text-bold-ink"
+            className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-6xl max-2xl:text-8xl font-sans font-semibold text-bold-ink"
             style={{ letterSpacing: '-0.02em' }}
           >
             {/* Capturing */}
             Ahmed Kassem is a UX Designer who makes complex things{' '}
-            <span className="reveal-text reveal-text-delay-3 text-6xl md:text-7xl lg:text-7xl text-accent-color font-display italic">
+            <span className="reveal-text reveal-text-delay-3 text-6xl md:text-7xl lg:text-7xl max-2xl:text-9xl text-accent-color font-display italic">
               simple.
             </span>
           </span>
