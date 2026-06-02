@@ -36,8 +36,7 @@ export default function ProjectCard({ project, index }) {
         <div
           className="absolute inset-0"
           style={{
-            background:
-              'linear-gradient(to top, rgba(10,10,10,0.5) 0%, transparent 60%)',
+            background: `linear-gradient(to top, ${project.accent} 0%, transparent 60%)`,
           }}
         />
 
@@ -59,7 +58,7 @@ export default function ProjectCard({ project, index }) {
 
         {/* Accent line */}
         <div
-          className="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500"
+          className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full transition-all duration-500"
           style={{ background: project.accent }}
         />
       </div>

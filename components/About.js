@@ -52,7 +52,7 @@ export default function About() {
               style={{ aspectRatio: '4/5' }}
             >
               <img
-                src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=800&auto=format&fit=crop"
+                src="/images/AboutImg.JPEG"
                 alt="Portrait"
                 className="w-full h-full object-cover"
                 style={{ filter: 'brightness(0.8) saturate(0.85)' }}

@@ -57,8 +57,8 @@ export default function ProjectPage({ project, prev, next }) {
         </Link>
 
         <span
-          className="font-mono text-bold-ink text-xs hidden md:block"
-          style={{ letterSpacing: '0.2em', opacity: 0.35 }}
+          className="font-sans text-bold-ink text-xs capitalize hidden md:block"
+          style={{ letterSpacing: '0.2em' }}
         >
           Ahmed 'Tiko' K.
         </span>
@@ -90,8 +90,7 @@ export default function ProjectPage({ project, prev, next }) {
           <div
             className="absolute inset-0"
             style={{
-              background:
-                'linear-gradient(to bottom, rgba(195,195,195,0.1) 0%, rgba(195,195,195,0.85) 100%)',
+              background: `linear-gradient(to bottom, ${project.accent} 0%, transparent 100%)`,
             }}
           />
         </div>
@@ -105,7 +104,7 @@ export default function ProjectPage({ project, prev, next }) {
             {/* Index + tags */}
             <div className="flex items-center gap-4 mb-6 flex-wrap">
               <span
-                className="font-mono text-dimmed-ink text-xs opacity-40"
+                className="font-mono text-white text-sm opacity-40"
                 style={{ letterSpacing: '0.3em' }}
               >
                 {project.index}
@@ -113,10 +112,9 @@ export default function ProjectPage({ project, prev, next }) {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="font-mono text-xs px-3 py-1 border text-dimmed-ink"
+                  className="font-mono text-sm px-3 py-1 border border-white rounded-full text-white"
                   style={{
                     letterSpacing: '0.15em',
-                    borderColor: 'rgba(25,25,25,0.2)',
                     fontSize: '10px',
                   }}
                 >
@@ -126,7 +124,7 @@ export default function ProjectPage({ project, prev, next }) {
             </div>
 
             <h1
-              className="font-sans font-semibold text-bold-ink mb-4"
+              className="font-sans font-semibold text-white mb-4"
               style={{
                 fontSize: 'clamp(2.5rem, 7vw, 5.5rem)',
                 letterSpacing: '-0.02em',
@@ -136,21 +134,17 @@ export default function ProjectPage({ project, prev, next }) {
               {project.title}
             </h1>
             <p
-              className="font-display italic font-light text-dimmed-ink"
+              className="font-sans italic font-light text-white"
               style={{
                 fontSize: 'clamp(1.1rem, 3vw, 2rem)',
                 letterSpacing: '-0.01em',
-                opacity: 0.7,
               }}
             >
               {project.subtitle}
             </p>
 
             {/* Meta row */}
-            <div
-              className="flex flex-wrap gap-8 mt-10 pt-8 border-t"
-              style={{ borderColor: 'rgba(25,25,25,0.15)' }}
-            >
+            <div className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-white/50">
               {[
                 { label: 'Client', value: project.client },
                 { label: 'Role', value: project.role },
@@ -159,13 +153,13 @@ export default function ProjectPage({ project, prev, next }) {
               ].map((m) => (
                 <div key={m.label}>
                   <p
-                    className="font-mono text-dimmed-ink text-xs mb-1"
+                    className="font-mono text-white text-sm mb-1"
                     style={{ letterSpacing: '0.2em', opacity: 0.4 }}
                   >
                     {m.label}
                   </p>
                   <p
-                    className="font-sans text-dimmed-ink text-sm font-light"
+                    className="font-sans text-white text-sm font-light"
                     style={{ letterSpacing: '0.03em' }}
                   >
                     {m.value}
@@ -186,7 +180,7 @@ export default function ProjectPage({ project, prev, next }) {
         >
           <div className="md:col-span-3">
             <span
-              className="font-mono text-xs text-dimmed-ink block"
+              className="font-mono text-sm text-dimmed-ink block"
               style={{ letterSpacing: '0.25em', opacity: 0.4 }}
             >
               Overview
@@ -194,7 +188,7 @@ export default function ProjectPage({ project, prev, next }) {
           </div>
           <div className="md:col-span-9">
             <p
-              className="font-display font-light text-bold-ink leading-snug"
+              className="font-display font-light text-bold-ink italic leading-snug"
               style={{
                 fontSize: 'clamp(1.3rem, 2.5vw, 1.9rem)',
                 letterSpacing: '-0.01em',
@@ -212,7 +206,7 @@ export default function ProjectPage({ project, prev, next }) {
         >
           <div className="md:col-span-3">
             <span
-              className="font-mono text-xs text-dimmed-ink block"
+              className="font-mono text-sm text-dimmed-ink block"
               style={{ letterSpacing: '0.25em', opacity: 0.4 }}
             >
               The challenge
@@ -245,7 +239,7 @@ export default function ProjectPage({ project, prev, next }) {
             </div>
             {project.images[0].caption && (
               <p
-                className="font-mono text-dimmed-ink text-xs mt-4"
+                className="font-mono text-dimmed-ink text-sm mt-4"
                 style={{ letterSpacing: '0.15em', opacity: 0.4 }}
               >
                 ↑ {project.images[0].caption}
@@ -263,7 +257,7 @@ export default function ProjectPage({ project, prev, next }) {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-12">
               <div className="md:col-span-3">
                 <span
-                  className="font-mono text-xs text-dimmed-ink block"
+                  className="font-mono text-sm text-dimmed-ink block"
                   style={{ letterSpacing: '0.25em', opacity: 0.4 }}
                 >
                   Approach
@@ -278,7 +272,7 @@ export default function ProjectPage({ project, prev, next }) {
                 <div key={i} className="bg-ash-grey p-8 md:p-10">
                   <div className="flex items-start gap-4 mb-4">
                     <span
-                      className="font-mono text-xs text-dimmed-ink mt-1"
+                      className="font-mono text-sm text-dimmed-ink mt-1"
                       style={{ letterSpacing: '0.2em', opacity: 0.3 }}
                     >
                       0{i + 1}
@@ -319,7 +313,7 @@ export default function ProjectPage({ project, prev, next }) {
             </div>
             {project.images[1].caption && (
               <p
-                className="font-mono text-dimmed-ink text-xs mt-4"
+                className="font-mono text-dimmed-ink text-sm mt-4"
                 style={{ letterSpacing: '0.15em', opacity: 0.4 }}
               >
                 ↑ {project.images[1].caption}
@@ -335,7 +329,7 @@ export default function ProjectPage({ project, prev, next }) {
         >
           <div className="md:col-span-3">
             <span
-              className="font-mono text-xs text-dimmed-ink block"
+              className="font-mono text-sm text-dimmed-ink block"
               style={{ letterSpacing: '0.25em', opacity: 0.4 }}
             >
               Outcome
@@ -360,7 +354,7 @@ export default function ProjectPage({ project, prev, next }) {
           style={{ borderColor: 'rgba(25,25,25,0.08)' }}
         >
           <p
-            className="font-mono text-xs text-dimmed-ink mb-6"
+            className="font-mono text-sm text-dimmed-ink mb-6"
             style={{ letterSpacing: '0.25em', opacity: 0.4 }}
           >
             Tools & methods
@@ -369,7 +363,7 @@ export default function ProjectPage({ project, prev, next }) {
             {project.tools.map((tool) => (
               <span
                 key={tool}
-                className="font-mono text-xs text-dimmed-ink px-4 py-2 border"
+                className="font-mono text-sm text-dimmed-ink px-4 py-2 border"
                 style={{
                   letterSpacing: '0.15em',
                   borderColor: 'rgba(25,25,25,0.18)',
@@ -393,7 +387,7 @@ export default function ProjectPage({ project, prev, next }) {
               className="group bg-ash-grey p-10 flex flex-col gap-2 hover:bg-white/40 transition-colors duration-300"
             >
               <span
-                className="font-mono text-xs text-dimmed-ink"
+                className="font-mono text-sm text-dimmed-ink"
                 style={{ letterSpacing: '0.2em', opacity: 0.35 }}
               >
                 ← Previous
@@ -415,7 +409,7 @@ export default function ProjectPage({ project, prev, next }) {
               className="group bg-ash-grey p-10 flex flex-col gap-2 items-end text-right hover:bg-white/40 transition-colors duration-300"
             >
               <span
-                className="font-mono text-xs text-dimmed-ink"
+                className="font-mono text-sm text-dimmed-ink"
                 style={{ letterSpacing: '0.2em', opacity: 0.35 }}
               >
                 Next →
@@ -433,7 +427,7 @@ export default function ProjectPage({ project, prev, next }) {
               className="group bg-ash-grey p-10 flex flex-col gap-2 items-end text-right hover:bg-white/40 transition-colors duration-300"
             >
               <span
-                className="font-mono text-xs text-dimmed-ink"
+                className="font-mono text-sm text-dimmed-ink"
                 style={{ letterSpacing: '0.2em', opacity: 0.35 }}
               >
                 All work →

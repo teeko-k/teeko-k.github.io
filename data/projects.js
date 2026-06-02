@@ -18,8 +18,7 @@ export const projects = [
     year: '2021 - 2025',
     tags: ['UX Design', 'Design Systems', 'Research'],
     // A 16:9 or 3:2 hero image. Replace with your actual project image.
-    thumbnail:
-      'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&auto=format&fit=crop',
+    thumbnail: '/Work/EA.png',
     // accent used for the card hover line + case-study page accent
     accent: '#251bf3',
     // 'wide' cards span 2 columns on desktop; 'tall' span 2 rows
