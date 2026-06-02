@@ -32,24 +32,24 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-32 px-8 md:px-12 relative"
+      className="py-32 px-8 md:px-12 relative 2xl:min-h-screen 2xl:py-12 2xl:flex 2xl:items-center"
     >
       {/* Ambient separator */}
       <div
-        className="absolute top-0 left-8 right-8 md:left-12 md:right-12 h-px"
+        className="absolute top-0 left-8 right-8 md:left-12 md:right-12 2xl:left-0 2xl:right-0 h-px"
         style={{
           background:
             'linear-gradient(to right, transparent, rgba(33,33,33,0.3), transparent)',
         }}
       />
 
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] 2xl:grid-cols-[1.1fr_1fr_0.9fr] gap-16 md:gap-24 items-start">
+      <div className="max-w-full 2xl:max-w-full 2xl:w-full 2xl:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] 2xl:grid-cols-[1.1fr_1fr_0.9fr] gap-16 md:gap-24 items-start 2xl:h-full">
           {/* Image */}
           <div className="fade-section relative">
             <div
-              className="img-zoom relative overflow-hidden"
-              style={{ aspectRatio: '4/5' }}
+              className="img-zoom relative overflow-hidden rounded-full"
+              style={{ aspectRatio: '1/1' }}
             >
               <img
                 src="/images/AboutImg.JPEG"
@@ -57,15 +57,7 @@ export default function About() {
                 className="w-full h-full object-cover"
                 style={{ filter: 'brightness(0.8) saturate(0.85)' }}
               />
-              {/* Corner accent */}
-              <div
-                className="absolute top-0 left-0 w-8 h-8 border-t border-l border-dimmed-ink"
-                style={{ opacity: 0.6 }}
-              />
-              <div
-                className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-dimmed-ink"
-                style={{ opacity: 0.6 }}
-              />
+              {/* Corner accent removed for circular frame */}
             </div>
 
             {/* Floating label */}
