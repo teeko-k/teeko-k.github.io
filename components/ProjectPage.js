@@ -57,7 +57,7 @@ export default function ProjectPage({ project, prev, next }) {
         </Link>
 
         <span
-          className="font-mono text-dimmed-ink text-xs hidden md:block"
+          className="font-mono text-bold-ink text-xs hidden md:block"
           style={{ letterSpacing: '0.2em', opacity: 0.35 }}
         >
           Ahmed 'Tiko' K.
@@ -126,7 +126,7 @@ export default function ProjectPage({ project, prev, next }) {
             </div>
 
             <h1
-              className="font-display font-light text-bold-ink mb-4"
+              className="font-sans font-semibold text-bold-ink mb-4"
               style={{
                 fontSize: 'clamp(2.5rem, 7vw, 5.5rem)',
                 letterSpacing: '-0.02em',

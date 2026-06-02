@@ -13,12 +13,13 @@ export const projects = [
     index: '01',
 
     // ── card (landing) ───────────────────────────────────────────────────────
-    title: 'EA — Frostbite Engine',
+    title: 'EA - Frostbite Engine',
     subtitle: 'Developer tooling for AAA game development',
-    year: '2024',
+    year: '2021 - 2025',
     tags: ['UX Design', 'Design Systems', 'Research'],
     // A 16:9 or 3:2 hero image. Replace with your actual project image.
-    thumbnail: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&auto=format&fit=crop',
+    thumbnail:
+      'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&auto=format&fit=crop',
     // accent used for the card hover line + case-study page accent
     accent: '#251bf3',
     // 'wide' cards span 2 columns on desktop; 'tall' span 2 rows
@@ -30,7 +31,7 @@ export const projects = [
     duration: '4 years',
     tools: ['Figma', 'Dovetail', 'Miro', 'Prototyping', 'Journey Mapping'],
     overview:
-      'At EA, I worked for four years on Frostbite — the company\'s proprietary game engine powering AAA titles including FIFA 23, FC 24, and the Dead Space remake. My role focused entirely on developer-facing tooling: cinematics editors, AI behaviour trees, and physics debug panels used daily by engineers and technical artists across multiple studios.',
+      "At EA, I worked for four years on Frostbite - the company's proprietary game engine powering AAA titles including FIFA 23, FC 24, and the Dead Space remake. My role focused entirely on developer-facing tooling: cinematics editors, AI behaviour trees, and physics debug panels used daily by engineers and technical artists across multiple studios.",
     challenge:
       'The tools were extraordinarily powerful, but each had been built in isolation over a decade. Workflows were inconsistent across modules, onboarding new developers took weeks, and there was no shared design language connecting the hundreds of individual panels and editors. Expert users resisted simplification; they needed power, not hand-holding.',
     approach: [
@@ -42,12 +43,12 @@ export const projects = [
       {
         step: 'Heuristic audit',
         detail:
-          'Catalogued 200+ UI patterns across Frostbite\'s tools, identifying the 40 that caused the most friction. Prioritised by frequency × severity × fix cost.',
+          "Catalogued 200+ UI patterns across Frostbite's tools, identifying the 40 that caused the most friction. Prioritised by frequency × severity × fix cost.",
       },
       {
         step: 'Design system',
         detail:
-          'Built Frostbite\'s first cross-tool component library in Figma, covering tokens, layout grids, and interaction patterns. Contributed the spec to the engineering component library.',
+          "Built Frostbite's first cross-tool component library in Figma, covering tokens, layout grids, and interaction patterns. Contributed the spec to the engineering component library.",
       },
       {
         step: 'Validation',
@@ -56,7 +57,7 @@ export const projects = [
       },
     ],
     outcome:
-      'Reduced new-developer onboarding time by an estimated 30%. The design system is now referenced by six internal teams. UX became a standing function in the Frostbite product org for the first time.',
+      'This work dramatically decreased the onboarding friction for new developers and increased the efficiency of critical workflows. But it wasn’t just about features; it helped establish UX as a true strategic partner in the development pipeline of Frostbite. Moving design from a finishing step to an integral part of how tools get built.',
     // Add as many images as you like. caption is optional.
     images: [
       {
@@ -73,11 +74,12 @@ export const projects = [
   {
     slug: 'officeworks-track-trace',
     index: '02',
-    title: 'Officeworks — Track & Trace',
+    title: 'Officeworks - Track & Trace',
     subtitle: 'End-to-end parcel visibility for customers & ops',
     year: '2021',
     tags: ['UX Design', 'Mobile', 'Service Design'],
-    thumbnail: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&auto=format&fit=crop',
+    thumbnail:
+      'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&auto=format&fit=crop',
     accent: '#c9a96e',
     size: 'normal',
 
@@ -123,7 +125,8 @@ export const projects = [
     subtitle: 'Internal logistics communications platform',
     year: '2021',
     tags: ['Product Design', 'Internal Tools'],
-    thumbnail: 'https://images.unsplash.com/photo-1544396821-4dd40b938ad3?w=1200&auto=format&fit=crop',
+    thumbnail:
+      'https://images.unsplash.com/photo-1544396821-4dd40b938ad3?w=1200&auto=format&fit=crop',
     accent: '#c9a96e',
     size: 'normal',
 
@@ -164,7 +167,8 @@ export const projects = [
     subtitle: 'Travel planning reimagined for solo adventurers',
     year: '2021',
     tags: ['Product Design', 'Mobile', 'Interaction Design'],
-    thumbnail: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&auto=format&fit=crop',
+    thumbnail:
+      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&auto=format&fit=crop',
     accent: '#c9a96e',
     size: 'normal',
 
@@ -175,7 +179,7 @@ export const projects = [
     overview:
       'Intravel is a mobile-first travel planning app designed for independent travellers who want to build itineraries collaboratively, discover local experiences, and manage bookings in one place — without the rigidity of packaged tours.',
     challenge:
-      'The market is crowded with generic itinerary tools. Intravel needed a product that felt like a local friend rather than a travel agent — opinionated, contextual, and genuinely useful when you\'re already on the ground.',
+      "The market is crowded with generic itinerary tools. Intravel needed a product that felt like a local friend rather than a travel agent — opinionated, contextual, and genuinely useful when you're already on the ground.",
     approach: [
       {
         step: 'Persona development',
@@ -198,7 +202,8 @@ export const projects = [
     images: [
       {
         src: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&auto=format&fit=crop',
-        caption: 'Itinerary builder — card-first layout with contextual overlays',
+        caption:
+          'Itinerary builder — card-first layout with contextual overlays',
       },
     ],
   },
@@ -210,7 +215,8 @@ export const projects = [
     subtitle: 'Pitch-ready product experience for field sales teams',
     year: '2021',
     tags: ['Interaction Design', 'Prototyping'],
-    thumbnail: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop',
+    thumbnail:
+      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop',
     accent: '#c9a96e',
     size: 'normal',
 

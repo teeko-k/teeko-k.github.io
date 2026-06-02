@@ -69,7 +69,7 @@ export default function About() {
             </div>
 
             {/* Floating label */}
-            <div
+            {/* <div
               className="absolute -bottom-6 -right-0 md:-right-6 bg-charcoal border px-6 py-4"
               style={{ borderColor: 'rgba(201,169,110,0.2)' }}
             >
@@ -82,7 +82,7 @@ export default function About() {
               <p className="font-sans text-dimmed-ink text-xs mt-1 font-light">
                 Available for commissions
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Text */}

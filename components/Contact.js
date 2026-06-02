@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { socialLinks } from '../data/social'
+import SocialLink from './SocialLink'
 
 export default function Contact() {
   const sectionRef = useRef(null)
@@ -92,54 +94,11 @@ export default function Contact() {
               new, or simply want to connect, I'd be happy to hear from you.
             </p>
 
-            {/* Direct links */}
-            <div className="space-y-4">
-              <a
-                href="mailto:a.taher.kassem@gmail.com"
-                className="flex items-center gap-4 text-dimmed-ink hover:text-accent-color transition-colors duration-300 group"
-              >
-                <svg
-                  className="w-4 h-4 opacity-50"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-                <span
-                  className="font-sans font-light text-sm"
-                  style={{ letterSpacing: '0.05em' }}
-                >
-                  a.taher.kassem@gmail.com
-                </span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/ahmedtkassem/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 text-dimmed-ink hover:text-accent-color transition-colors duration-300 group"
-              >
-                <svg
-                  className="w-4 h-4 opacity-50"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <g transform="scale(0.04)">
-                    <path d="M116.504,500.219V170.654H6.975v329.564H116.504L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z" />
-                  </g>
-                </svg>
-                <span
-                  className="font-sans font-light text-sm"
-                  style={{ letterSpacing: '0.05em' }}
-                >
-                  LinkedIn
-                </span>
-              </a>
+            {/* Social links */}
+            <div className="flex flex-col flex-wrap gap-x-6 gap-y-3">
+              {socialLinks.map((social) => (
+                <SocialLink key={social.label} social={social} />
+              ))}
             </div>
           </div>
 
