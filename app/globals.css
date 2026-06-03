@@ -43,6 +43,10 @@ body {
   overflow-x: hidden;
 }
 
+.group:hover .card-cta {
+  opacity: 1 !important;
+}
+
 /* header {
   padding-top: max(1.5rem, env(safe-area-inset-top)) !important;
 } */

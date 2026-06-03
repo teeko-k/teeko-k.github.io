@@ -2,70 +2,62 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 
-export default function ProjectCard({ project, index }) {
+export default function ProjectCard({ project }) {
+  const [imgError, setImgError] = useState(false)
+
   return (
     <Link
       href={`/work/${project.slug}`}
-      className="group relative flex-shrink-0 flex flex-col overflow-hidden bg-white"
+      className="group relative flex-shrink-0 flex flex-col md:flex-row bg-white overflow-hidden"
       style={{
-        width: '100%',
-        minWidth: 'min(380px, 80vw)',
-        maxWidth: 'min(380px, 80vw)',
-        borderRadius: '16px',
-        border: '1px solid rgba(25,25,25,0.08)',
+        minWidth: 'min(560px, 85vw)',
+        maxWidth: 'min(560px, 85vw)',
+        borderRadius: '20px',
+        border: '1px solid rgba(25,25,25,0.05)',
+        boxShadow: '0 8px 60px rgba(0,0,0,0.08)',
+        padding: '10px',
+        gap: '12px',
       }}
     >
-      {/* Image */}
+      {/* Image — full width mobile, 60% desktop */}
       <div
-        className={`relative overflow-hidden bg-${project.accent}`}
+        className="relative overflow-hidden flex-shrink-0"
         style={{
+          background: project.accent,
+          borderRadius: '12px',
           aspectRatio: '3/2',
-          borderRadius: '16px 16px 0 0',
+          flex: '0 0 60%',
+          maxWidth: '100%',
         }}
       >
-        <Image
-          src={project.thumbnail}
-          alt={project.title}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-          style={{ filter: 'brightness(0.78) saturate(0.8)' }}
-        />
-
-        {/* Overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(to top, ${project.accent} 0%, transparent 60%)`,
-          }}
-        />
-
-        {/* Index */}
+        {!imgError && (
+          <Image
+            src={project.thumbnail}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+            style={{ filter: 'brightness(0.82) saturate(0.85)' }}
+            onError={() => setImgError(true)}
+          />
+        )}
         <span
-          className="absolute top-4 left-4 font-mono text-xs opacity-50"
-          style={{ letterSpacing: '0.2em', color: '#f5f0eb' }}
+          className="absolute top-3 left-3 font-mono text-xs"
+          style={{ letterSpacing: '0.2em', color: '#fff', opacity: 0.6 }}
         >
           {project.index}
         </span>
-
-        {/* Year */}
         <span
-          className="absolute top-4 right-4 font-mono text-xs opacity-50"
-          style={{ letterSpacing: '0.2em', color: '#f5f0eb' }}
+          className="absolute top-3 right-3 font-mono text-xs"
+          style={{ letterSpacing: '0.2em', color: '#fff', opacity: 0.6 }}
         >
           {project.year}
         </span>
-
-        {/* Accent line */}
-        <div
-          className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full transition-all duration-500"
-          style={{ background: project.accent }}
-        />
       </div>
 
-      {/* Card body */}
-      <div className="p-6 flex flex-col flex-1">
-        {/* Title first */}
+      {/* Content */}
+      <div className="flex flex-col flex-1 px-2 pt-2 pb-1">
         <h3
           className="font-sans font-semibold text-xl text-bold-ink group-hover:text-accent-color transition-colors duration-300 mb-1"
           style={{ letterSpacing: '-0.01em' }}
@@ -74,28 +66,30 @@ export default function ProjectCard({ project, index }) {
         </h3>
 
         <p
-          className="font-sans text-dimmed-ink text-sm font-light leading-relaxed flex-1 mb-4"
+          className="font-sans text-bold-ink text-sm font-light leading-relaxed flex-1 mb-4"
           style={{ opacity: 0.6 }}
         >
           {project.subtitle}
         </p>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-x-3 gap-y-1 mb-5">
+        <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="font-mono text-xs text-dimmed-ink"
-              style={{ letterSpacing: '0.12em', opacity: 0.4 }}
+              className="font-sans text-xs text-dimmed-ink px-3 py-1 border rounded-full"
+              style={{
+                letterSpacing: '0.05em',
+                opacity: 0.6,
+                borderColor: 'rgba(25,25,25,0.12)',
+              }}
             >
               {tag}
             </span>
           ))}
         </div>
 
-        {/* Footer row */}
         <div
-          className="flex items-center justify-between pt-4 border-t"
+          className="flex items-center justify-between pt-3 border-t"
           style={{ borderColor: 'rgba(25,25,25,0.08)' }}
         >
           <span
@@ -105,8 +99,8 @@ export default function ProjectCard({ project, index }) {
             {project.client}
           </span>
           <span
-            className="flex items-center gap-1.5 font-mono text-xs text-accent-color opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            style={{ letterSpacing: '0.12em' }}
+            className="flex items-center gap-1.5 font-mono text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style={{ color: project.accent, letterSpacing: '0.12em' }}
           >
             View
             <svg
