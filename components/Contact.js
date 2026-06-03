@@ -49,16 +49,16 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-32 px-8 md:px-12 relative"
+      className="py-24 px-8 md:px-12 relative"
     >
       {/* Ambient separator */}
-      <div
+      {/* <div
         className="absolute top-0 left-8 right-8 md:left-12 md:right-12 h-px"
         style={{
           background:
             'linear-gradient(to right, transparent, rgba(33,33,33,0.3), transparent)',
         }}
-      />
+      /> */}
 
       {/* Ambient glow */}
       <div

@@ -32,16 +32,16 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-24 px-8 md:px-12 relative 2xl:min-h-screen 2xl:py-12 2xl:flex 2xl:items-center"
+      className="py-24 px-8 md:px-12 relative 2xl:py-36 2xl:flex 2xl:items-center"
     >
       {/* Ambient separator */}
-      <div
+      {/* <div
         className="absolute top-0 left-8 right-8 md:left-12 md:right-12 2xl:left-0 2xl:right-0 h-px"
         style={{
           background:
             'linear-gradient(to right, transparent, rgba(33,33,33,0.3), transparent)',
         }}
-      />
+      /> */}
 
       <div className="max-w-full 2xl:max-w-full 2xl:w-full 2xl:px-12">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] 2xl:grid-cols-[1fr_2fr_0.9fr] gap-16 md:gap-24 items-start 2xl:h-full">
@@ -93,7 +93,7 @@ export default function About() {
             </h2>
 
             <div
-              className="space-y-5 font-sans text-dimmed-ink font-light leading-relaxed"
+              className="space-y-5 font-sans text-bold-ink font-light leading-relaxed"
               style={{ fontSize: '18px' }}
             >
               <p>

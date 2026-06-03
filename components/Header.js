@@ -161,7 +161,7 @@ export default function Header() {
                       {link.sub}
                     </span>
                     <span
-                      className="font-sans text-4xl md:text-6xl lg:text-7xl font-light leading-none transition-all duration-300"
+                      className="font-sans font-semibold text-4xl md:text-6xl lg:text-7xl leading-none transition-all duration-300"
                       style={{
                         color:
                           hoveredLink === i
@@ -192,12 +192,12 @@ export default function Header() {
             </div>
 
             {/* Copyrights */}
-            <span
+            {/* <span
               className="text-dimmed-ink font-mono text-xs opacity-40"
               style={{ letterSpacing: '0.15em' }}
             >
               © 2026
-            </span>
+            </span> */}
           </div>
         </div>
       </div>

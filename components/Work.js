@@ -39,13 +39,13 @@ export default function Work() {
   return (
     <section id="work" ref={sectionRef} className="py-24 relative">
       {/* Ambient separator */}
-      <div
+      {/* <div
         className="absolute top-0 left-8 right-8 md:left-12 md:right-12 h-px"
         style={{
           background:
             'linear-gradient(to right, transparent, rgba(33,33,33,0.3), transparent)',
         }}
-      />
+      /> */}
       {/* Section header */}
       <div className="fade-section flex items-end justify-between mb-12 px-8 md:px-12">
         <div>
