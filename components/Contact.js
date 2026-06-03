@@ -49,7 +49,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-24 px-8 md:px-12 relative"
+      className="py-24 pt-0 px-8 md:px-12 relative"
     >
       {/* Ambient separator */}
       {/* <div

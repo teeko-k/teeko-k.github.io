@@ -32,7 +32,7 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-24 px-8 md:px-12 relative 2xl:py-36 2xl:flex 2xl:items-center"
+      className="py-24 px-8 md:px-12 relative 2xl:py-24 2xl:flex 2xl:items-center"
     >
       {/* Ambient separator */}
       {/* <div
