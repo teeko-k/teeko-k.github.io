@@ -7,6 +7,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const projects = [
+  // EA Frostbite case study is intentionally detailed to serve as a template for future entries. Replace the placeholder text and images with your actual project content, and follow the same structure for new projects you add.
   {
     // ── identifiers ──────────────────────────────────────────────────────────
     slug: 'ea-frostbite',
@@ -70,6 +71,7 @@ export const projects = [
     ],
   },
 
+  // Officeworks Track & Trace case study is a more concise example. Follow the same structure for new projects, adjusting the level of detail as needed.
   {
     slug: 'officeworks-track-trace',
     index: '02',
@@ -117,6 +119,59 @@ export const projects = [
     ],
   },
 
+  // Intravel Mobile App case study is intentionally brief to show how you can adjust the level of detail based on the project. Follow the same structure for new projects, but feel free to expand or condense sections as appropriate for the story you want to tell.
+  {
+    slug: 'intravel-mobile-app',
+    index: '03',
+    title: 'Intravel Flight Booking - Mobile App',
+    subtitle: 'Travel planning reimagined for solo adventurers',
+    year: '2020',
+    tags: ['Product Design', 'Mobile', 'Interaction Design'],
+    thumbnail: '/Work/intravel01.jpg',
+    accent: '#c9a96e',
+    size: 'normal',
+
+    client: 'Intravel Group',
+    role: 'UX/UI Designer',
+    duration: '2 months',
+    tools: ['Adobe XD', 'Figma', 'Notion'],
+    overview:
+      'Intravel is a mobile-first travel planning app designed for independent travellers who want to build itineraries collaboratively, discover local experiences, and manage bookings in one place — without the rigidity of packaged tours.',
+    challenge:
+      "The market is crowded with generic itinerary tools. Intravel needed a product that felt like a local friend rather than a travel agent — opinionated, contextual, and genuinely useful when you're already on the ground.",
+    approach: [
+      {
+        step: 'Persona development',
+        detail:
+          'Defined three core traveller archetypes through diary studies and interviews: the Solo Planner, the Group Coordinator, and the Spontaneous Explorer. Each needed a different entry point.',
+      },
+      {
+        step: 'Prototype & test',
+        detail:
+          'Built 3 divergent prototypes exploring different IA models. Ran moderated testing with 15 participants across two rounds to narrow down the winning direction.',
+      },
+      {
+        step: 'Visual design',
+        detail:
+          'Designed a warm, editorial visual language with a card-based layout that surfaces context (weather, local events, transport) alongside itinerary steps.',
+      },
+    ],
+    outcome:
+      'Delivered a production-ready design system and prototype to the engineering team. App launched on iOS with a 4.6 App Store rating in its first month.',
+    images: [
+      {
+        src: '/Work/intravel02.png',
+        caption:
+          'Itinerary builder — card-first layout with contextual overlays',
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&auto=format&fit=crop',
+        caption:
+          'Itinerary builder — card-first layout with contextual overlays',
+      },
+    ],
+  },
+
   {
     slug: 'officeworks-mailman',
     index: '03',
@@ -155,54 +210,6 @@ export const projects = [
       {
         src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1600&auto=format&fit=crop',
         caption: 'Exception triage queue — priority-first layout',
-      },
-    ],
-  },
-
-  {
-    slug: 'intravel-mobile-app',
-    index: '04',
-    title: 'Intravel Mobile App',
-    subtitle: 'Travel planning reimagined for solo adventurers',
-    year: '2021',
-    tags: ['Product Design', 'Mobile', 'Interaction Design'],
-    thumbnail:
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&auto=format&fit=crop',
-    accent: '#c9a96e',
-    size: 'normal',
-
-    client: 'Intravel (Startup)',
-    role: 'Lead UX/UI Designer',
-    duration: '5 months',
-    tools: ['Figma', 'Principle', 'Maze', 'Notion'],
-    overview:
-      'Intravel is a mobile-first travel planning app designed for independent travellers who want to build itineraries collaboratively, discover local experiences, and manage bookings in one place — without the rigidity of packaged tours.',
-    challenge:
-      "The market is crowded with generic itinerary tools. Intravel needed a product that felt like a local friend rather than a travel agent — opinionated, contextual, and genuinely useful when you're already on the ground.",
-    approach: [
-      {
-        step: 'Persona development',
-        detail:
-          'Defined three core traveller archetypes through diary studies and interviews: the Solo Planner, the Group Coordinator, and the Spontaneous Explorer. Each needed a different entry point.',
-      },
-      {
-        step: 'Prototype & test',
-        detail:
-          'Built 3 divergent prototypes exploring different IA models. Ran moderated testing with 15 participants across two rounds to narrow down the winning direction.',
-      },
-      {
-        step: 'Visual design',
-        detail:
-          'Designed a warm, editorial visual language with a card-based layout that surfaces context (weather, local events, transport) alongside itinerary steps.',
-      },
-    ],
-    outcome:
-      'Delivered a production-ready design system and prototype to the engineering team. App launched on iOS with a 4.6 App Store rating in its first month.',
-    images: [
-      {
-        src: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&auto=format&fit=crop',
-        caption:
-          'Itinerary builder — card-first layout with contextual overlays',
       },
     ],
   },
