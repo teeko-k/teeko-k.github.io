@@ -57,7 +57,7 @@ export default function ProjectPage({ project, prev, next }) {
         </Link>
 
         <span
-          className="font-sans text-bold-ink text-xs capitalize hidden md:block"
+          className="font-sans text-bold-ink text-xs uppercase hidden md:block"
           style={{ letterSpacing: '0.2em' }}
         >
           Ahmed 'Tiko' K.
@@ -175,15 +175,15 @@ export default function ProjectPage({ project, prev, next }) {
         >
           <div className="md:col-span-3">
             <span
-              className="font-mono text-sm text-dimmed-ink block"
-              style={{ letterSpacing: '0.25em', opacity: 0.4 }}
+              className="font-mono text-dimmed-ink block"
+              style={{ letterSpacing: '0.25em' }}
             >
               Overview
             </span>
           </div>
           <div className="md:col-span-9">
             <p
-              className="font-display font-light text-bold-ink italic leading-snug"
+              className="font-display text-bold-ink italic leading-snug"
               style={{
                 fontSize: 'clamp(1.3rem, 2.5vw, 1.9rem)',
                 letterSpacing: '-0.01em',
@@ -201,16 +201,16 @@ export default function ProjectPage({ project, prev, next }) {
         >
           <div className="md:col-span-3">
             <span
-              className="font-mono text-sm text-dimmed-ink block"
-              style={{ letterSpacing: '0.25em', opacity: 0.4 }}
+              className="font-mono text-dimmed-ink block"
+              style={{ letterSpacing: '0.25em' }}
             >
               The challenge
             </span>
           </div>
           <div className="md:col-span-9">
             <p
-              className="font-sans font-light text-bold-ink leading-relaxed"
-              style={{ fontSize: '16px' }}
+              className="font-sans text-bold-ink leading-relaxed"
+              style={{ fontSize: '18px' }}
             >
               {project.challenge}
             </p>
@@ -252,8 +252,8 @@ export default function ProjectPage({ project, prev, next }) {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-12">
               <div className="md:col-span-3">
                 <span
-                  className="font-mono text-sm text-bold-ink block"
-                  style={{ letterSpacing: '0.25em', opacity: 0.4 }}
+                  className="font-mono text-bold-ink block"
+                  style={{ letterSpacing: '0.25em' }}
                 >
                   Approach
                 </span>
@@ -273,16 +273,13 @@ export default function ProjectPage({ project, prev, next }) {
                       0{i + 1}
                     </span>
                     <h3
-                      className="font-display text-xl font-light text-bold-ink"
+                      className="font-sans text-xl font-light text-bold-ink"
                       style={{ letterSpacing: '-0.01em' }}
                     >
                       {item.step}
                     </h3>
                   </div>
-                  <p
-                    className="font-sans font-light text-bold-ink text-sm leading-relaxed"
-                    style={{ opacity: 0.7 }}
-                  >
+                  <p className="font-sans text-bold-ink leading-relaxed">
                     {item.detail}
                   </p>
                 </div>
@@ -324,15 +321,15 @@ export default function ProjectPage({ project, prev, next }) {
         >
           <div className="md:col-span-3">
             <span
-              className="font-mono text-sm text-dimmed-ink block"
-              style={{ letterSpacing: '0.25em', opacity: 0.4 }}
+              className="font-mono text-dimmed-ink block"
+              style={{ letterSpacing: '0.25em' }}
             >
               Outcome
             </span>
           </div>
           <div className="md:col-span-9">
             <p
-              className="font-display font-light text-bold-ink leading-snug"
+              className="font-display font-light text-bold-ink italic leading-snug"
               style={{
                 fontSize: 'clamp(1.3rem, 2.5vw, 1.9rem)',
                 letterSpacing: '-0.01em',
@@ -349,8 +346,8 @@ export default function ProjectPage({ project, prev, next }) {
           style={{ borderColor: 'rgba(25,25,25,0.08)' }}
         >
           <p
-            className="font-mono text-sm text-dimmed-ink mb-6"
-            style={{ letterSpacing: '0.25em', opacity: 0.4 }}
+            className="font-mono text-accent-color mb-6 capitalize"
+            style={{ letterSpacing: '0.25em' }}
           >
             Tools & methods
           </p>
@@ -388,7 +385,7 @@ export default function ProjectPage({ project, prev, next }) {
                 ← Previous
               </span>
               <span
-                className="font-display text-2xl font-light text-bold-ink group-hover:text-accent-color transition-colors duration-300"
+                className="font-sans text-2xl font-semibold text-bold-ink group-hover:text-accent-color transition-colors duration-300"
                 style={{ letterSpacing: '-0.01em' }}
               >
                 {prev.title}
@@ -410,7 +407,7 @@ export default function ProjectPage({ project, prev, next }) {
                 Next →
               </span>
               <span
-                className="font-display text-2xl font-light text-bold-ink group-hover:text-accent-color transition-colors duration-300"
+                className="font-sans text-2xl font-semibold text-bold-ink group-hover:text-accent-color transition-colors duration-300"
                 style={{ letterSpacing: '-0.01em' }}
               >
                 {next.title}
