@@ -12,8 +12,8 @@ export default function ProjectCard({ project }) {
       href={`/work/${project.slug}`}
       className="group relative flex-shrink-0 flex flex-col md:flex-row bg-white overflow-hidden"
       style={{
-        minWidth: 'min(560px, 85vw)',
-        maxWidth: 'min(560px, 85vw)',
+        minWidth: 'min(780px, 85vw)',
+        maxWidth: 'min(780px, 85vw)',
         borderRadius: '20px',
         border: '1px solid rgba(25,25,25,0.05)',
         boxShadow: '0 8px 60px rgba(0,0,0,0.08)',
