@@ -3,4 +3,5 @@
 module.exports = {
   siteUrl: 'https://teeko-k.github.io',
   generateRobotsTxt: true,
+  outDir: './out',
 }
