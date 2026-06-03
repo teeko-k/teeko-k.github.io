@@ -65,10 +65,7 @@ export default function ProjectCard({ project }) {
           {project.title}
         </h3>
 
-        <p
-          className="font-sans text-bold-ink text-sm font-light leading-relaxed flex-1 mb-4"
-          style={{ opacity: 0.6 }}
-        >
+        <p className="font-sans text-bold-ink text-sm font-light leading-relaxed flex-1 mb-4">
           {project.subtitle}
         </p>
 
@@ -76,11 +73,10 @@ export default function ProjectCard({ project }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="font-sans text-xs text-dimmed-ink px-3 py-1 border rounded-full"
+              className="font-sans text-xs text-bold-ink px-3 py-1 border rounded-full"
               style={{
                 letterSpacing: '0.05em',
-                opacity: 0.6,
-                borderColor: 'rgba(25,25,25,0.12)',
+                borderColor: 'rgba(25,25,25,0.3)',
               }}
             >
               {tag}
@@ -94,7 +90,7 @@ export default function ProjectCard({ project }) {
         >
           <span
             className="font-mono text-xs text-dimmed-ink"
-            style={{ letterSpacing: '0.15em', opacity: 0.35 }}
+            style={{ letterSpacing: '0.15em', opacity: 0.6 }}
           >
             {project.client}
           </span>
