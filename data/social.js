@@ -35,7 +35,7 @@ export const socialLinks = [
   },
   {
     label: 'Youtube',
-    href: 'https://youtube.com',
+    href: 'https://www.youtube.com/@AyeKayeSculpts',
     viewBox: '0 0 24 24',
     path: (
       <g transform="scale(0.75)">
