@@ -124,10 +124,10 @@ export const projects = [
     slug: 'intravel-mobile-app',
     index: '03',
     title: 'Intravel Flight Booking - Mobile App',
-    subtitle: 'Travel planning reimagined for solo adventurers',
-    year: '2020',
+    subtitle: 'Mobile App design',
+    year: '2019',
     tags: ['Product Design', 'Mobile', 'Interaction Design'],
-    thumbnail: '/Work/intravel01.jpg',
+    thumbnail: '/Work/Intravel/Intravel-cover.png',
     accent: '#c9a96e',
     size: 'normal',
 
@@ -160,12 +160,12 @@ export const projects = [
       'Delivered a production-ready design system and prototype to the engineering team. App launched on iOS with a 4.6 App Store rating in its first month.',
     images: [
       {
-        src: '/Work/intravel02.png',
+        src: '/Work/Intravel/Wireframes.png',
         caption:
           'Itinerary builder — card-first layout with contextual overlays',
       },
       {
-        src: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&auto=format&fit=crop',
+        src: '/Work/Intravel/PlanWalkthrough.png',
         caption:
           'Itinerary builder — card-first layout with contextual overlays',
       },
