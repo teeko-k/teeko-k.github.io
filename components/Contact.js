@@ -161,12 +161,12 @@ export default function Contact() {
                 className="flex items-center gap-4 group transition-all duration-300"
               >
                 <span
-                  className="font-mono text-xs text-accent-color group-hover:text-accent-color transition-colors duration-300"
+                  className="font-mono text-xs text-color-accent group-hover:text-color-accent transition-colors duration-300"
                   style={{ letterSpacing: '0.25em' }}
                 >
                   Send message
                 </span>
-                <span className="block w-12 h-px bg-text-primary group-hover:w-20 group-hover:bg-accent-color transition-all duration-500" />
+                <span className="block w-12 h-px bg-text-primary group-hover:w-20 group-hover:bg-color-accent transition-all duration-500" />
               </button>
             </form>
           </div>
