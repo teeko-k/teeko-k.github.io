@@ -114,6 +114,8 @@ export default function Work() {
           gap: '24px',
           paddingLeft: '32px',
           paddingRight: '32px',
+          paddingTop: '20px',
+          paddingBottom: '40px',
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
           WebkitOverflowScrolling: 'touch',
@@ -125,7 +127,7 @@ export default function Work() {
       </div>
 
       {/* Mobile CTA */}
-      <div className="fade-section flex justify-center mt-10 md:hidden">
+      {/* <div className="fade-section flex justify-center mt-10 md:hidden">
         <Link
           href="/work"
           className="font-mono text-xs text-text-secondary border border-text-secondary/20 px-6 py-3 hover:border-accent-color hover:text-accent-color transition-colors duration-300"
@@ -133,7 +135,7 @@ export default function Work() {
         >
           View all projects
         </Link>
-      </div>
+      </div> */}
     </section>
   )
 }

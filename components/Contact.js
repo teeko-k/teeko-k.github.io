@@ -32,7 +32,7 @@ export default function Contact() {
   const inputStyle = (name) => ({
     background: 'transparent',
     border: 'none',
-    borderBottom: `1px solid ${focused === name ? 'var(--text-secondary)' : 'rgba(25,25,25,0.3)'}`,
+    borderBottom: `1px solid ${focused === name ? 'var(--text-primary)' : 'var(--text-secondary)'}`,
     borderRadius: 0,
     color: 'var(--text-secondary)',
     outline: 'none',

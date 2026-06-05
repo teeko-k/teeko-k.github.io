@@ -27,10 +27,16 @@ export default function Header({ isProjectPage = false }) {
 
   const handleNavClick = (href) => {
     setIsOpen(false)
-    setTimeout(() => {
-      const el = document.querySelector(href)
-      if (el) el.scrollIntoView({ behavior: 'smooth' })
-    }, 600)
+    if (href.startsWith('/#')) {
+      setTimeout(() => {
+        window.location.href = href
+      }, 600)
+    } else {
+      setTimeout(() => {
+        const el = document.querySelector(href)
+        if (el) el.scrollIntoView({ behavior: 'smooth' })
+      }, 600)
+    }
   }
 
   return (

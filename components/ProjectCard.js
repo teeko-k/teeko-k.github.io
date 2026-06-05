@@ -16,7 +16,7 @@ export default function ProjectCard({ project }) {
         maxWidth: 'min(780px, 85vw)',
         borderRadius: '20px',
         border: '1px solid rgba(25,25,25,0.05)',
-        boxShadow: '0 8px 60px rgba(0,0,0,0.08)',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
         padding: '10px',
         gap: '12px',
       }}
