@@ -10,7 +10,7 @@ export default function ProjectCard({ project }) {
   return (
     <Link
       href={`/work/${project.slug}`}
-      className="group relative flex-shrink-0 flex flex-col md:flex-row bg-white overflow-hidden"
+      className="group relative flex-shrink-0 flex flex-col md:flex-row bg-color-card-bg overflow-hidden"
       style={{
         minWidth: 'min(780px, 85vw)',
         maxWidth: 'min(780px, 85vw)',
@@ -59,24 +59,32 @@ export default function ProjectCard({ project }) {
       {/* Content */}
       <div className="flex flex-col flex-1 px-2 pt-2 pb-1">
         <h3
-          className="font-sans font-semibold text-xl text-bold-ink group-hover:text-accent-color transition-colors duration-300 mb-1"
+          className="font-sans font-semibold text-xl text-text-primary group-hover:text-color-accent transition-colors duration-300 mb-1"
           style={{ letterSpacing: '-0.01em' }}
         >
           {project.title}
         </h3>
 
-        <p className="font-sans text-bold-ink text-sm font-light leading-relaxed flex-1 mb-4">
+        <p className="font-sans text-text-secondary text-sm font-light leading-relaxed mb-2">
           {project.subtitle}
         </p>
 
+        {/* separator */}
+        <div
+          className="w-[24px] h-[4px] rounded-full mb-8 transition-all duration-300 group-hover:w-[40px]"
+          style={{ backgroundColor: project.accent }}
+        ></div>
+        <div className="flex-1" />
+
+        {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="font-sans text-xs text-bold-ink px-3 py-1 border rounded-full"
+              className="font-sans text-xs text-text-secondary px-3 py-1 border rounded-full"
               style={{
                 letterSpacing: '0.05em',
-                borderColor: 'rgba(25,25,25,0.3)',
+                borderColor: 'rgba(128, 184, 241, 0.3)',
               }}
             >
               {tag}
@@ -86,10 +94,10 @@ export default function ProjectCard({ project }) {
 
         <div
           className="flex items-center justify-between pt-3 border-t"
-          style={{ borderColor: 'rgba(25,25,25,0.08)' }}
+          style={{ borderColor: 'rgba(128, 184, 241, 0.3)' }}
         >
           <span
-            className="font-mono text-xs text-dimmed-ink"
+            className="font-mono text-xs text-text-secondary"
             style={{ letterSpacing: '0.15em', opacity: 0.6 }}
           >
             {project.client}

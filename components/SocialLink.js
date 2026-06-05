@@ -6,7 +6,7 @@ export default function SocialLink({ social }) {
       href={social.href}
       target={isMail ? undefined : '_blank'}
       rel={isMail ? undefined : 'noopener noreferrer'}
-      className="flex items-center gap-2 text-dimmed-ink hover:text-accent-color transition-colors duration-300 font-sans text-sm font-light"
+      className="flex items-center gap-2 text-text-secondary hover:text-color-accent transition-colors duration-300 font-sans text-sm font-light"
       style={{ letterSpacing: '0.12em' }}
     >
       {social.path && (

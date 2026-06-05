@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import OverlayNav from './OverlayNav'
 
-export default function Header() {
+export default function Header({ isProjectPage = false }) {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [hoveredLink, setHoveredLink] = useState(null)
@@ -36,13 +36,13 @@ export default function Header() {
   return (
     <>
       {/* Notch fill */}
-      <div
-        className="fixed top-0 left-0 right-0 z-50 bg-ash-grey"
+      {/* <div
+        className="fixed top-0 left-0 right-0 z-50 bg-color-bg"
         style={{ height: 'env(safe-area-inset-top)' }}
-      />
+      /> */}
       {/* Sticky Header */}
       <header
-        className={`fixed top-0 left-0 right-0 border-b z-50 flex items-center justify-between px-8 md:px-12 py-6 transition-all duration-500 bg-ash-grey`}
+        className={`fixed top-0 left-0 right-0 border-b z-50 flex items-center justify-between px-8 md:px-12 py-6 transition-all duration-500 ${scrolled ? 'bg-color-bg' : 'transparent'}`}
         style={{
           top: 0,
           paddingTop: 'max(1.5rem, env(safe-area-inset-top))',
@@ -51,19 +51,21 @@ export default function Header() {
       >
         {/* Logo */}
         <a
-          href="#"
+          href="/"
           className="relative z-50 flex flex-col leading-none group"
           style={{ opacity: isOpen ? 0 : 1, transition: 'opacity 0.3s ease' }}
         >
           <span
-            className="text-bold-ink tracking-widest-3 uppercase text-xs font-sans font-normal"
-            style={{ letterSpacing: '0.3em' }}
+            className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-primary'} tracking-widest-3 uppercase text-xs font-sans font-normal`}
+            style={{
+              letterSpacing: '0.3em',
+            }}
           >
             Ahmed 'Tiko' K.
           </span>
           <span
-            className="text-dimmed-ink text-xs font-mono mt-0.5"
-            style={{ letterSpacing: '0.2em', fontSize: '10px' }}
+            className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-secondary'} text-sm font-[200] font-sans mt-0.5`}
+            style={{ letterSpacing: '0.2em', fontSize: '12px' }}
           >
             UX | Product Designer
           </span>
@@ -76,14 +78,14 @@ export default function Header() {
           aria-label="Toggle navigation"
         >
           <span
-            className={`burger-line block h-[2px] ${isOpen ? 'bg-accent-color' : 'bg-dimmed-ink'} `}
+            className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
             style={{
               width: '28px',
               transform: isOpen ? 'translateY(7px) rotate(45deg)' : 'none',
             }}
           />
           <span
-            className="burger-line block h-px bg-dimmed-ink"
+            className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
             style={{
               width: '20px',
               opacity: isOpen ? 0 : 1,
@@ -91,7 +93,7 @@ export default function Header() {
             }}
           />
           <span
-            className={`burger-line block h-[2px] ${isOpen ? 'bg-accent-color' : 'bg-dimmed-ink'} `}
+            className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
             style={{
               width: '25px',
               transform: isOpen ? 'translateY(-7px) rotate(-45deg)' : 'none',

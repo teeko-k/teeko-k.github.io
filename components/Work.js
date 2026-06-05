@@ -50,13 +50,13 @@ export default function Work() {
       <div className="fade-section flex items-end justify-between mb-12 px-8 md:px-12">
         <div>
           <span
-            className="font-mono text-dimmed-ink text-sm"
+            className="font-mono text-text-secondary text-sm"
             style={{ letterSpacing: '0.3em' }}
           >
             01 — Work
           </span>
           <h2
-            className="font-sans font-semibold text-5xl 2xl:text-6xl mt-3 text-bold-ink"
+            className="font-sans font-semibold text-5xl 2xl:text-6xl mt-3 text-text-primary"
             style={{ letterSpacing: '-0.02em' }}
           >
             Featured Projects
@@ -67,7 +67,7 @@ export default function Work() {
         <div className="hidden md:flex items-center gap-3">
           <button
             onClick={() => scroll('left')}
-            className="w-10 h-10 border border-dimmed-ink/20 flex items-center justify-center hover:border-accent-color hover:text-accent-color transition-colors duration-300 text-dimmed-ink"
+            className="w-10 h-10 border border-text-secondary flex items-center justify-center hover:border-accent-color hover:text-accent-color transition-colors duration-300 text-text-secondary"
             style={{ borderRadius: '50%' }}
           >
             <svg
@@ -86,7 +86,7 @@ export default function Work() {
           </button>
           <button
             onClick={() => scroll('right')}
-            className="w-10 h-10 border border-dimmed-ink/20 flex items-center justify-center hover:border-accent-color hover:text-accent-color transition-colors duration-300 text-dimmed-ink"
+            className="w-10 h-10 border border-text-secondary flex items-center justify-center hover:border-accent-color hover:text-accent-color transition-colors duration-300 text-text-secondary"
             style={{ borderRadius: '50%' }}
           >
             <svg
@@ -128,7 +128,7 @@ export default function Work() {
       <div className="fade-section flex justify-center mt-10 md:hidden">
         <Link
           href="/work"
-          className="font-mono text-xs text-dimmed-ink border border-dimmed-ink/20 px-6 py-3 hover:border-accent-color hover:text-accent-color transition-colors duration-300"
+          className="font-mono text-xs text-text-secondary border border-text-secondary/20 px-6 py-3 hover:border-accent-color hover:text-accent-color transition-colors duration-300"
           style={{ letterSpacing: '0.2em', borderRadius: '999px' }}
         >
           View all projects

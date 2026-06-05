@@ -66,12 +66,12 @@ export default function About() {
               style={{ borderColor: 'rgba(201,169,110,0.2)' }}
             >
               <p
-                className="font-mono text-dimmed-ink text-xs"
+                className="font-mono text-text-secondary text-xs"
                 style={{ letterSpacing: '0.2em' }}
               >
                 Visual Artist
               </p>
-              <p className="font-sans text-dimmed-ink text-xs mt-1 font-light">
+              <p className="font-sans text-text-secondary text-xs mt-1 font-light">
                 Available for commissions
               </p>
             </div> */}
@@ -80,20 +80,20 @@ export default function About() {
           {/* Text */}
           <div className="fade-section md:col-start-2 md:row-start-1">
             <span
-              className="font-mono text-dimmed-ink text-sm"
+              className="font-mono text-text-secondary text-sm"
               style={{ letterSpacing: '0.3em' }}
             >
               03 — About
             </span>
             <h2
-              className="font-sans font-semibold text-4xl md:text-5xl 2xl:text-6xl mt-4 mb-8 text-bold-ink leading-tight"
+              className="font-sans font-semibold text-4xl md:text-5xl 2xl:text-6xl mt-4 mb-8 text-text-primary leading-tight"
               style={{ letterSpacing: '-0.01em' }}
             >
               Designing for people, not screens
             </h2>
 
             <div
-              className="space-y-5 font-sans text-bold-ink font-light leading-relaxed"
+              className="space-y-5 font-sans text-text-secondary font-light leading-relaxed"
               style={{ fontSize: '18px' }}
             >
               <p>

@@ -3,6 +3,7 @@
 import { socialLinks } from '../data/social'
 import { navLinks } from '../data/navLinks'
 import SocialLink from './SocialLink'
+import { useTheme } from '../context/ThemeContext'
 
 const navBgColors = [
   'rgba(180, 140, 80, 0.12)',
@@ -17,9 +18,11 @@ export default function OverlayNav({
   setHoveredLink,
   onNavClick,
 }) {
+  const { theme, toggleTheme } = useTheme()
+
   return (
     <div
-      className={`nav-overlay fixed inset-0 z-40 bg-ash-grey flex flex-col ${isOpen ? 'open' : ''}`}
+      className={`nav-overlay fixed inset-0 z-40 bg-color-bg flex flex-col ${isOpen ? 'open' : ''}`}
     >
       {/* Ambient hover background */}
       <div
@@ -39,7 +42,7 @@ export default function OverlayNav({
       <div className="relative z-10 flex flex-col justify-end h-full px-8 md:px-16 pb-16">
         {/* Nav number indicator */}
         <div
-          className="absolute top-28 right-8 md:right-16 text-accent-color font-mono text-xs"
+          className="absolute top-28 right-8 md:right-16 text-color-accent font-mono text-xs"
           style={{ letterSpacing: '0.2em' }}
         >
           <span>{hoveredLink !== null ? `0${hoveredLink + 1}` : '—'}</span>
@@ -59,7 +62,7 @@ export default function OverlayNav({
                   className="group flex items-baseline gap-6 py-2 text-left"
                 >
                   <span
-                    className="font-mono text-dimmed-ink text-xs transition-opacity duration-300"
+                    className="font-mono text-dimmed-ink text-sm transition-opacity duration-300"
                     style={{
                       opacity: hoveredLink === i ? 1 : 0.3,
                       letterSpacing: '0.15em',
@@ -72,7 +75,7 @@ export default function OverlayNav({
                     style={{
                       color:
                         hoveredLink === i
-                          ? 'var(--accent-color)'
+                          ? 'var(--color-accent)'
                           : 'var(--bold-ink)',
                       letterSpacing: hoveredLink === i ? '-0.01em' : '0.01em',
                     }}
@@ -96,15 +99,16 @@ export default function OverlayNav({
                 <SocialLink key={social.label} social={social} />
               ))}
             </div>
-          </div>
 
-          {/* Copyrights */}
-          {/* <span
-            className="text-dimmed-ink font-mono text-xs opacity-40"
-            style={{ letterSpacing: '0.15em' }}
-          >
-            © 2026
-          </span> */}
+            {/* Theme toggle */}
+            <button
+              onClick={toggleTheme}
+              className="font-sans text-sm text-text-secondary opacity-50 hover:opacity-100 transition-opacity duration-300 text-left md:text-right"
+              style={{ letterSpacing: '0.15em' }}
+            >
+              {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -32,9 +32,9 @@ export default function Contact() {
   const inputStyle = (name) => ({
     background: 'transparent',
     border: 'none',
-    borderBottom: `1px solid ${focused === name ? 'var(--dimmed-ink)' : 'rgba(25,25,25,0.3)'}`,
+    borderBottom: `1px solid ${focused === name ? 'var(--text-secondary)' : 'rgba(25,25,25,0.3)'}`,
     borderRadius: 0,
-    color: 'var(--dimmed-ink)',
+    color: 'var(--text-secondary)',
     outline: 'none',
     width: '100%',
     padding: '12px 0',
@@ -74,20 +74,20 @@ export default function Contact() {
           {/* Left */}
           <div className="fade-section">
             <span
-              className="font-mono text-dimmed-ink text-sm"
+              className="font-mono text-text-secondary text-sm"
               style={{ letterSpacing: '0.3em' }}
             >
               04 — Contact
             </span>
             <h2
-              className="font-sans font-semibold text-5xl 2xl:text-6xl mt-4 mb-8 text-bold-ink leading-tight"
+              className="font-sans font-semibold text-5xl 2xl:text-6xl mt-4 mb-8 text-text-primary leading-tight"
               style={{ letterSpacing: '-0.01em' }}
             >
               Get in touch
             </h2>
 
             <p
-              className="font-sans text-dimmed-ink font-light leading-relaxed mb-10"
+              className="font-sans text-text-secondary font-light leading-relaxed mb-10"
               style={{ fontSize: '18px', maxWidth: '380px' }}
             >
               If you're working on an interesting problem, building something
@@ -113,7 +113,7 @@ export default function Contact() {
             >
               <div>
                 <label
-                  className="font-mono text-dimmed-ink text-xs block mb-3"
+                  className="font-mono text-text-secondary text-xs block mb-3"
                   style={{ letterSpacing: '0.2em', opacity: 0.5 }}
                 >
                   Name
@@ -128,7 +128,7 @@ export default function Contact() {
               </div>
               <div>
                 <label
-                  className="font-mono text-dimmed-ink text-xs block mb-3"
+                  className="font-mono text-text-secondary text-xs block mb-3"
                   style={{ letterSpacing: '0.2em', opacity: 0.5 }}
                 >
                   Email
@@ -143,7 +143,7 @@ export default function Contact() {
               </div>
               <div>
                 <label
-                  className="font-mono text-dimmed-ink text-xs block mb-3"
+                  className="font-mono text-text-secondary text-xs block mb-3"
                   style={{ letterSpacing: '0.2em', opacity: 0.5 }}
                 >
                   Message
@@ -166,7 +166,7 @@ export default function Contact() {
                 >
                   Send message
                 </span>
-                <span className="block w-12 h-px bg-bold-ink group-hover:w-20 group-hover:bg-accent-color transition-all duration-500" />
+                <span className="block w-12 h-px bg-text-primary group-hover:w-20 group-hover:bg-accent-color transition-all duration-500" />
               </button>
             </form>
           </div>

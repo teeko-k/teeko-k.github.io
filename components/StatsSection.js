@@ -15,13 +15,13 @@ export default function StatsSection() {
       {statsData.map((stat) => (
         <div key={stat.label}>
           <p
-            className="font-display text-3xl font-light text-dimmed-ink"
+            className="font-display text-3xl font-light text-text-primary"
             style={{ letterSpacing: '-0.02em' }}
           >
             {stat.value}
           </p>
           <p
-            className="font-mono text-dimmed-ink text-xs mt-1"
+            className="font-mono text-text-secondary text-xs mt-1"
             style={{ letterSpacing: '0.12em', opacity: 0.5 }}
           >
             {stat.label}

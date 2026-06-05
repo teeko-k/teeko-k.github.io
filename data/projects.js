@@ -128,7 +128,7 @@ export const projects = [
     year: '2019',
     tags: ['Product Design', 'Mobile', 'Interaction Design'],
     thumbnail: '/Work/Intravel/Intravel-cover.png',
-    accent: '#c9a96e',
+    accent: '#f8991d',
     size: 'normal',
 
     client: 'Intravel Group',
@@ -165,7 +165,12 @@ export const projects = [
           'Itinerary builder — card-first layout with contextual overlays',
       },
       {
-        src: '/Work/Intravel/PlanWalkthrough.png',
+        src: '/Work/Intravel/PlanWalkthrough01.png',
+        caption:
+          'Itinerary builder — card-first layout with contextual overlays',
+      },
+      {
+        src: '/Work/Intravel/PlanWalkthrough02.png',
         caption:
           'Itinerary builder — card-first layout with contextual overlays',
       },
@@ -175,40 +180,68 @@ export const projects = [
   {
     slug: 'officeworks-mailman',
     index: '03',
-    title: 'Officeworks — Mailman',
-    subtitle: 'Internal logistics communications platform',
-    year: '2021',
-    tags: ['Product Design', 'Internal Tools'],
-    thumbnail:
-      'https://images.unsplash.com/photo-1544396821-4dd40b938ad3?w=1200&auto=format&fit=crop',
-    accent: '#c9a96e',
+    title: 'Officeworks - Mailman',
+    subtitle: 'Parcel Delivery Service Design',
+    year: '2018',
+    tags: ['Product Design', 'Service Design', 'Interaction Design'],
+    thumbnail: '/Work/Mailman/Mailman-isometric.png',
+    accent: '#0084ff',
     size: 'normal',
 
     client: 'Officeworks',
     role: 'UX Designer',
     duration: '4 months',
-    tools: ['Figma', 'Confluence', 'Miro'],
+    tools: [
+      'Adobe Illustrator',
+      'Adobe After Effects',
+      'Axure RP',
+      'Askable',
+      'Miro',
+      'Journey Mapping',
+      'Heuristic Evaluation',
+      'Prototyping',
+      'Design Systems',
+      'Agile',
+    ],
     overview:
-      'Mailman is an internal tool for Officeworks logistics coordinators to manage carrier communications, exception handling, and delivery escalations — replacing a patchwork of email chains and spreadsheets.',
+      'Mailman was a parcel delivery service offered by Officeworks, allowing customers to send parcels between capital cities directly from store. I was brought in to redesign the end-to-end experience, from how customers discovered and navigated the in-store space, to a self-serve kiosk interface that removed the need for staff assistance.',
     challenge:
-      'Coordinators were managing 100+ exceptions per day across multiple tabs, with no shared view of status. Critical escalations were getting lost in email threads.',
+      "The in-store Mailman experience had significant drop-off — customers couldn't find the space in store, and those who did were unsure how to use the service without staff help. The business needed a path toward full self-service that would scale across multiple Officeworks locations.",
     approach: [
       {
-        step: 'Observation',
+        step: 'Research & discovery',
         detail:
-          'Shadowed logistics coordinators during peak periods to understand how exceptions were triaged in practice vs. the documented process.',
+          'Met with stakeholders across departments, visited stores to experience the service firsthand, reviewed customer feedback, and conducted user interviews to map pain points across the full journey.',
       },
       {
-        step: 'Information architecture',
+        step: 'In-store space design',
         detail:
-          'Restructured the exception queue around urgency and actionability rather than chronological order. Introduced a triage view with keyboard shortcuts for power users.',
+          'Developed store layout concepts with signage, floor markings, and zoned areas guiding customers through each step: choose your package, pack your item, pay and print label, send your parcel. Concepts were used by the business for store rollout planning.',
+      },
+      {
+        step: 'Kiosk interface',
+        detail:
+          'Designed a touch-screen kiosk interface that guided users through the process of booking a delivery, printing labels, and scheduling pickups. The design focused on clarity and simplicity to accommodate users of all tech comfort levels.',
+      },
+      {
+        step: 'Validation & iteration',
+        detail:
+          'Conducted usability testing with 20 participants across two rounds, iterating on the kiosk interface and in-store signage based on feedback and observed pain points.',
       },
     ],
     outcome:
-      'Average exception resolution time reduced by 35%. Coordinators reported significantly lower cognitive load during the AM peak window.',
+      "'The store space concept was adopted as a planning reference for Officeworks store layouts. The kiosk UI concept established the interaction framework for Mailman's self-serve ambition. While the service was eventually discontinued for business reasons, the design work laid the groundwork for future self-service initiatives within the company.",
     images: [
       {
-        src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1600&auto=format&fit=crop',
+        src: '/Work/Mailman/mailman_store_iso.png',
+        caption: 'Exception triage queue — priority-first layout',
+      },
+      {
+        src: '/Work/Mailman/Mailman-storyboard.png',
+        caption: 'Exception triage queue — priority-first layout',
+      },
+      {
+        src: '/Work/Mailman/Mailman-isometric.png',
         caption: 'Exception triage queue — priority-first layout',
       },
     ],
@@ -223,7 +256,7 @@ export const projects = [
     tags: ['Interaction Design', 'Prototyping'],
     thumbnail:
       'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop',
-    accent: '#c9a96e',
+    accent: '#bd2143',
     size: 'normal',
 
     client: 'Reliance™',

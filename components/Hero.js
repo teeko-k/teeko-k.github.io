@@ -16,9 +16,9 @@ export default function Hero() {
       <div className="relative z-10 px-8 md:px-12 pb-20 md:pb-24">
         {/* Overline */}
         <div className="reveal-text reveal-text-delay-1 flex items-center gap-4 mb-6">
-          <span className="w-8 h-px bg-dimmed-ink" />
+          <span className="w-8 h-px bg-text-secondary" />
           <span
-            className="font-mono text-dimmed-ink text-sm uppercase"
+            className="font-mono text-text-secondary text-sm uppercase"
             style={{ letterSpacing: '0.3em' }}
           >
             Intro
@@ -28,12 +28,12 @@ export default function Hero() {
         {/* Main heading */}
         <h1 className="font-display w-[70%] lg:w-[80%] 2xl:w-[60%] font-light leading-none mb-8">
           <span
-            className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-6xl 2xl:text-9xl font-sans font-semibold text-bold-ink"
+            className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-6xl 2xl:text-9xl font-sans font-semibold text-text-primary"
             style={{ letterSpacing: '-0.02em' }}
           >
             {/* Capturing */}
             Ahmed Kassem is a UX Designer who makes complex things{' '}
-            <span className="reveal-text reveal-text-delay-3 text-6xl md:text-7xl lg:text-7xl 2xl:text-9xl text-accent-color font-display italic">
+            <span className="reveal-text reveal-text-delay-3 text-6xl md:text-7xl lg:text-7xl 2xl:text-9xl font-display italic text-transparent bg-clip-text bg-gradient-to-tr from-color-accent to-color-accent-secondary">
               simple.
             </span>
           </span>
@@ -50,7 +50,7 @@ export default function Hero() {
                 className="absolute top-0 w-full"
                 style={{
                   height: '40%',
-                  background: 'var(--accent-color)',
+                  background: 'var(--color-accent)',
                   animation:
                     'scrollLine 2s cubic-bezier(0.76, 0, 0.24, 1) infinite',
                 }}
@@ -58,7 +58,7 @@ export default function Hero() {
             </div>
           </div>
           <span
-            className="font-mono text-dimmed-ink text-sm"
+            className="font-mono text-text-secondary text-sm"
             style={{ letterSpacing: '0.2em' }}
           >
             Scroll

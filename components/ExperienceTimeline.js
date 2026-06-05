@@ -52,7 +52,7 @@ export default function ExperienceTimeline() {
   return (
     <div className="mt-14 mb-12">
       <span
-        className="font-mono text-xs text-dimmed-ink block mb-8"
+        className="font-mono text-xs text-text-secondary block mb-8"
         style={{ letterSpacing: '0.25em', opacity: 0.45 }}
       >
         Experience
@@ -67,7 +67,7 @@ export default function ExperienceTimeline() {
           >
             {/* Year */}
             <span
-              className="font-mono text-xs text-dimmed-ink text-right pt-1 leading-relaxed"
+              className="font-mono text-xs text-text-secondary text-right pt-1 leading-relaxed"
               style={{ opacity: 0.45, letterSpacing: '0.08em' }}
             >
               {item.years}
@@ -81,8 +81,8 @@ export default function ExperienceTimeline() {
                   width: item.current ? '10px' : '8px',
                   height: item.current ? '10px' : '8px',
                   background: item.current
-                    ? 'var(--accent-color)'
-                    : 'var(--dimmed-ink)',
+                    ? 'var(--color-accent)'
+                    : 'var(--text-secondary)',
                 }}
               />
               {i < arr.length - 1 && (
@@ -90,7 +90,8 @@ export default function ExperienceTimeline() {
                   className="flex-1 mt-1.5"
                   style={{
                     width: '1px',
-                    background: 'rgba(25,25,25,0.15)',
+                    background: 'var(--text-secondary)',
+                    opacity: 0.15,
                     minHeight: '40px',
                   }}
                 />
@@ -128,13 +129,13 @@ export default function ExperienceTimeline() {
                 {item.role}
               </p>
               <p
-                className="font-sans text-dimmed-ink text-sm font-light mt-0.5"
+                className="font-sans text-text-secondary text-sm font-light mt-0.5"
                 style={{ opacity: 0.7 }}
               >
                 {item.company}
               </p>
               <p
-                className="font-mono text-xs text-dimmed-ink mt-1"
+                className="font-mono text-xs text-text-secondary mt-1"
                 style={{ letterSpacing: '0.08em', opacity: 0.4 }}
               >
                 {item.detail}
@@ -145,11 +146,11 @@ export default function ExperienceTimeline() {
                   letterSpacing: '0.12em',
                   fontSize: '10px',
                   borderColor: item.current
-                    ? 'var(--accent-color)'
-                    : 'rgba(25,25,25,0.2)',
+                    ? 'var(--color-accent)'
+                    : 'var(--text-secondary)',
                   color: item.current
-                    ? 'var(--accent-color)'
-                    : 'var(--dimmed-ink)',
+                    ? 'var(--color-accent)'
+                    : 'var(--text-secondary)',
                   opacity: item.current ? 1 : 0.6,
                 }}
               >
