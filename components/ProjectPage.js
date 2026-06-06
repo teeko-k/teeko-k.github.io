@@ -81,7 +81,7 @@ export default function ProjectPage({ project, prev, next }) {
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <div
-        className="relative pt-24 pb-0 overflow-hidden"
+        className="relative pb-0 overflow-hidden"
         style={{ minHeight: '70vh' }}
       >
         {/* Background image */}
