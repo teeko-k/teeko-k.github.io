@@ -47,10 +47,20 @@ export default function Header({ isProjectPage = false }) {
         style={{ minHeight: 'env(safe-area-inset-top)' }}
       /> */}
       {/* Sticky Header */}
-      <header
+      {/* <header
         className={`sticky top-0 left-0 right-0 border-b z-50 flex items-center justify-between px-8 md:px-12 py-6 transition-all duration-500 ${scrolled ? 'bg-color-bg' : 'transparent'}`}
         style={{
           // paddingTop: '80px !important',
+          borderColor: scrolled ? 'rgba(25,25,25,0.3)' : 'transparent',
+        }}
+      > */}
+      <header
+        className={`fixed left-0 right-0 border-b z-50 flex items-center justify-between px-8 md:px-12 transition-all duration-500`}
+        style={{
+          top: 'calc(-1 * env(safe-area-inset-top))',
+          paddingTop: 'calc(env(safe-area-inset-top) + 1.5rem)',
+          paddingBottom: '1.5rem',
+          backgroundColor: scrolled ? 'var(--color-bg)' : 'transparent',
           borderColor: scrolled ? 'rgba(25,25,25,0.3)' : 'transparent',
         }}
       >
