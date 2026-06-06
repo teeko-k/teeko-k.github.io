@@ -49,37 +49,20 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   background-color: var(--ash-grey);
   color: var(--dimmed-ink);
   font-family: 'Gabarito', sans-serif;
   overflow-x: hidden;
-  /* padding-top: 0 !important; */
-  /* padding-top: 80px !important; Default padding for safe area on mobile */
 }
-
-/* header::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: env(safe-area-inset-top);
-  background-color: var(--color-bg);
-  z-index: 1;
-} */
 
 .group:hover .card-cta {
   opacity: 1 !important;
 }
-
-/* header {
-  padding-top: max(1.5rem, env(safe-area-inset-top)) !important;
-} */
 
 
 /* Custom scrollbar */
