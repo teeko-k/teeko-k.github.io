@@ -31,7 +31,6 @@
   --text-secondary: #505050;
   --color-accent: #251bf3;
   --color-accent-secondary: #d702bb;
-  --sat: env(safe-area-inset-top);
   /* --dummy: #f8991d; */
 }
 

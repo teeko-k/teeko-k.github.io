@@ -58,22 +58,6 @@ export default function Hero() {
             </div>
           </div>
 
-          <div
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              zIndex: 9999,
-              color: 'red',
-              fontSize: '20px',
-            }}
-          >
-            {typeof window !== 'undefined' &&
-              getComputedStyle(document.documentElement).getPropertyValue(
-                '--sat',
-              )}
-          </div>
-
           <span
             className="font-mono text-text-secondary text-sm"
             style={{ letterSpacing: '0.2em' }}
