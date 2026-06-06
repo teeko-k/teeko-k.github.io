@@ -41,15 +41,8 @@ export default function Header({ isProjectPage = false }) {
 
   return (
     <>
-      <div
-        className="fixed top-0 left-0 right-0 bg-color-bg z-50"
-        style={{ height: '59px' }}
-      />
       {/* header fixed wrapper */}
-      <header
-        className={`fixed left-0 right-0 z-50 bg-color-bg`}
-        style={{ top: '59px' }}
-      >
+      <header className={`fixed top-0 left-0 right-0 z-50 bg-color-bg`}>
         {/* This is the structural wrapper for the header content */}
         <div className={`py-6 px-8 md:px-12 flex items-center justify-between`}>
           {/* Logo */}
@@ -59,9 +52,7 @@ export default function Header({ isProjectPage = false }) {
           >
             <span
               className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-primary'} tracking-widest-3 uppercase text-xs font-sans font-normal`}
-              style={{
-                letterSpacing: '0.3em',
-              }}
+              style={{ letterSpacing: '0.3em' }}
             >
               Ahmed 'Tiko' K.
             </span>
@@ -80,14 +71,14 @@ export default function Header({ isProjectPage = false }) {
             aria-label="Toggle navigation"
           >
             <span
-              className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
+              className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'}`}
               style={{
                 width: '28px',
                 transform: isOpen ? 'translateY(7px) rotate(45deg)' : 'none',
               }}
             />
             <span
-              className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
+              className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'}`}
               style={{
                 width: '20px',
                 opacity: isOpen ? 0 : 1,
@@ -95,7 +86,7 @@ export default function Header({ isProjectPage = false }) {
               }}
             />
             <span
-              className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
+              className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'}`}
               style={{
                 width: '25px',
                 transform: isOpen ? 'translateY(-7px) rotate(-45deg)' : 'none',
