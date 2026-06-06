@@ -65,11 +65,7 @@ export default function Header({ isProjectPage = false }) {
         }}
       >
         {/* Logo */}
-        <a
-          href="/"
-          className="relative z-50 flex flex-col leading-none group"
-          style={{ opacity: isOpen ? 0 : 1, transition: 'opacity 0.3s ease' }}
-        >
+        <a href="/" className="relative z-50 flex flex-col leading-none group">
           <span
             className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-primary'} tracking-widest-3 uppercase text-xs font-sans font-normal`}
             style={{
