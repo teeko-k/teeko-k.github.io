@@ -43,8 +43,8 @@ export default function Header({ isProjectPage = false }) {
     <>
       {/* Notch fill */}
       <div
-        className="fixed top-0 left-0 right-0 z-50 bg-red-500"
-        style={{ height: 'env(safe-area-inset-top)' }}
+        className="fixed top-0 left-0 right-0 z-53 bg-red-500"
+        style={{ minHeight: 'env(safe-area-inset-top)' }}
       />
       {/* Sticky Header */}
       <header
