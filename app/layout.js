@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <head>
-        <meta name="theme-color" content="#09102a" />
+        <meta name="theme-color" content="#ff0000" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
