@@ -42,15 +42,15 @@ export default function Header({ isProjectPage = false }) {
   return (
     <>
       {/* Notch fill */}
-      {/* <div
-        className="fixed top-0 left-0 right-0 z-50 bg-color-bg"
+      <div
+        className="fixed top-0 left-0 right-0 z-50 bg-red-500"
         style={{ height: 'env(safe-area-inset-top)' }}
-      /> */}
+      />
       {/* Sticky Header */}
       <header
-        className={`fixed top-0 left-0 right-0 border-b z-50 flex items-center justify-between px-8 md:px-12 pb-6 transition-all duration-500 ${scrolled ? 'bg-color-bg' : 'transparent'}`}
+        className={`fixed top-0 left-0 right-0 border-b z-50 flex items-center justify-between px-8 md:px-12 py-6 transition-all duration-500 ${scrolled ? 'bg-color-bg' : 'transparent'}`}
         style={{
-          paddingTop: 'max(15px, env(safe-area-inset-top)) !important',
+          // paddingTop: 'max(15px, env(safe-area-inset-top)) !important',
           borderColor: scrolled ? 'rgba(25,25,25,0.3)' : 'transparent',
         }}
       >

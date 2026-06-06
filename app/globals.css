@@ -58,7 +58,7 @@ body {
   color: var(--dimmed-ink);
   font-family: 'Gabarito', sans-serif;
   overflow-x: hidden;
-  padding-top: 80px !important; /* Default padding for safe area on mobile */
+  /* padding-top: 80px !important; Default padding for safe area on mobile */
 }
 
 /* header::before {
