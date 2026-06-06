@@ -4,12 +4,12 @@
 @tailwind utilities;
 /* stylelint-enable at-rule-no-unknown */
 
-@supports (padding-top: env(safe-area-inset-top)) {
+/* @supports (padding-top: env(safe-area-inset-top)) {
   .safe-area-top {
     height: env(safe-area-inset-top);
     min-height: 59px;
   }
-}
+} */
 
 :root {
   /* --obsidian: #0a0a0a;
@@ -49,13 +49,9 @@
   box-sizing: border-box;
 }
 
-/* html {
-  scroll-behavior: smooth;
-} */
-
 body {
-  background-color: var(--ash-grey);
-  color: var(--dimmed-ink);
+  background-color: var(--color-bg);
+  color: var(--text-primary);
   font-family: 'Gabarito', sans-serif;
   overflow-x: hidden;
 }
