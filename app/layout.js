@@ -46,6 +46,10 @@ export default function RootLayout({ children }) {
         {/* rest of your head tags */}
       </head>
       <body className="bg-color-bg text-text-primary antialiased">
+        <div
+          className="fixed top-0 left-0 right-0 z-50 bg-red-500"
+          style={{ height: 'env(safe-area-inset-top)' }}
+        />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
