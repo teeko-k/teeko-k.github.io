@@ -43,7 +43,7 @@ export default function Header({ isProjectPage = false }) {
     <>
       {/* header fixed wrapper */}
       <header
-        className={`fixed left-0 right-0 z-50 bg-color-bg`}
+        className={`fixed left-0 right-0 z-50 bg-red-500`}
         style={{
           top: 0,
           marginTop: 'calc(-1 * env(safe-area-inset-top))',
