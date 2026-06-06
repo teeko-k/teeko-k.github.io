@@ -12,6 +12,7 @@ export const metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
+  viewportFit: 'cover',
 }
 
 export default function RootLayout({ children }) {
@@ -44,7 +45,10 @@ export default function RootLayout({ children }) {
         /> */}
         {/* rest of your head tags */}
       </head>
-      <body className="bg-color-bg text-text-primary antialiased">
+      <body
+        className="bg-color-bg text-text-primary antialiased"
+        suppressHydrationWarning
+      >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
