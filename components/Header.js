@@ -42,66 +42,66 @@ export default function Header({ isProjectPage = false }) {
   return (
     <>
       {/* header fixed wrapper */}
-      <header className={`fixed top-0 left-0 right-0 z-50 bg-color-bg`}>
-        {/* This is a safe area inset for the top of the screen */}
-        <div className={`pt-[env(safe-area-inset-top)]`}>
-          {/* This is the structural wrapper for the header content */}
-          <div
-            className={`py-6 px-8 md:px-12 flex items-center justify-between`}
+      <header
+        className={`fixed left-0 right-0 z-50 bg-color-bg`}
+        style={{
+          top: 0,
+          marginTop: 'calc(-1 * env(safe-area-inset-top))',
+          paddingTop: 'env(safe-area-inset-top)',
+        }}
+      >
+        {/* This is the structural wrapper for the header content */}
+        <div className={`py-6 px-8 md:px-12 flex items-center justify-between`}>
+          {/* Logo */}
+          <a
+            href="/"
+            className="relative z-50 flex flex-col leading-none group"
           >
-            {/* Logo */}
-            <a
-              href="/"
-              className="relative z-50 flex flex-col leading-none group"
+            <span
+              className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-primary'} tracking-widest-3 uppercase text-xs font-sans font-normal`}
+              style={{
+                letterSpacing: '0.3em',
+              }}
             >
-              <span
-                className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-primary'} tracking-widest-3 uppercase text-xs font-sans font-normal`}
-                style={{
-                  letterSpacing: '0.3em',
-                }}
-              >
-                Ahmed 'Tiko' K.
-              </span>
-              <span
-                className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-secondary'} text-sm font-[200] font-sans mt-0.5`}
-                style={{ letterSpacing: '0.2em', fontSize: '12px' }}
-              >
-                UX | Product Designer
-              </span>
-            </a>
+              Ahmed 'Tiko' K.
+            </span>
+            <span
+              className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-secondary'} text-sm font-[200] font-sans mt-0.5`}
+              style={{ letterSpacing: '0.2em', fontSize: '12px' }}
+            >
+              UX | Product Designer
+            </span>
+          </a>
 
-            {/* Burger Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="relative z-50 flex flex-col justify-center items-end gap-1.5 w-10 h-10 group"
-              aria-label="Toggle navigation"
-            >
-              <span
-                className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
-                style={{
-                  width: '28px',
-                  transform: isOpen ? 'translateY(7px) rotate(45deg)' : 'none',
-                }}
-              />
-              <span
-                className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
-                style={{
-                  width: '20px',
-                  opacity: isOpen ? 0 : 1,
-                  transform: isOpen ? 'scaleX(0)' : 'none',
-                }}
-              />
-              <span
-                className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
-                style={{
-                  width: '25px',
-                  transform: isOpen
-                    ? 'translateY(-7px) rotate(-45deg)'
-                    : 'none',
-                }}
-              />
-            </button>
-          </div>
+          {/* Burger Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="relative z-50 flex flex-col justify-center items-end gap-1.5 w-10 h-10 group"
+            aria-label="Toggle navigation"
+          >
+            <span
+              className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
+              style={{
+                width: '28px',
+                transform: isOpen ? 'translateY(7px) rotate(45deg)' : 'none',
+              }}
+            />
+            <span
+              className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
+              style={{
+                width: '20px',
+                opacity: isOpen ? 0 : 1,
+                transform: isOpen ? 'scaleX(0)' : 'none',
+              }}
+            />
+            <span
+              className={`burger-line block h-[2px] ${isProjectPage && !scrolled && !isOpen ? 'bg-white' : 'bg-text-secondary'} `}
+              style={{
+                width: '25px',
+                transform: isOpen ? 'translateY(-7px) rotate(-45deg)' : 'none',
+              }}
+            />
+          </button>
         </div>
       </header>
 
