@@ -45,10 +45,7 @@ export default function RootLayout({ children }) {
         /> */}
         {/* rest of your head tags */}
       </head>
-      <body
-        className="bg-color-bg text-text-primary antialiased"
-        suppressHydrationWarning
-      >
+      <body className="text-text-primary antialiased" suppressHydrationWarning>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

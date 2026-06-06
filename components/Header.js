@@ -44,7 +44,9 @@ export default function Header({ isProjectPage = false }) {
       {/* header fixed wrapper */}
       <header
         className={`fixed top-0 left-0 right-0 z-50`}
-        style={{ background: '#ff0000' }}
+        style={{
+          backgroundColor: 'var(--color-bg)',
+        }}
       >
         {/* This is the structural wrapper for the header content */}
         <div className={`py-6 px-8 md:px-12 flex items-center justify-between`}>
