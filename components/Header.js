@@ -50,7 +50,7 @@ export default function Header({ isProjectPage = false }) {
       <header
         className={`fixed top-0 left-0 right-0 border-b z-50 flex items-center justify-between px-8 md:px-12 py-6 transition-all duration-500 ${scrolled ? 'bg-color-bg' : 'transparent'}`}
         style={{
-          // paddingTop: 'max(15px, env(safe-area-inset-top)) !important',
+          paddingTop: '80px !important',
           borderColor: scrolled ? 'rgba(25,25,25,0.3)' : 'transparent',
         }}
       >
