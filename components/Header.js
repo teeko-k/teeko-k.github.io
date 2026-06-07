@@ -45,7 +45,8 @@ export default function Header({ isProjectPage = false }) {
       <header
         className={`fixed top-0 left-0 right-0 z-50`}
         style={{
-          backgroundColor: 'var(--color-bg)',
+          backgroundColor:
+            isProjectPage && !scrolled ? 'transparent' : 'var(--color-bg)',
         }}
       >
         {/* This is the structural wrapper for the header content */}
@@ -56,17 +57,28 @@ export default function Header({ isProjectPage = false }) {
             className="relative z-50 flex flex-col leading-none group"
           >
             <span
-              className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-primary'} tracking-widest-3 uppercase text-base font-sans font-bold`}
+              className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-primary'} tracking-widest-3 uppercase text-sm lg:text-base font-sans font-bold`}
               style={{ letterSpacing: '0.5em' }}
             >
-              Ahmed'<span className="text-color-accent">Tiko</span>'Kassem
+              Ahmed'
+              <span
+                style={{
+                  color:
+                    isProjectPage && !scrolled
+                      ? 'white'
+                      : 'var(--text-secondary)',
+                }}
+              >
+                Tiko
+              </span>
+              'Kassem
             </span>
-            {/* <span
+            <span
               className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-secondary'} text-sm font-[200] font-sans mt-0.5`}
               style={{ letterSpacing: '0.2em', fontSize: '12px' }}
             >
               UX | Product Designer
-            </span> */}
+            </span>
           </a>
 
           {/* Burger Button */}
