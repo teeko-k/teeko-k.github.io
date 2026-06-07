@@ -33,6 +33,7 @@ module.exports = {
         'text-secondary': 'var(--text-secondary)',
         'color-accent': 'var(--color-accent)',
         'color-accent-secondary': 'var(--color-accent-secondary)',
+        'color-gradient-stop': 'var(--gradient-stop)',
       },
       letterSpacing: {
         'widest-2': '0.25em',

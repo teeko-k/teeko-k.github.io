@@ -14,7 +14,7 @@ export default function Hero() {
 
       {/* Background Gradient */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-40 bg-gradient-to-b from-purple-600 to-color-bg to-85%"
+        className="absolute inset-0 pointer-events-none opacity-40 bg-gradient-to-b from-color-gradient-stop to-color-bg to-85%"
         // style={{
         //   background:
         //     'radial-gradient(circle at top center, var(--color-accent) 0%, var(--color-accent) 15%, var(--color-bg) 55%)',

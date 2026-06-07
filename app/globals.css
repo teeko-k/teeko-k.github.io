@@ -19,6 +19,7 @@
   --text-secondary: #505050;
   --color-accent: #251bf3;
   --color-accent-secondary: #d702bb;
+  --gradient-stop: #0ac3df;
 }
 
 .dark {
@@ -28,6 +29,7 @@
   --text-secondary: #80b8f1;
   --color-accent: #7767de;
   --color-accent-secondary: #c943b7;
+  --gradient-stop: #0a4adf;
 }
 
 * {
