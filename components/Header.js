@@ -45,8 +45,7 @@ export default function Header({ isProjectPage = false }) {
       <header
         className={`fixed top-0 left-0 right-0 z-50`}
         style={{
-          backgroundColor:
-            isProjectPage && !scrolled ? 'transparent' : 'var(--color-bg)',
+          backgroundColor: scrolled ? 'var(--color-bg)' : 'transparent',
         }}
       >
         {/* This is the structural wrapper for the header content */}

@@ -12,6 +12,15 @@ export default function Hero() {
         <div className="relative w-full h-full md:h-auto md:aspect-video opacity-80"></div>
       </div> */}
 
+      {/* Background Gradient */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-40 bg-gradient-to-b from-purple-600 to-color-bg to-85%"
+        // style={{
+        //   background:
+        //     'radial-gradient(circle at top center, var(--color-accent) 0%, var(--color-accent) 15%, var(--color-bg) 55%)',
+        // }}
+      />
+
       {/* Hero content */}
       <div className="relative z-10 px-8 md:px-12 pb-20 md:pb-24">
         {/* Overline */}

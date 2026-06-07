@@ -71,7 +71,7 @@ export default function OverlayNav({
                     {link.sub}
                   </span>
                   <span
-                    className="font-sans font-semibold text-4xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-none transition-all duration-300"
+                    className="font-display text-4xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-none transition-all duration-300"
                     style={{
                       color:
                         hoveredLink === i
