@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
         {/* rest of your head tags */}
       </head>
       <body className="text-text-primary antialiased" suppressHydrationWarning>
+        <div className="safari-sampler-override"></div>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
