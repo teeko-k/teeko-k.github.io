@@ -56,17 +56,17 @@ export default function Header({ isProjectPage = false }) {
             className="relative z-50 flex flex-col leading-none group"
           >
             <span
-              className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-primary'} tracking-widest-3 uppercase text-xs font-sans font-normal`}
-              style={{ letterSpacing: '0.3em' }}
+              className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-primary'} tracking-widest-3 uppercase text-base font-sans font-bold`}
+              style={{ letterSpacing: '0.5em' }}
             >
-              Ahmed 'Tiko' K.
+              Ahmed'<span className="text-color-accent">Tiko</span>'Kassem
             </span>
-            <span
+            {/* <span
               className={`${isProjectPage && !scrolled ? 'text-white' : 'text-text-secondary'} text-sm font-[200] font-sans mt-0.5`}
               style={{ letterSpacing: '0.2em', fontSize: '12px' }}
             >
               UX | Product Designer
-            </span>
+            </span> */}
           </a>
 
           {/* Burger Button */}

@@ -32,7 +32,7 @@ export default function Hero() {
             style={{ letterSpacing: '-0.02em' }}
           >
             {/* Capturing */}
-            Ahmed Kassem is a UX Designer who makes complex things{' '}
+            Ahmed is a UX Designer who makes complex things{' '}
             <span className="reveal-text reveal-text-delay-3 text-6xl md:text-7xl lg:text-7xl 2xl:text-9xl font-display italic text-transparent bg-clip-text bg-gradient-to-tr from-color-accent to-color-accent-secondary">
               simple.
             </span>
