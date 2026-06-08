@@ -5,12 +5,11 @@
 
 /* stylelint-enable at-rule-no-unknown */
 
-/* @supports (padding-top: env(safe-area-inset-top)) {
+@supports (padding-top: env(safe-area-inset-top)) {
   .safe-area-top {
-    height: env(safe-area-inset-top);
-    min-height: 59px;
+    padding-top: max(env(safe-area-inset-top), 1.5rem);
   }
-} */
+}
 
 :root {
   --color-bg: #f3efef;
@@ -29,7 +28,7 @@
   --text-secondary: #80b8f1;
   --color-accent: #7767de;
   --color-accent-secondary: #c943b7;
-  --gradient-stop: #0a4adf;
+  --gradient-stop: #1081eb;
 }
 
 .safari-sampler-override {

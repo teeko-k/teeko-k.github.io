@@ -22,7 +22,7 @@ export default function OverlayNav({
 
   return (
     <div
-      className={`nav-overlay fixed inset-0 z-40 bg-color-bg flex flex-col ${isOpen ? 'open' : ''}`}
+      className={`nav-overlay fixed inset-0 z-40 bg-color-bg flex flex-col safe-area-top ${isOpen ? 'open' : ''}`}
     >
       {/* Ambient hover background */}
       <div

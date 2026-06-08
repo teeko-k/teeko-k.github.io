@@ -43,7 +43,7 @@ export default function Header({ isProjectPage = false }) {
     <>
       {/* header fixed wrapper */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50`}
+        className={`fixed top-0 left-0 right-0 z-50 safe-area-top`}
         style={{
           backgroundColor: scrolled ? 'var(--color-bg)' : 'transparent',
         }}
