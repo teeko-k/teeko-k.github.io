@@ -31,7 +31,7 @@ export default function ProjectPage({ project, prev, next }) {
   }, [])
 
   return (
-    <main className="grain relative min-h-screen">
+    <main className="min-h-screen">
       {/*
         Original fixed header commented out — using shared `Header` component
         instead. The block below is preserved for reference.
