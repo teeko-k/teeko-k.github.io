@@ -43,7 +43,7 @@ export default function Header({ isProjectPage = false }) {
     <>
       {/* header fixed wrapper */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 safe-area-top`}
+        className={`fixed top-0 left-0 right-0 z-50`}
         style={{
           backgroundColor: scrolled ? 'var(--color-bg)' : 'transparent',
         }}
@@ -112,12 +112,12 @@ export default function Header({ isProjectPage = false }) {
         </div>
       </header>
 
-      <OverlayNav
+      {/* <OverlayNav
         isOpen={isOpen}
         hoveredLink={hoveredLink}
         setHoveredLink={setHoveredLink}
         onNavClick={handleNavClick}
-      />
+      /> */}
     </>
   )
 }
