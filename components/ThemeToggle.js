@@ -2,9 +2,16 @@
 
 import { useTheme } from '../context/ThemeContext'
 
-export default function ThemeToggle({ inNav = false }) {
+export default function ThemeToggle({
+  inNav = false,
+  isProjectHeader = false,
+  scrolled = false,
+}) {
   const { theme, toggleTheme } = useTheme()
   const isDark = theme === 'dark'
+
+  // On project pages before scroll, use white; otherwise normal colors
+  const isWhiteMode = isProjectHeader && !scrolled
 
   // Mobile / nav version — plain text
   if (inNav) {
@@ -22,19 +29,25 @@ export default function ThemeToggle({ inNav = false }) {
   // Header split pill — md+ only
   return (
     <div
-      className="hidden md:flex items-center rounded-full overflow-hidden border relative"
+      className="hidden md:flex items-center rounded-full overflow-hidden border relative transition-all duration-300"
       style={{
-        borderColor: 'var(--text-secondary)',
-        opacity: 0.6,
+        borderColor: isWhiteMode
+          ? 'rgba(255,255,255,0.5)'
+          : 'var(--text-secondary)',
+        opacity: 0.7,
         height: '28px',
       }}
     >
       {/* Sliding indicator */}
       <div
-        className="absolute top-0 bottom-0 w-1/2 rounded-full transition-transform duration-300 ease-in-out"
+        className="absolute top-0 bottom-0 w-1/2 rounded-full transition-all duration-300 ease-in-out"
         style={{
-          background: isDark ? '#09102a' : '#f3efef',
-          border: '1.5px solid var(--text-secondary)',
+          background: isWhiteMode
+            ? 'rgba(255,255,255,0.2)'
+            : isDark
+              ? '#09102a'
+              : '#f3efef',
+          border: `1.5px solid ${isWhiteMode ? 'rgba(255,255,255,0.5)' : 'var(--text-secondary)'}`,
           transform: isDark ? 'translateX(0%)' : 'translateX(100%)',
         }}
       />
@@ -44,7 +57,11 @@ export default function ThemeToggle({ inNav = false }) {
         onClick={() => !isDark && toggleTheme()}
         className="relative z-10 flex items-center justify-center gap-1.5 px-3 h-full transition-all duration-300"
         style={{
-          color: isDark ? 'var(--text-primary)' : 'var(--text-secondary)',
+          color: isWhiteMode
+            ? 'white'
+            : isDark
+              ? 'var(--text-primary)'
+              : 'var(--text-secondary)',
           opacity: isDark ? 1 : 0.45,
         }}
         aria-label="Dark mode"
@@ -62,7 +79,11 @@ export default function ThemeToggle({ inNav = false }) {
         onClick={() => isDark && toggleTheme()}
         className="relative z-10 flex items-center justify-center gap-1.5 px-3 h-full transition-all duration-300"
         style={{
-          color: !isDark ? 'var(--text-primary)' : 'var(--text-secondary)',
+          color: isWhiteMode
+            ? 'white'
+            : !isDark
+              ? 'var(--text-primary)'
+              : 'var(--text-secondary)',
           opacity: !isDark ? 1 : 0.45,
         }}
         aria-label="Light mode"

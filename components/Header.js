@@ -82,7 +82,7 @@ export default function Header({ isProjectPage = false }) {
 
           {/* Center — theme toggle, md+ only */}
           <div className="absolute left-1/2 -translate-x-1/2">
-            <ThemeToggle />
+            <ThemeToggle isProjectHeader={isProjectPage} scrolled={scrolled} />
           </div>
 
           {/* Burger Button */}
