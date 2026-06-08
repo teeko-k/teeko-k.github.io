@@ -48,7 +48,7 @@ export default function About() {
           {/* Image */}
           <div className="fade-section relative">
             <div
-              className="img-zoom relative overflow-hidden rounded-full"
+              className="img-zoom relative overflow-hidden rounded-full border-2 border-text-secondary"
               style={{ aspectRatio: '1/1' }}
             >
               <img

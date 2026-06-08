@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import OverlayNav from './OverlayNav'
+import ThemeToggle from './ThemeToggle'
 
 export default function Header({ isProjectPage = false }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -41,14 +42,13 @@ export default function Header({ isProjectPage = false }) {
 
   return (
     <>
-      {/* header fixed wrapper */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out`}
         style={{
-          backgroundColor: scrolled ? 'var(--color-bg)' : 'transparent',
+          background: scrolled ? 'var(--color-bg)' : 'transparent',
+          // borderColor: scrolled ? 'var(--text-secondary)' : 'transparent',
         }}
       >
-        {/* This is the structural wrapper for the header content */}
         <div className={`py-6 px-8 md:px-12 flex items-center justify-between`}>
           {/* Logo */}
           <a
@@ -79,6 +79,11 @@ export default function Header({ isProjectPage = false }) {
               UX | Product Designer
             </span>
           </a>
+
+          {/* Center — theme toggle, md+ only */}
+          <div className="absolute left-1/2 -translate-x-1/2">
+            <ThemeToggle />
+          </div>
 
           {/* Burger Button */}
           <button

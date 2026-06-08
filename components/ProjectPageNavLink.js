@@ -17,8 +17,7 @@ export default function ProjectPageNavLink({
   return (
     <Link
       href={hasProject ? `/work/${project.slug}` : fallbackHref}
-      className={`group bg-color-bg p-10 flex flex-col gap-2 ${!isPrev ? 'items-end text-right' : ''} hover:bg-white/20 transition-colors duration-300 border border-text-secondary`}
-      style={{ borderOpacity: 0.12 }}
+      className={`group bg-color-bg p-10 flex flex-col gap-2 ${!isPrev ? 'items-end text-right' : ''} hover:bg-white/20 transition-colors duration-300 rounded-lg`}
     >
       <span
         className="font-mono text-sm text-text-secondary"

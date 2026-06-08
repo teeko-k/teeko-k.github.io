@@ -303,13 +303,7 @@ export default function ProjectPage({ project, prev, next }) {
             </div>
 
             {/* Prev / Next navigation */}
-            <div
-              className="fade-section grid grid-cols-1 md:grid-cols-2 gap-4 mt-0 border"
-              style={{
-                background: 'rgba(25,25,25,0.08)',
-                borderColor: 'rgba(25,25,25,0.12)',
-              }}
-            >
+            <div className="fade-section grid grid-cols-1 md:grid-cols-2 gap-px mt-0">
               <ProjectPageNavLink type="prev" project={prev} />
               <ProjectPageNavLink
                 type="next"

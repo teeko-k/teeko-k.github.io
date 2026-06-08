@@ -3,7 +3,7 @@
 import { socialLinks } from '../data/social'
 import { navLinks } from '../data/navLinks'
 import SocialLink from './SocialLink'
-import { useTheme } from '../context/ThemeContext'
+import ThemeToggle from './ThemeToggle'
 
 const navBgColors = [
   'rgba(180, 140, 80, 0.12)',
@@ -18,8 +18,6 @@ export default function OverlayNav({
   setHoveredLink,
   onNavClick,
 }) {
-  const { theme, toggleTheme } = useTheme()
-
   return (
     <div
       className={`nav-overlay fixed inset-0 z-40 bg-color-bg flex flex-col safe-area-top ${isOpen ? 'open' : ''}`}
@@ -38,7 +36,7 @@ export default function OverlayNav({
       {/* Decorative top rule */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber to-transparent opacity-30" />
 
-      {/* Nav Content — links at bottom-left */}
+      {/* Nav Content */}
       <div className="relative z-10 flex flex-col justify-end h-full px-8 md:px-16 pb-16">
         {/* Nav number indicator */}
         <div
@@ -71,7 +69,7 @@ export default function OverlayNav({
                     {link.sub}
                   </span>
                   <span
-                    className="font-display text-4xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-none transition-all duration-300"
+                    className="font-sans font-bold text-4xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-none transition-all duration-300"
                     style={{
                       color:
                         hoveredLink === i
@@ -88,7 +86,7 @@ export default function OverlayNav({
           </ul>
         </nav>
 
-        {/* Bottom row: social + label */}
+        {/* Bottom row: social + theme toggle */}
         <div
           className="nav-social-item border-t pt-6"
           style={{ borderColor: 'rgba(25,25,25,0.3)' }}
@@ -99,15 +97,10 @@ export default function OverlayNav({
                 <SocialLink key={social.label} social={social} />
               ))}
             </div>
-
-            {/* Theme toggle */}
-            <button
-              onClick={toggleTheme}
-              className="font-sans text-sm text-text-secondary opacity-50 hover:opacity-100 transition-opacity duration-300 text-left md:text-right"
-              style={{ letterSpacing: '0.15em' }}
-            >
-              {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
-            </button>
+            {/* Mobile only — hidden on md+ since toggle is in header */}
+            <div className="md:hidden">
+              <ThemeToggle inNav />
+            </div>
           </div>
         </div>
       </div>
