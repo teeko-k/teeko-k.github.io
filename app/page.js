@@ -7,7 +7,8 @@ import Work from '@/components/Work'
 
 export default function Home() {
   return (
-    <main className="grain relative">
+    // relative
+    <main className="grain">
       <Header />
       <Hero />
       <Work />

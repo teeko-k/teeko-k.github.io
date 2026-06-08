@@ -112,12 +112,12 @@ export default function Header({ isProjectPage = false }) {
         </div>
       </header>
 
-      {/* <OverlayNav
+      <OverlayNav
         isOpen={isOpen}
         hoveredLink={hoveredLink}
         setHoveredLink={setHoveredLink}
         onNavClick={handleNavClick}
-      /> */}
+      />
     </>
   )
 }
