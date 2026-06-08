@@ -1,10 +1,11 @@
 'use client'
 
-import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import Header from './Header'
 import CaseStudyOutline from '@/components/CaseStudyOutline'
+import ProjectPageNavLink from './ProjectPageNavLink'
+import ProjectHeroSection from './ProjectHeroSection'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ProjectPage — renders a full case study from a project data object.
@@ -32,171 +33,11 @@ export default function ProjectPage({ project, prev, next }) {
 
   return (
     <main className="min-h-screen">
-      {/*
-        Original fixed header commented out — using shared `Header` component
-        instead. The block below is preserved for reference.
-
-      <div
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-12 py-6 border-b bg-color-bg"
-        style={{ borderColor: 'rgba(25,25,25,0.15)' }}
-      >
-        <Link
-          href="/#work"
-          className="flex items-center gap-3 text-text-secondary hover:text-accent-color transition-colors duration-300 font-sans text-md font-light group"
-          style={{ letterSpacing: '0.05em' }}
-        >
-          <svg
-            className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M7 16l-4-4m0 0l4-4m-4 4h18"
-            />
-          </svg>
-          Back to work
-        </Link>
-
-        <span
-          className="font-sans text-text-primary text-xs uppercase hidden md:block"
-          style={{ letterSpacing: '0.2em' }}
-        >
-          Ahmed 'Tiko' K.
-        </span>
-
-        <Link
-          href="/#contact"
-          className="font-mono text-xs text-accent-color transition-colors duration-300 hidden md:block"
-          style={{ letterSpacing: '0.2em' }}
-        >
-          Get in touch →
-        </Link>
-      </div>
-      */}
-
       <Header isProjectPage={true} />
-
-      {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <div
-        className="relative pt-24 pb-0 overflow-hidden"
-        style={{ minHeight: '70vh' }}
-      >
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <Image
-            src={project.thumbnail}
-            alt={project.title}
-            fill
-            priority
-            className="object-cover"
-            style={{ filter: 'brightness(0.45) saturate(0.6)' }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `linear-gradient(to bottom, ${project.accent} 0%, transparent 100%)`,
-            }}
-          />
-        </div>
-
-        {/* Hero content */}
-        <div
-          className="relative z-10 px-8 md:px-12 pt-16 pb-24 max-w-6xl mx-auto flex flex-col justify-end h-full"
-          style={{ minHeight: '65vh' }}
-        >
-          <div className="mt-auto">
-            <Link
-              href="/#work"
-              className="inline-flex items-center gap-3 text-white/80 hover:text-white transition-colors duration-300 font-sans text-sm font-light mb-4"
-              style={{ letterSpacing: '0.05em' }}
-            >
-              <svg
-                className="w-4 h-4 -translate-x-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M7 16l-4-4m0 0l4-4m-4 4h18"
-                />
-              </svg>
-              Back to work
-            </Link>
-
-            <h1
-              className="font-sans font-semibold text-white mb-4"
-              style={{
-                fontSize: 'clamp(2.5rem, 7vw, 5.5rem)',
-                letterSpacing: '-0.02em',
-                lineHeight: 1.0,
-              }}
-            >
-              {project.title}
-            </h1>
-
-            {/* Tags */}
-            <div className="flex items-center gap-4 mb-6 flex-wrap">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="font-mono text-sm px-3 py-1 border border-white rounded-full text-white"
-                  style={{
-                    letterSpacing: '0.15em',
-                    fontSize: '10px',
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <p
-              className="font-display italic font-light text-white"
-              style={{
-                fontSize: 'clamp(1.1rem, 3vw, 2rem)',
-                letterSpacing: '-0.01em',
-              }}
-            >
-              {project.subtitle}
-            </p>
-
-            {/* Meta row */}
-            <div className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-white/50">
-              {[
-                { label: 'Client', value: project.client },
-                { label: 'Role', value: project.role },
-                { label: 'Duration', value: project.duration },
-                { label: 'Year', value: project.year },
-              ].map((m) => (
-                <div key={m.label}>
-                  <p
-                    className="font-mono text-white text-sm mb-1"
-                    style={{ letterSpacing: '0.2em', opacity: 0.4 }}
-                  >
-                    {m.label}
-                  </p>
-                  <p
-                    className="font-sans text-white text-sm font-light"
-                    style={{ letterSpacing: '0.03em' }}
-                  >
-                    {m.value}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+      <ProjectHeroSection project={project} />
 
       {/* ── Body ─────────────────────────────────────────────────────────── */}
-      <div className="px-8 md:px-12 pb-32 max-w-6xl mx-auto">
+      <div className="px-8 md:px-12 pb-32">
         <div
           className="xl:grid xl:gap-16"
           style={{ gridTemplateColumns: '160px 1fr' }}
@@ -463,68 +304,18 @@ export default function ProjectPage({ project, prev, next }) {
 
             {/* Prev / Next navigation */}
             <div
-              className="fade-section grid grid-cols-1 md:grid-cols-2 gap-px mt-0"
-              style={{ background: 'rgba(25,25,25,0.08)' }}
+              className="fade-section grid grid-cols-1 md:grid-cols-2 gap-4 mt-0 border"
+              style={{
+                background: 'rgba(25,25,25,0.08)',
+                borderColor: 'rgba(25,25,25,0.12)',
+              }}
             >
-              {prev ? (
-                <Link
-                  href={`/work/${prev.slug}`}
-                  className="group bg-color-bg p-10 flex flex-col gap-2 hover:bg-white/20 transition-colors duration-300"
-                >
-                  <span
-                    className="font-mono text-sm text-text-secondary"
-                    style={{ letterSpacing: '0.2em', opacity: 0.35 }}
-                  >
-                    ← Previous
-                  </span>
-                  <span
-                    className="font-sans text-2xl font-semibold text-text-primary group-hover:text-accent-color transition-colors duration-300"
-                    style={{ letterSpacing: '-0.01em' }}
-                  >
-                    {prev.title}
-                  </span>
-                </Link>
-              ) : (
-                <div className="bg-color-bg p-10" />
-              )}
-
-              {next ? (
-                <Link
-                  href={`/work/${next.slug}`}
-                  className="group bg-color-bg p-10 flex flex-col gap-2 items-end text-right hover:bg-white/20 transition-colors duration-300"
-                >
-                  <span
-                    className="font-mono text-sm text-text-secondary"
-                    style={{ letterSpacing: '0.2em', opacity: 0.35 }}
-                  >
-                    Next →
-                  </span>
-                  <span
-                    className="font-sans text-2xl font-semibold text-text-primary group-hover:text-accent-color transition-colors duration-300"
-                    style={{ letterSpacing: '-0.01em' }}
-                  >
-                    {next.title}
-                  </span>
-                </Link>
-              ) : (
-                <Link
-                  href="/#work"
-                  className="group bg-color-bg p-10 flex flex-col gap-2 items-end text-right hover:bg-white/20 transition-colors duration-300"
-                >
-                  <span
-                    className="font-mono text-sm text-text-secondary"
-                    style={{ letterSpacing: '0.2em', opacity: 0.35 }}
-                  >
-                    All work →
-                  </span>
-                  <span
-                    className="font-display text-2xl font-light text-text-primary group-hover:text-accent-color transition-colors duration-300"
-                    style={{ letterSpacing: '-0.01em' }}
-                  >
-                    Back to portfolio
-                  </span>
-                </Link>
-              )}
+              <ProjectPageNavLink type="prev" project={prev} />
+              <ProjectPageNavLink
+                type="next"
+                project={next}
+                fallbackHref="/#work"
+              />
             </div>
           </div>
           {/* end main content */}

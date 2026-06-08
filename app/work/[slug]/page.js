@@ -7,7 +7,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const project = getProject(params.slug)
+  const { slug } = await params
+  const project = getProject(slug)
   if (!project) return {}
   return {
     title: `${project.title} — Ahmed Kassem`,

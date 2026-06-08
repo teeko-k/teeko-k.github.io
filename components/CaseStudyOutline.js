@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react'
 
-// Sections must match the IDs used in ProjectPage.js
-// Add id="cs-overview", id="cs-challenge", etc. to each section div in ProjectPage.js
 const SECTIONS = [
   { id: 'cs-overview', label: 'Overview' },
   { id: 'cs-challenge', label: 'The challenge' },
@@ -14,7 +12,9 @@ const SECTIONS = [
 
 export default function CaseStudyOutline() {
   const [activeId, setActiveId] = useState(null)
+  const [visible, setVisible] = useState(false)
 
+  // Track active section
   useEffect(() => {
     const observers = []
 
@@ -36,6 +36,21 @@ export default function CaseStudyOutline() {
     return () => observers.forEach((o) => o.disconnect())
   }, [])
 
+  // Show outline only when scrolled past the hero
+  useEffect(() => {
+    const handleScroll = () => {
+      const firstEl = document.getElementById(SECTIONS[0].id)
+      if (!firstEl) return
+      const rect = firstEl.getBoundingClientRect()
+      // visible once the top of the first section is above the middle of the screen
+      setVisible(rect.top < window.innerHeight * 0.6)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll() // check on mount
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const handleClick = (id) => {
     const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -43,11 +58,18 @@ export default function CaseStudyOutline() {
 
   return (
     <div className="hidden xl:block">
-      {/* Sticky container — sits in the left column of ProjectPage body */}
-      <div className="sticky top-40">
+      <div
+        className="sticky top-40"
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? 'translateY(0)' : 'translateY(12px)',
+          transition: 'opacity 0.5s ease, transform 0.5s ease',
+          pointerEvents: visible ? 'auto' : 'none',
+        }}
+      >
         {/* Label */}
         <span
-          className="font-mono text-xs text-text-secondary block mb-6"
+          className="font-sans text-xs text-text-primary block mb-6"
           style={{ letterSpacing: '0.25em', opacity: 0.45 }}
         >
           Contents
@@ -76,9 +98,7 @@ export default function CaseStudyOutline() {
                       marginLeft: isActive ? '-1.5px' : '0',
                       background: isActive
                         ? 'var(--color-accent)'
-                        : isPast
-                          ? 'var(--text-secondary)'
-                          : 'var(--text-secondary)',
+                        : 'var(--text-secondary)',
                       opacity: isActive ? 1 : isPast ? 0.5 : 0.25,
                     }}
                   />
@@ -95,18 +115,18 @@ export default function CaseStudyOutline() {
                   )}
                 </div>
 
-                {/* Spacer column (the 1px line column — unused here, dots handle it) */}
+                {/* Spacer */}
                 <div />
 
                 {/* Label */}
                 <button
                   onClick={() => handleClick(section.id)}
-                  className="text-left pb-8 transition-all duration-300 font-mono text-xs"
+                  className="text-left pb-8 transition-all duration-300 font-sans text-xs"
                   style={{
                     letterSpacing: '0.18em',
                     color: isActive
                       ? 'var(--color-accent)'
-                      : 'var(--text-secondary)',
+                      : 'var(--text-primary)',
                     opacity: isActive ? 1 : isPast ? 0.5 : 0.35,
                     cursor: 'pointer',
                     background: 'none',

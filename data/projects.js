@@ -184,7 +184,7 @@ export const projects = [
     subtitle: 'Parcel Delivery Service Design',
     year: '2018',
     tags: ['Product Design', 'Service Design', 'Interaction Design'],
-    thumbnail: '/Work/Mailman/Mailman-isometric.png',
+    thumbnail: '/Work/Mailman/Mailman-cover.png',
     accent: '#0084ff',
     size: 'normal',
 
@@ -234,15 +234,16 @@ export const projects = [
     images: [
       {
         src: '/Work/Mailman/mailman_store_iso.png',
-        caption: 'Exception triage queue — priority-first layout',
+        caption:
+          'In-store space design — guiding customers through the Mailman journey',
       },
       {
         src: '/Work/Mailman/Mailman-storyboard.png',
-        caption: 'Exception triage queue — priority-first layout',
+        caption: 'Storyboard - mapping the Kiosk interaction flow',
       },
       {
-        src: '/Work/Mailman/Mailman-isometric.png',
-        caption: 'Exception triage queue — priority-first layout',
+        src: '/Work/Mailman/Components.png',
+        caption: 'Kiosk interface — core component library',
       },
     ],
   },
