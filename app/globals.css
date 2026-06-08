@@ -5,9 +5,19 @@
 
 /* stylelint-enable at-rule-no-unknown */
 
+/* Small-screen fallback: only apply on narrower viewports so desktop isn't affected */
+@media (max-width: 1024px) {
+  .safe-area-top {
+    padding-top: 1.5rem;
+  }
+}
+
+/* When the browser supports env(safe-area-inset-top), use it (overrides fallback above).
+   This ensures iOS devices with notches/Dynamic Island get correct spacing without
+   forcing a desktop fallback. */
 @supports (padding-top: env(safe-area-inset-top)) {
   .safe-area-top {
-    padding-top: max(env(safe-area-inset-top), 1.5rem);
+    padding-top: env(safe-area-inset-top);
   }
 }
 
