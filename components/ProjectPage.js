@@ -37,7 +37,7 @@ export default function ProjectPage({ project, prev, next }) {
       <ProjectHeroSection project={project} />
 
       {/* ── Body ─────────────────────────────────────────────────────────── */}
-      <div className="px-8 md:px-12 pb-32">
+      <div className="px-8 md:px-12 2xl:max-w-[70%] 2xl:mx-auto pb-32">
         <div
           className="xl:grid xl:gap-16"
           style={{ gridTemplateColumns: '160px 1fr' }}
