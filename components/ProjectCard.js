@@ -12,11 +12,11 @@ export default function ProjectCard({ project }) {
       href={`/work/${project.slug}`}
       className="group relative flex-shrink-0 flex flex-col md:flex-row bg-color-card-bg overflow-hidden"
       style={{
-        minWidth: 'min(780px, 85vw)',
-        maxWidth: 'min(780px, 85vw)',
+        minWidth: 'min(800px, 95vw)',
+        maxWidth: 'min(800px, 95vw)',
         borderRadius: '20px',
         border: '1px solid rgba(25,25,25,0.05)',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
         padding: '10px',
         gap: '12px',
       }}

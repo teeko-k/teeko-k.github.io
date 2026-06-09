@@ -29,7 +29,15 @@ export const projects = [
     client: 'Electronic Arts',
     role: 'Senior UX Designer',
     duration: '4 years',
-    tools: ['Figma', 'Dovetail', 'Miro', 'Prototyping', 'Journey Mapping'],
+    tools: [
+      'Figma',
+      'Dovetail',
+      'Miro',
+      'Prototyping',
+      'Journey Mapping',
+      'Design Systems',
+      'Usability Testing',
+    ],
     overview:
       "At EA, I worked for four years on Frostbite - the company's proprietary game engine powering AAA titles including FIFA 23, FC 24, and the Dead Space remake. My role focused entirely on developer-facing tooling: cinematics editors, AI behaviour trees, and physics debug panels used daily by engineers and technical artists across multiple studios.",
     challenge:
@@ -179,7 +187,7 @@ export const projects = [
 
   {
     slug: 'officeworks-mailman',
-    index: '03',
+    index: '04',
     title: 'Officeworks - Mailman',
     subtitle: 'Parcel Delivery Service Design',
     year: '2018',
@@ -247,6 +255,8 @@ export const projects = [
       },
     ],
   },
+
+  // The Reliance case study is intentionally minimal to show how you can adjust the level of detail based on the project. Follow the same structure for new projects, but feel free to expand or condense sections as appropriate for the story you want to tell.
 
   {
     slug: 'reliance-sales-kit',

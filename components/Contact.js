@@ -51,24 +51,7 @@ export default function Contact() {
       ref={sectionRef}
       className="py-24 pt-0 px-8 md:px-12 relative"
     >
-      {/* Ambient separator */}
-      {/* <div
-        className="absolute top-0 left-8 right-8 md:left-12 md:right-12 h-px"
-        style={{
-          background:
-            'linear-gradient(to right, transparent, rgba(33,33,33,0.3), transparent)',
-        }}
-      /> */}
-
-      {/* Ambient glow */}
-      <div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(circle, rgba(201,169,110,0.05) 0%, transparent 70%)',
-        }}
-      />
-
+      {/* Section Content */}
       <div className="max-w-6xl mx-8 md:mx-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
           {/* Left */}

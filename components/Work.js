@@ -30,7 +30,7 @@ export default function Work() {
   const scroll = (dir) => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
-        left: dir === 'left' ? -420 : 420,
+        left: dir === 'left' ? -500 : 500,
         behavior: 'smooth',
       })
     }
@@ -67,7 +67,7 @@ export default function Work() {
         <div className="hidden md:flex items-center gap-3">
           <button
             onClick={() => scroll('left')}
-            className="w-10 h-10 border border-text-secondary flex items-center justify-center hover:border-accent-color hover:text-accent-color transition-colors duration-300 text-text-secondary"
+            className="w-10 h-10 border-[3px] border-text-secondary flex items-center justify-center hover:border-accent-color hover:text-accent-color transition-colors duration-300 text-text-secondary"
             style={{ borderRadius: '50%' }}
           >
             <svg
@@ -77,16 +77,16 @@ export default function Work() {
               viewBox="0 0 24 24"
             >
               <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M7 16l-4-4m0 0l4-4m-4 4h18"
+                d="M15 6L9 12L15 18"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
           </button>
           <button
             onClick={() => scroll('right')}
-            className="w-10 h-10 border border-text-secondary flex items-center justify-center hover:border-accent-color hover:text-accent-color transition-colors duration-300 text-text-secondary"
+            className="w-10 h-10 border-[3px] border-text-secondary flex items-center justify-center hover:border-accent-color hover:text-accent-color transition-colors duration-300 text-text-secondary"
             style={{ borderRadius: '50%' }}
           >
             <svg
@@ -95,11 +95,17 @@ export default function Work() {
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path
+              {/* <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={1.5}
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
+              /> */}
+              <path
+                d="M9 6L15 12L9 18"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
           </button>

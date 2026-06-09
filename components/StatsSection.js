@@ -1,9 +1,12 @@
 'use client'
 
 const statsData = [
-  { value: '15+', label: 'Years' },
-  { value: '200+', label: 'Projects' },
-  { value: '2', label: 'Continents' },
+  { value: 'Curiosity', label: 'Asking better questions' },
+  { value: 'Empathy', label: 'Understanding people deeply' },
+  {
+    value: 'Clarity',
+    label: 'Making complex things simple',
+  },
 ]
 
 export default function StatsSection() {

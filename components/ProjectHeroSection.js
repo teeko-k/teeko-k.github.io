@@ -2,11 +2,16 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTheme } from '../context/ThemeContext'
 
 export default function ProjectHeroSection({ project }) {
+  const { theme } = useTheme()
+  const isDarkTheme = theme === 'dark'
+
   return (
     <div
       className="relative pt-24 pb-0 overflow-hidden"
+      data-theme={theme}
       style={{ minHeight: '70vh' }}
     >
       {/* Background image */}
@@ -22,7 +27,9 @@ export default function ProjectHeroSection({ project }) {
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(to bottom, ${project.accent} 0%, transparent 100%)`,
+            background: isDarkTheme
+              ? `linear-gradient(to bottom, ${project.accent} 0%, transparent 55%, var(--color-bg) 100%)`
+              : `linear-gradient(to bottom, ${project.accent} 0%, transparent 100%)`,
           }}
         />
       </div>

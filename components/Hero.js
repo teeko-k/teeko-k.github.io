@@ -1,25 +1,15 @@
 'use client'
 
 // import Image from 'next/image'
-import { useEffect, useRef } from 'react'
+// import { useEffect, useRef } from 'react'
 
 export default function Hero() {
   // const videoRef = useRef(null)
 
   return (
     <section className="bg-color-bg relative h-screen 2xl:h-[85vh] flex flex-col justify-end overflow-hidden">
-      {/* <div className="absolute inset-0 bg-ash-grey">
-        <div className="relative w-full h-full md:h-auto md:aspect-video opacity-80"></div>
-      </div> */}
-
       {/* Background Gradient */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-40 bg-gradient-to-b from-color-gradient-stop to-color-bg to-85%"
-        // style={{
-        //   background:
-        //     'radial-gradient(circle at top center, var(--color-accent) 0%, var(--color-accent) 15%, var(--color-bg) 55%)',
-        // }}
-      />
+      <div className="absolute inset-0 pointer-events-none opacity-40 bg-gradient-to-b from-color-gradient-stop to-color-bg to-85%" />
 
       {/* Hero content */}
       <div className="relative z-10 px-8 md:px-12 pb-20 md:pb-24">
