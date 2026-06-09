@@ -45,7 +45,7 @@ export default function ThemeToggle({
           background: isWhiteMode
             ? 'rgba(255,255,255,0.2)'
             : isDark
-              ? '#09102a'
+              ? 'var(--color-bg)'
               : '#f3efef',
           border: `1.5px solid ${isWhiteMode ? 'rgba(255,255,255,0.5)' : 'var(--text-secondary)'}`,
           transform: isDark ? 'translateX(0%)' : 'translateX(100%)',

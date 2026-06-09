@@ -19,7 +19,7 @@ export const projects = [
     year: '2021 - 2025',
     tags: ['UX Design', 'Design Systems', 'Research'],
     // A 16:9 or 3:2 hero image. Replace with your actual project image.
-    thumbnail: '/Work/EA.png',
+    thumbnail: '/Work/EA/EA-cover.png',
     // accent used for the card hover line + case-study page accent
     accent: '#251bf3',
     // 'wide' cards span 2 columns on desktop; 'tall' span 2 rows
@@ -69,12 +69,18 @@ export const projects = [
     // Add as many images as you like. caption is optional.
     images: [
       {
-        src: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1600&auto=format&fit=crop',
-        caption: 'Cinematics editor — before / after workflow consolidation',
+        src: '/Work/EA/Workshop.jpg',
+        caption:
+          'Workshop — aligning global stakeholders on research insights and priorities',
       },
       {
-        src: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&auto=format&fit=crop',
-        caption: 'Component library — core token architecture',
+        src: '/Work/EA/Editor.png',
+        caption: 'Editor UI - modal redesign with new component library',
+      },
+      {
+        src: '/Work/EA/Timelines.png',
+        caption:
+          'Cinematics timeline - Mono and split view modes for different user needs',
       },
     ],
   },
