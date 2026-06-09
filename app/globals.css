@@ -24,7 +24,8 @@
 :root {
   --color-bg: #f3efef;
   --color-card-bg: #ffffff;
-  --text-primary: #07031d;
+  /* --text-primary: #07031d; */
+  --text-primary: #09102a;
   --text-secondary: #505050;
   --color-accent: #251bf3;
   --color-accent-secondary: #d702bb;
