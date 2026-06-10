@@ -151,15 +151,14 @@ export const projects = [
     subtitle: "End-to-end parcel visibility for customers & ops",
     year: "2018 - 2019",
     tags: ["UX Design", "Mobile", "Service Design"],
-    thumbnail:
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1200&auto=format&fit=crop",
-    accent: "#c9a96e",
+    thumbnail: "/Work/TrackTrace/TrackTrace-cover.png",
+    accent: "#008f66",
     size: "normal",
 
     client: "Officeworks",
     role: "UX Designer",
     duration: "6 months",
-    tools: ["Figma", "UserTesting", "Miro", "Zeplin"],
+    tools: ["Adobe XD", "Axure RP", "UserTesting", "Miro", "Zeplin"],
     overview:
       'Officeworks needed a unified parcel tracking experience spanning their web, app, and in-store channels. Customers had no real-time visibility into deliveries, leading to a high volume of "where is my order" contacts hitting the support team.',
     challenge:
@@ -185,8 +184,19 @@ export const projects = [
       "WISMO contact rate dropped 22% in the three months post-launch. Customer satisfaction scores for delivery experience increased by 14 points.",
     images: [
       {
-        src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1600&auto=format&fit=crop",
-        caption: "Mobile tracking timeline — progressive disclosure pattern",
+        src: "/Work/TrackTrace/TrackTrace-prep.png",
+        caption:
+          "Journey mapping — identifying key pain points across the delivery journey",
+      },
+      {
+        src: "/Work/TrackTrace/TrackTrace-Wireframes.png",
+        caption:
+          "Wireframes — designing a progressive tracking timeline that degrades gracefully with incomplete data",
+      },
+      {
+        src: "/Work/TrackTrace/TrackTrace-screens.png",
+        caption:
+          "Screens — implementing the progressive tracking timeline - building the design system components and interaction patterns for the final UI",
       },
     ],
   },
@@ -268,7 +278,7 @@ export const projects = [
   {
     slug: "reliance-sales-kit",
     index: "05",
-    title: "Reliance™ — Interactive Sales Kit",
+    title: "Reliance™ - Interactive Sales Kit",
     subtitle: "Pitch-ready product experience for field sales teams",
     year: "2017",
     tags: ["Interaction Design", "Prototyping"],
