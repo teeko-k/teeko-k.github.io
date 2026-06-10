@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import { useEffect, useRef, useState } from 'react'
-import { socialLinks } from '../data/social'
-import SocialLink from './SocialLink'
+import { useEffect, useRef, useState } from "react"
+import { socialLinks } from "../data/social"
+import SocialLink from "./SocialLink"
 
 export default function Contact() {
   const sectionRef = useRef(null)
@@ -13,7 +13,7 @@ export default function Contact() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
+            entry.target.classList.add("visible")
           }
         })
       },
@@ -22,7 +22,7 @@ export default function Contact() {
 
     const section = sectionRef.current
     if (section) {
-      const els = section.querySelectorAll('.fade-section')
+      const els = section.querySelectorAll(".fade-section")
       els.forEach((el) => observer.observe(el))
     }
 
@@ -30,19 +30,19 @@ export default function Contact() {
   }, [])
 
   const inputStyle = (name) => ({
-    background: 'transparent',
-    border: 'none',
-    borderBottom: `1px solid ${focused === name ? 'var(--text-primary)' : 'var(--text-secondary)'}`,
+    background: "transparent",
+    border: "none",
+    borderBottom: `1px solid ${focused === name ? "var(--text-primary)" : "var(--text-secondary)"}`,
     borderRadius: 0,
-    color: 'var(--text-secondary)',
-    outline: 'none',
-    width: '100%',
-    padding: '12px 0',
-    fontFamily: 'DM Sans, sans-serif',
-    fontSize: '15px',
+    color: "var(--text-secondary)",
+    outline: "none",
+    width: "100%",
+    padding: "12px 0",
+    fontFamily: "DM Sans, sans-serif",
+    fontSize: "15px",
     fontWeight: 300,
-    transition: 'border-color 0.3s ease',
-    letterSpacing: '0.03em',
+    transition: "border-color 0.3s ease",
+    letterSpacing: "0.03em",
   })
 
   return (
@@ -58,20 +58,20 @@ export default function Contact() {
           <div className="fade-section">
             <span
               className="font-mono text-text-secondary text-sm"
-              style={{ letterSpacing: '0.3em' }}
+              style={{ letterSpacing: "0.3em" }}
             >
               04 — Contact
             </span>
             <h2
               className="font-sans font-semibold text-5xl 2xl:text-6xl mt-4 mb-8 text-text-primary leading-tight"
-              style={{ letterSpacing: '-0.01em' }}
+              style={{ letterSpacing: "-0.01em" }}
             >
               Get in touch
             </h2>
 
             <p
               className="font-sans text-text-secondary font-light leading-relaxed mb-10"
-              style={{ fontSize: '18px', maxWidth: '380px' }}
+              style={{ fontSize: "18px", maxWidth: "380px" }}
             >
               If you're working on an interesting problem, building something
               new, or simply want to connect, I'd be happy to hear from you.
@@ -91,51 +91,51 @@ export default function Contact() {
               className="space-y-8 max-w-md"
               onSubmit={(e) => {
                 e.preventDefault()
-                alert('Message sent! (wire up your endpoint)')
+                alert("Message sent! (wire up your endpoint)")
               }}
             >
               <div>
                 <label
                   className="font-mono text-text-secondary text-xs block mb-3"
-                  style={{ letterSpacing: '0.2em', opacity: 0.5 }}
+                  style={{ letterSpacing: "0.2em", opacity: 0.5 }}
                 >
                   Name
                 </label>
                 <input
                   type="text"
                   placeholder="Your name"
-                  style={inputStyle('name')}
-                  onFocus={() => setFocused('name')}
+                  style={inputStyle("name")}
+                  onFocus={() => setFocused("name")}
                   onBlur={() => setFocused(null)}
                 />
               </div>
               <div>
                 <label
                   className="font-mono text-text-secondary text-xs block mb-3"
-                  style={{ letterSpacing: '0.2em', opacity: 0.5 }}
+                  style={{ letterSpacing: "0.2em", opacity: 0.5 }}
                 >
                   Email
                 </label>
                 <input
                   type="email"
                   placeholder="your@email.com"
-                  style={inputStyle('email')}
-                  onFocus={() => setFocused('email')}
+                  style={inputStyle("email")}
+                  onFocus={() => setFocused("email")}
                   onBlur={() => setFocused(null)}
                 />
               </div>
               <div>
                 <label
                   className="font-mono text-text-secondary text-xs block mb-3"
-                  style={{ letterSpacing: '0.2em', opacity: 0.5 }}
+                  style={{ letterSpacing: "0.2em", opacity: 0.5 }}
                 >
                   Message
                 </label>
                 <textarea
                   rows={4}
                   placeholder="Tell me about your project..."
-                  style={{ ...inputStyle('message'), resize: 'none' }}
-                  onFocus={() => setFocused('message')}
+                  style={{ ...inputStyle("message"), resize: "none" }}
+                  onFocus={() => setFocused("message")}
                   onBlur={() => setFocused(null)}
                 />
               </div>
@@ -145,7 +145,7 @@ export default function Contact() {
               >
                 <span
                   className="font-mono text-xs text-color-accent group-hover:text-color-accent transition-colors duration-300"
-                  style={{ letterSpacing: '0.25em' }}
+                  style={{ letterSpacing: "0.25em" }}
                 >
                   Send message
                 </span>

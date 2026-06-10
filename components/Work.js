@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import Link from 'next/link'
-import { useEffect, useRef } from 'react'
-import { projects } from '@/data/projects'
-import ProjectCard from './ProjectCard'
+import Link from "next/link"
+import { useEffect, useRef } from "react"
+import { projects } from "@/data/projects"
+import ProjectCard from "./ProjectCard"
 
 export default function Work() {
   const sectionRef = useRef(null)
@@ -13,7 +13,7 @@ export default function Work() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add('visible')
+          if (entry.isIntersecting) entry.target.classList.add("visible")
         })
       },
       { threshold: 0.08 },
@@ -21,7 +21,7 @@ export default function Work() {
     const section = sectionRef.current
     if (section) {
       section
-        .querySelectorAll('.fade-section')
+        .querySelectorAll(".fade-section")
         .forEach((el) => observer.observe(el))
     }
     return () => observer.disconnect()
@@ -30,8 +30,8 @@ export default function Work() {
   const scroll = (dir) => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
-        left: dir === 'left' ? -500 : 500,
-        behavior: 'smooth',
+        left: dir === "left" ? -500 : 500,
+        behavior: "smooth",
       })
     }
   }
@@ -50,14 +50,14 @@ export default function Work() {
       <div className="fade-section flex items-end justify-between mb-12 px-8 md:px-12">
         <div>
           <span
-            className="font-mono text-text-secondary text-sm"
-            style={{ letterSpacing: '0.3em' }}
+            className="font-mono text-text-secondary text-sm 2xl:text-lg"
+            style={{ letterSpacing: "0.3em" }}
           >
-            01 — Work
+            02 — Work
           </span>
           <h2
             className="font-sans font-semibold text-5xl 2xl:text-6xl mt-3 text-text-primary"
-            style={{ letterSpacing: '-0.02em' }}
+            style={{ letterSpacing: "-0.02em" }}
           >
             Featured Projects
           </h2>
@@ -66,9 +66,9 @@ export default function Work() {
         {/* Arrow controls */}
         <div className="hidden md:flex items-center gap-3">
           <button
-            onClick={() => scroll('left')}
+            onClick={() => scroll("left")}
             className="w-10 h-10 border-[3px] border-text-secondary flex items-center justify-center hover:border-accent-color hover:text-accent-color transition-colors duration-300 text-text-secondary"
-            style={{ borderRadius: '50%' }}
+            style={{ borderRadius: "50%" }}
           >
             <svg
               className="w-4 h-4"
@@ -85,9 +85,9 @@ export default function Work() {
             </svg>
           </button>
           <button
-            onClick={() => scroll('right')}
+            onClick={() => scroll("right")}
             className="w-10 h-10 border-[3px] border-text-secondary flex items-center justify-center hover:border-accent-color hover:text-accent-color transition-colors duration-300 text-text-secondary"
-            style={{ borderRadius: '50%' }}
+            style={{ borderRadius: "50%" }}
           >
             <svg
               className="w-4 h-4"
@@ -117,14 +117,14 @@ export default function Work() {
         ref={carouselRef}
         className="flex flex-col md:flex-row md:overflow-x-auto"
         style={{
-          gap: '24px',
-          paddingLeft: '32px',
-          paddingRight: '32px',
-          paddingTop: '20px',
-          paddingBottom: '40px',
-          scrollbarWidth: 'none',
-          msOverflowStyle: 'none',
-          WebkitOverflowScrolling: 'touch',
+          gap: "24px",
+          paddingLeft: "32px",
+          paddingRight: "32px",
+          paddingTop: "20px",
+          paddingBottom: "40px",
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          WebkitOverflowScrolling: "touch",
         }}
       >
         {projects.map((project, i) => (
