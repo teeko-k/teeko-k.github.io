@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <section
-      className="bg-color-bg relative h-screen lg:h-[80vh] 2xl:h-[65vh] flex flex-col justify-end 2xl:justify-center overflow-hidden"
+      className="bg-color-bg relative h-screen lg:h-[80vh] 2xl:h-[75vh] flex flex-col justify-end 2xl:justify-center overflow-hidden"
       id="home"
     >
       {/* Background Gradient */}
