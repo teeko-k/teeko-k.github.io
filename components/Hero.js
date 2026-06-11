@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <section
-      className="bg-color-bg relative h-screen lg:h-[80vh] flex flex-col justify-end 2xl:justify-center overflow-hidden"
+      className="bg-color-bg relative h-screen lg:h-[80vh] 2xl:h-[65%] flex flex-col justify-end 2xl:justify-center overflow-hidden"
       id="home"
     >
       {/* Background Gradient */}
@@ -31,7 +31,7 @@ export default function Hero() {
         {/* Main heading */}
         <h1 className="font-display w-full md:w-[80%] 2xl:w-[70%] leading-none mb-8">
           <span
-            className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-6xl 2xl:text-9xl font-sans font-semibold text-text-primary"
+            className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-6xl 2xl:text-8xl font-sans font-semibold text-text-primary"
             style={{ letterSpacing: "-0.02em" }}
           >
             Ahmed is a UX Designer who makes complex things{" "}
