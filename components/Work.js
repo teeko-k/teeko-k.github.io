@@ -37,7 +37,7 @@ export default function Work() {
   }
 
   return (
-    <section id="work" ref={sectionRef} className="py-24 relative">
+    <section id="work" ref={sectionRef} className="pb-24 relative">
       {/* Ambient separator */}
       {/* <div
         className="absolute top-0 left-8 right-8 md:left-12 md:right-12 h-px"

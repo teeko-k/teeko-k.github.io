@@ -49,13 +49,22 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-24 pt-0 px-8 md:px-12 relative"
+      className="pb-24 pt-0 px-8 md:px-12 relative"
     >
-      {/* Section Content */}
-      <div className="max-w-6xl mx-8 md:mx-12">
+      {/* Bordered box */}
+      <div
+        className="fade-section p-8 md:p-16"
+        style={{
+          border: "1px solid var(--text-secondary)",
+          opacity: 1,
+          borderRadius: "2px",
+          borderColor:
+            "color-mix(in srgb, var(--text-secondary) 40%, transparent)",
+        }}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
           {/* Left */}
-          <div className="fade-section">
+          <div>
             <span
               className="font-mono text-text-secondary text-sm"
               style={{ letterSpacing: "0.3em" }}
@@ -86,7 +95,7 @@ export default function Contact() {
           </div>
 
           {/* Right — Form */}
-          <div className="fade-section">
+          <div>
             <form
               className="space-y-8 max-w-md"
               onSubmit={(e) => {

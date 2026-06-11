@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { useState } from 'react'
+import Link from "next/link"
+import Image from "next/image"
+import { useState } from "react"
 
 export default function ProjectCard({ project }) {
   const [imgError, setImgError] = useState(false)
@@ -12,13 +12,13 @@ export default function ProjectCard({ project }) {
       href={`/work/${project.slug}`}
       className="group relative flex-shrink-0 flex flex-col md:flex-row bg-color-card-bg overflow-hidden"
       style={{
-        minWidth: 'min(800px, 85vw)',
-        maxWidth: 'min(800px, 85vw)',
-        borderRadius: '20px',
-        border: '1px solid rgba(25,25,25,0.05)',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-        padding: '10px',
-        gap: '12px',
+        minWidth: "min(960px, 85vw)",
+        maxWidth: "min(960px, 85vw)",
+        borderRadius: "20px",
+        border: "1px solid rgba(25,25,25,0.05)",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+        padding: "10px",
+        gap: "12px",
       }}
     >
       {/* Image — full width mobile, 60% desktop */}
@@ -26,10 +26,10 @@ export default function ProjectCard({ project }) {
         className="relative overflow-hidden flex-shrink-0"
         style={{
           background: project.accent,
-          borderRadius: '12px',
-          aspectRatio: '3/2',
-          flex: '0 0 60%',
-          maxWidth: '100%',
+          borderRadius: "12px",
+          aspectRatio: "3/2",
+          flex: "0 0 60%",
+          maxWidth: "100%",
         }}
       >
         {!imgError && (
@@ -38,19 +38,19 @@ export default function ProjectCard({ project }) {
             alt={project.title}
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-            style={{ filter: 'brightness(0.82) saturate(0.85)' }}
+            style={{ filter: "brightness(0.82) saturate(0.85)" }}
             onError={() => setImgError(true)}
           />
         )}
         <span
           className="absolute top-3 left-3 font-mono text-xs"
-          style={{ letterSpacing: '0.2em', color: '#fff', opacity: 0.6 }}
+          style={{ letterSpacing: "0.2em", color: "#fff", opacity: 0.6 }}
         >
           {project.index}
         </span>
         <span
           className="absolute top-3 right-3 font-mono text-xs"
-          style={{ letterSpacing: '0.2em', color: '#fff', opacity: 0.6 }}
+          style={{ letterSpacing: "0.2em", color: "#fff", opacity: 0.6 }}
         >
           {project.year}
         </span>
@@ -60,7 +60,7 @@ export default function ProjectCard({ project }) {
       <div className="flex flex-col flex-1 px-2 pt-2 pb-1">
         <h3
           className="font-sans font-semibold text-xl text-text-primary group-hover:text-color-accent transition-colors duration-300 mb-1"
-          style={{ letterSpacing: '-0.01em' }}
+          style={{ letterSpacing: "-0.01em" }}
         >
           {project.title}
         </h3>
@@ -83,8 +83,8 @@ export default function ProjectCard({ project }) {
               key={tag}
               className="font-sans text-xs text-text-secondary px-3 py-1 border rounded-full"
               style={{
-                letterSpacing: '0.05em',
-                borderColor: 'rgba(128, 184, 241, 0.3)',
+                letterSpacing: "0.05em",
+                borderColor: "rgba(128, 184, 241, 0.3)",
               }}
             >
               {tag}
@@ -94,17 +94,17 @@ export default function ProjectCard({ project }) {
 
         <div
           className="flex items-center justify-between pt-3 border-t"
-          style={{ borderColor: 'rgba(128, 184, 241, 0.3)' }}
+          style={{ borderColor: "rgba(128, 184, 241, 0.3)" }}
         >
           <span
             className="font-mono text-xs text-text-secondary"
-            style={{ letterSpacing: '0.15em', opacity: 0.6 }}
+            style={{ letterSpacing: "0.15em", opacity: 0.6 }}
           >
             {project.client}
           </span>
           <span
             className="flex items-center gap-1.5 font-mono text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            style={{ color: project.accent, letterSpacing: '0.12em' }}
+            style={{ color: project.accent, letterSpacing: "0.12em" }}
           >
             View
             <svg

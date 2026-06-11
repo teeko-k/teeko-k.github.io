@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import { useEffect, useRef } from 'react'
-import ExperienceTimeline from './ExperienceTimeline'
-import StatsSection from './StatsSection'
+import { useEffect, useRef } from "react"
+import ExperienceTimeline from "./ExperienceTimeline"
+import StatsSection from "./StatsSection"
 
 export default function About() {
   const sectionRef = useRef(null)
@@ -12,7 +12,7 @@ export default function About() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
+            entry.target.classList.add("visible")
           }
         })
       },
@@ -21,7 +21,7 @@ export default function About() {
 
     const section = sectionRef.current
     if (section) {
-      const els = section.querySelectorAll('.fade-section')
+      const els = section.querySelectorAll(".fade-section")
       els.forEach((el) => observer.observe(el))
     }
 
@@ -32,7 +32,7 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-24 px-8 md:px-12 relative 2xl:py-24 2xl:flex 2xl:items-center"
+      className="pb-24 px-8 md:px-12 relative 2xl:flex 2xl:items-center"
     >
       {/* Ambient separator */}
       {/* <div
@@ -49,13 +49,13 @@ export default function About() {
           <div className="fade-section relative">
             <div
               className="img-zoom relative overflow-hidden rounded-full border-2 border-text-secondary"
-              style={{ aspectRatio: '1/1' }}
+              style={{ aspectRatio: "1/1" }}
             >
               <img
                 src="/images/AboutImg.JPEG"
                 alt="Portrait"
                 className="w-full h-full object-cover"
-                style={{ filter: 'brightness(0.8) saturate(0.85)' }}
+                style={{ filter: "brightness(0.8) saturate(0.85)" }}
               />
               {/* Corner accent removed for circular frame */}
             </div>
@@ -81,20 +81,20 @@ export default function About() {
           <div className="fade-section md:col-start-2 md:row-start-1">
             <span
               className="font-mono text-text-secondary text-sm"
-              style={{ letterSpacing: '0.3em' }}
+              style={{ letterSpacing: "0.3em" }}
             >
               03 — About
             </span>
             <h2
               className="font-sans font-semibold text-4xl md:text-5xl 2xl:text-6xl mt-4 mb-8 text-text-primary leading-tight"
-              style={{ letterSpacing: '-0.01em' }}
+              style={{ letterSpacing: "-0.01em" }}
             >
               Designing for people, not screens
             </h2>
 
             <div
               className="space-y-5 font-sans text-text-secondary font-light leading-relaxed"
-              style={{ fontSize: '18px' }}
+              style={{ fontSize: "18px" }}
             >
               <p>
                 My interest in design started long before I ever called myself a
