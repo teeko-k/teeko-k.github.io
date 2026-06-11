@@ -98,7 +98,7 @@ export default function ProjectPage({ project, prev, next }) {
             {project.images?.[0] && (
               <div className="fade-section py-12">
                 <div
-                  className="relative overflow-hidden"
+                  className="relative rounded-xl overflow-hidden"
                   style={{ aspectRatio: "16/9" }}
                 >
                   <Image
@@ -170,7 +170,7 @@ export default function ProjectPage({ project, prev, next }) {
             {project.images?.[1] && (
               <div className="fade-section py-12">
                 <div
-                  className="relative overflow-hidden"
+                  className="relative rounded-xl overflow-hidden"
                   style={{ aspectRatio: "16/9" }}
                 >
                   <Image
@@ -196,7 +196,7 @@ export default function ProjectPage({ project, prev, next }) {
             {project.images?.[2] && (
               <div className="fade-section py-12">
                 <div
-                  className="relative overflow-hidden"
+                  className="relative rounded-xl overflow-hidden"
                   style={{ aspectRatio: "16/9" }}
                 >
                   <Image
