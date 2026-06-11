@@ -83,10 +83,7 @@ export default function About() {
               Designing for people, not screens
             </h2>
 
-            <div
-              className="space-y-5 font-sans text-text-secondary font-light leading-relaxed"
-              style={{ fontSize: "18px" }}
-            >
+            <div className="space-y-5 font-sans text-text-secondary leading-relaxed text-lg">
               <p>
                 My interest in design started long before I ever called myself a
                 designer.

@@ -57,7 +57,7 @@ export default function Contact() {
         style={{
           border: "1px solid var(--text-secondary)",
           opacity: 1,
-          borderRadius: "2px",
+          borderRadius: "20px",
           borderColor:
             "color-mix(in srgb, var(--text-secondary) 40%, transparent)",
         }}
