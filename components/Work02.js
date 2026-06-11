@@ -26,7 +26,11 @@ export default function Work02() {
   }, [])
 
   return (
-    <section id="work" ref={sectionRef} className="pb-24 relative">
+    <section
+      id="work"
+      ref={sectionRef}
+      className="pb-24 2xl:max-w-[70%] 2xl:mx-auto relative"
+    >
       {/* Section header */}
       <div className="fade-section mb-4 px-8 md:px-12">
         <span
