@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
 
         {/* Main heading */}
-        <h1 className="font-display w-full md:w-[55%] 2xl:w-[65%] leading-none mb-8">
+        <h1 className="font-display w-[80%] md:w-[55%] 2xl:w-[65%] leading-none mb-8">
           <span
             className="reveal-text reveal-text-delay-2 block text-5xl md:text-6xl lg:text-6xl 2xl:text-8xl font-sans font-bold text-text-primary"
             style={{ letterSpacing: "-0.02em" }}
