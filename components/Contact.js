@@ -49,7 +49,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="pb-24 pt-0 px-8 md:px-12 relative"
+      className="pb-24 pt-0 px-8 md:px-12 xl:max-w-[1280px] xl:mx-auto relative"
     >
       {/* Bordered box */}
       <div
