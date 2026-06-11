@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 
-export default function ProjectCard02({ project, index }) {
+export default function ProjectCard({ project, index }) {
   const [imgError, setImgError] = useState(false)
   const isEven = index % 2 === 0
 
@@ -77,10 +77,18 @@ export default function ProjectCard02({ project, index }) {
 
         {/* Subtitle */}
         <p
-          className="font-sans text-text-secondary font-light leading-relaxed mb-8"
+          className="font-sans text-text-secondary font-light leading-relaxed mb-6"
           style={{ fontSize: "16px", maxWidth: "380px" }}
         >
           {project.subtitle}
+        </p>
+
+        {/* Overview */}
+        <p
+          className="font-sans text-text-secondary font-light leading-relaxed mb-8"
+          style={{ fontSize: "15px", maxWidth: "420px", opacity: 0.75 }}
+        >
+          {project.overview}
         </p>
 
         {/* Tags */}

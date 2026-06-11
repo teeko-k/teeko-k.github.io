@@ -282,24 +282,23 @@ export const projects = [
     subtitle: "Pitch-ready product experience for field sales teams",
     year: "2017",
     tags: ["Interaction Design", "Prototyping"],
-    thumbnail:
-      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop",
+    thumbnail: "/Work/Reliance/Rliance-cover.png",
     accent: "#bd2143",
     size: "normal",
 
     client: "Reliance™",
     role: "UX/UI Designer",
     duration: "3 months",
-    tools: ["Figma", "Adobe XD", "After Effects", "Keynote"],
+    tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe After Effects"],
     overview:
-      "Reliance needed an interactive sales tool their field reps could use on tablets during client meetings — replacing static PDFs and disconnected slide decks with a guided, interactive product experience.",
+      "Reliance needed an interactive sales tool their field reps could use on tablets during client meetings, replacing static PDFs and disconnected slide decks with a guided, interactive product experience.",
     challenge:
       "The existing sales materials were outdated the moment they were printed. Reps were improvising presentations on the fly, creating an inconsistent brand experience and losing deals on avoidable objections.",
     approach: [
       {
         step: "Sales journey mapping",
         detail:
-          "Interviewed 12 field reps and 4 sales managers to map the actual pitch flow — where clients engaged, where they dropped off, and what questions repeatedly derailed deals.",
+          "Interviewed 12 field reps and 4 sales managers to map the actual pitch flow: where clients engaged, where they dropped off, and what questions repeatedly derailed deals.",
       },
       {
         step: "Interactive prototype",
