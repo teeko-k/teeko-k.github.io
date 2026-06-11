@@ -77,7 +77,7 @@ export default function ProjectCard({ project, index }) {
 
         {/* Subtitle */}
         <p
-          className="font-sans text-text-secondary font-light leading-relaxed mb-6"
+          className="font-sans text-text-primary leading-relaxed mb-6 italic"
           style={{ fontSize: "16px", maxWidth: "380px" }}
         >
           {project.subtitle}
@@ -85,8 +85,8 @@ export default function ProjectCard({ project, index }) {
 
         {/* Overview */}
         <p
-          className="font-sans text-text-secondary font-light leading-relaxed mb-8"
-          style={{ fontSize: "15px", maxWidth: "420px", opacity: 0.75 }}
+          className="font-sans text-text-secondary leading-relaxed text-lg mb-8"
+          style={{ maxWidth: "500px", opacity: 0.75 }}
         >
           {project.overview}
         </p>
