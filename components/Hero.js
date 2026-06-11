@@ -42,13 +42,7 @@ export default function Hero() {
         </h1>
 
         {/* Scroll indicator */}
-        <div className="reveal-text reveal-text-delay-3 flex flex-col items-center gap-2">
-          <span
-            className="font-sans text-text-secondary text-sm 2xl:text-lg"
-            style={{ letterSpacing: "0.2em" }}
-          >
-            Scroll
-          </span>
+        <div className="reveal-text reveal-text-delay-3 flex flex-row items-center gap-4">
           <div
             className="w-[2px] h-12 relative overflow-hidden"
             style={{ background: "rgba(99,99,99,0.15)" }}
@@ -63,6 +57,12 @@ export default function Hero() {
               }}
             />
           </div>
+          <span
+            className="font-sans text-text-secondary text-sm 2xl:text-lg"
+            style={{ letterSpacing: "0.2em", opacity: "0.5" }}
+          >
+            Scroll
+          </span>
         </div>
       </div>
 
