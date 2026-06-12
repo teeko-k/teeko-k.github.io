@@ -14,7 +14,7 @@ export const projects = [
     index: "01",
 
     // ── card (landing) ───────────────────────────────────────────────────────
-    title: "EA - Frostbite Engine",
+    title: "Frostbite Engine",
     subtitle: "Developer tooling for AAA game development",
     year: "2021 - 2025",
     tags: ["UX Design", "Design Systems", "Research"],
@@ -89,7 +89,7 @@ export const projects = [
   {
     slug: "intravel-mobile-app",
     index: "03",
-    title: "Intravel Flight Booking - Mobile App",
+    title: "Travel Planning App",
     subtitle: "Mobile App design",
     year: "2019",
     tags: ["Product Design", "Mobile", "Interaction Design"],
@@ -147,7 +147,7 @@ export const projects = [
   {
     slug: "officeworks-track-trace",
     index: "02",
-    title: "Officeworks - Track & Trace",
+    title: "Officeworks Track & Trace",
     subtitle: "End-to-end parcel visibility for customers & ops",
     year: "2018 - 2019",
     tags: ["UX Design", "Mobile", "Service Design"],
@@ -205,7 +205,7 @@ export const projects = [
   {
     slug: "officeworks-mailman",
     index: "04",
-    title: "Officeworks - Mailman",
+    title: "Mailman",
     subtitle: "Parcel Delivery Service Design",
     year: "2018",
     tags: ["Product Design", "Service Design", "Interaction Design"],
@@ -278,12 +278,12 @@ export const projects = [
   {
     slug: "reliance-sales-kit",
     index: "05",
-    title: "Reliance™ - Interactive Sales Kit",
+    title: "Interactive Sales Kit",
     subtitle: "Pitch-ready product experience for field sales teams",
     year: "2017",
     tags: ["Interaction Design", "Prototyping"],
-    thumbnail: "/Work/Reliance/Rliance-cover.png",
-    accent: "#bd2143",
+    thumbnail: "/Work/Reliance/Reliance-cover.png",
+    accent: "#a10b2b",
     size: "normal",
 
     client: "Reliance™",
@@ -291,9 +291,9 @@ export const projects = [
     duration: "3 months",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe After Effects"],
     overview:
-      "Reliance needed an interactive sales tool their field reps could use on tablets during client meetings, replacing static PDFs and disconnected slide decks with a guided, interactive product experience.",
+      "Reliance, a Canadian home heating and cooling provider with over 50 years in business, ran their entire sales process on paper brochures, printed spec sheets, and spreadsheets. Reps were improvising during client meetings, updates couldn't keep pace with new product lines, and the experience varied wildly depending on who was presenting. Reliance needed a tablet sales app that gave reps one consistent, interactive tool to guide every client conversation.",
     challenge:
-      "The existing sales materials were outdated the moment they were printed. Reps were improvising presentations on the fly, creating an inconsistent brand experience and losing deals on avoidable objections.",
+      "The brief arrived with the project already behind schedule and the requirements unclear. The existing materials were outdated the moment they were printed, and reps had built their own workarounds, creating an inconsistent brand experience and losing deals on objections that better information could have solved. As the lead designer, I ran client workshops to clarify scope, mapped the gap between the paper-based process reps actually used and the digital experience we needed to design, and worked from client-provided materials to get a usable MVP defined fast.To help reps explain complex heating and cooling systems during a pitch, I also produced custom animations in After Effects, giving the sales conversation a level of visual clarity static diagrams couldn't match.",
     approach: [
       {
         step: "Sales journey mapping",
@@ -303,14 +303,22 @@ export const projects = [
       {
         step: "Interactive prototype",
         detail:
-          "Designed a non-linear presentation tool that let reps navigate to any product area based on client interest, with animated product demos and configurable spec sheets embedded inline.",
+          "Designed a non-linear presentation tool that let reps navigate to any product area based on client interest, with custom After Effects animations and configurable spec sheets embedded inline.",
       },
     ],
     outcome:
-      "Deployed to 60 field reps. Sales management reported a measurable improvement in pitch consistency and a reduction in deal cycle length for mid-market accounts.",
+      "Deployed to field reps, the app increased sales by 40% and cut sales preparation time by 60%. Reps described it as a major step up from paper, and sales management saw a clear gain in pitch consistency across the team along with a shorter deal cycle for mid-market accounts.",
     images: [
       {
-        src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&auto=format&fit=crop",
+        src: "/Work/Reliance/EarlySketches.png",
+        caption: "Product configurator — embedded inline in the pitch flow",
+      },
+      {
+        src: "/Work/Reliance/SystemDiagram.png",
+        caption: "Product configurator — embedded inline in the pitch flow",
+      },
+      {
+        src: "/Work/Reliance/EngineeringAnalysis.png",
         caption: "Product configurator — embedded inline in the pitch flow",
       },
     ],

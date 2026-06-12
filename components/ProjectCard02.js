@@ -77,8 +77,8 @@ export default function ProjectCard({ project, index }) {
 
         {/* Subtitle */}
         <p
-          className="font-sans text-text-primary leading-relaxed mb-6 italic"
-          style={{ fontSize: "16px", maxWidth: "380px" }}
+          className="font-display text-text-primary leading-relaxed mb-6 italic"
+          style={{ fontSize: "20px", maxWidth: "380px" }}
         >
           {project.subtitle}
         </p>
