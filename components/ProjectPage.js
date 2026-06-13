@@ -1,11 +1,11 @@
 "use client"
 
-import Image from "next/image"
 import { useEffect, useRef } from "react"
 import Header from "./Header"
 import CaseStudyOutline from "@/components/CaseStudyOutline"
-import ProjectPageNavLink from "./ProjectPageNavLink"
-import ProjectHeroSection from "./ProjectHeroSection"
+import ProjectPageNavLink from "@/components/ProjectPageNavLink"
+import ProjectHeroSection from "@/components/ProjectHeroSection"
+import CaseStudyImage from "@/components/CaseStudyImage"
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ProjectPage — renders a full case study from a project data object.
@@ -96,28 +96,11 @@ export default function ProjectPage({ project, prev, next }) {
 
             {/* First image (if exists) */}
             {project.images?.[0] && (
-              <div className="fade-section py-12">
-                <div
-                  className="relative rounded-xl overflow-hidden"
-                  style={{ aspectRatio: "16/9" }}
-                >
-                  <Image
-                    src={project.images[0].src}
-                    alt={project.images[0].caption ?? project.title}
-                    fill
-                    className="object-cover"
-                    style={{ filter: "brightness(0.85) saturate(0.85)" }}
-                  />
-                </div>
-                {project.images[0].caption && (
-                  <p
-                    className="font-sans italic text-text-secondary text-sm mt-4"
-                    style={{ letterSpacing: "0.15em", opacity: 0.4 }}
-                  >
-                    ↑ {project.images[0].caption}
-                  </p>
-                )}
-              </div>
+              <CaseStudyImage
+                image={project.images[0]}
+                alt={project.title}
+                dim
+              />
             )}
 
             {/* Approach */}
@@ -166,83 +149,10 @@ export default function ProjectPage({ project, prev, next }) {
               </div>
             )}
 
-            {/* Second image (if exists) */}
-            {project.images?.[1] && (
-              <div className="fade-section py-12">
-                <div
-                  className="relative rounded-xl overflow-hidden"
-                  style={{ aspectRatio: "16/9" }}
-                >
-                  <Image
-                    src={project.images[1].src}
-                    alt={project.images[1].caption ?? project.title}
-                    fill
-                    className="object-cover"
-                    // style={{ filter: 'brightness(0.85) saturate(0.85)' }}
-                  />
-                </div>
-                {project.images[1].caption && (
-                  <p
-                    className="font-sans italic text-text-secondary text-sm mt-4"
-                    style={{ letterSpacing: "0.15em", opacity: 0.4 }}
-                  >
-                    ↑ {project.images[1].caption}
-                  </p>
-                )}
-              </div>
-            )}
-
-            {/* Third image (if exists) */}
-            {project.images?.[2] && (
-              <div className="fade-section py-12">
-                <div
-                  className="relative rounded-xl overflow-hidden"
-                  style={{ aspectRatio: "16/9" }}
-                >
-                  <Image
-                    src={project.images[2].src}
-                    alt={project.images[2].caption ?? project.title}
-                    fill
-                    className="object-cover"
-                    style={{ filter: "brightness(0.85) saturate(0.85)" }}
-                  />
-                </div>
-                {project.images[2].caption && (
-                  <p
-                    className="font-sans italic text-text-secondary text-sm mt-4"
-                    style={{ letterSpacing: "0.15em", opacity: 0.4 }}
-                  >
-                    ↑ {project.images[2].caption}
-                  </p>
-                )}
-              </div>
-            )}
-
-            {/* Fourth image (if exists) */}
-            {project.images?.[3] && (
-              <div className="fade-section py-12">
-                <div
-                  className="relative overflow-hidden"
-                  style={{ aspectRatio: "16/9" }}
-                >
-                  <Image
-                    src={project.images[3].src}
-                    alt={project.images[3].caption ?? project.title}
-                    fill
-                    className="object-cover"
-                    style={{ filter: "brightness(0.85) saturate(0.85)" }}
-                  />
-                </div>
-                {project.images[3].caption && (
-                  <p
-                    className="font-sans italic text-text-secondary text-sm mt-4"
-                    style={{ letterSpacing: "0.15em", opacity: 0.4 }}
-                  >
-                    ↑ {project.images[3].caption}
-                  </p>
-                )}
-              </div>
-            )}
+            {/* Remaining images — render before Outcome */}
+            {project.images?.slice(1).map((image, i) => (
+              <CaseStudyImage key={i} image={image} alt={project.title} />
+            ))}
 
             {/* Outcome */}
             <div

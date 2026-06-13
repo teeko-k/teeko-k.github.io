@@ -14,10 +14,10 @@ export const projects = [
     index: "01",
 
     // ── card (landing) ───────────────────────────────────────────────────────
-    title: "Frostbite Engine",
+    title: "EA - Frostbite Engine",
     subtitle: "Developer tooling for AAA game development",
     year: "2021 - 2025",
-    tags: ["UX Design", "Design Systems", "Research"],
+    tags: ["UX Design", "Design Systems", "Research", "WPF"],
     // A 16:9 or 3:2 hero image. Replace with your actual project image.
     thumbnail: "/Work/EA/EA-cover.png",
     // accent used for the card hover line + case-study page accent
@@ -39,33 +39,33 @@ export const projects = [
       "Usability Testing",
     ],
     overview:
-      "At EA, I worked for four years on Frostbite - the company's proprietary game engine powering AAA titles including FIFA 23, FC 24, and the Dead Space remake. My role focused entirely on developer-facing tooling: cinematics editors, AI behaviour trees, and physics debug panels used daily by engineers and technical artists across multiple studios.",
+      "At EA, I worked for four years on Frostbite, the company’s proprietary game engine powering AAA titles including FIFA 23, FC 24, and the Dead Space remake. My role focused on developer-facing tooling, including cinematics editors, AI behaviour trees, and physics debug panels used daily by engineers and technical artists across multiple studios.",
     challenge:
-      "The tools were extraordinarily powerful, but each had been built in isolation over a decade. Workflows were inconsistent across modules, onboarding new developers took weeks, and there was no shared design language connecting the hundreds of individual panels and editors. Expert users resisted simplification; they needed power, not hand-holding.",
+      "The tools were highly powerful but developed in isolation over more than a decade. As a result, workflows were inconsistent across modules, onboarding new developers often took weeks, and there was no shared design language connecting hundreds of individual panels and editors. At the same time, expert users resisted simplification; they required flexibility and depth, not abstraction.",
     approach: [
       {
         step: "Discovery",
         detail:
-          "Ran structured research sessions with developers across three studios — Melbourne, Stockholm, and LA. Used contextual inquiry and diary studies to map actual workflows rather than stated ones.",
+          "Conducted research sessions and interviews with developers across multiple disciplines in studios in Melbourne, Stockholm, and Los Angeles. By observing and discussing their day-to-day workflows, I mapped user journeys, identified key pain points and opportunities, and developed personas that informed subsequent design decisions.",
       },
       {
-        step: "Heuristic audit",
+        step: "Audit",
         detail:
-          "Catalogued 200+ UI patterns across Frostbite's tools, identifying the 40 that caused the most friction. Prioritised by frequency × severity × fix cost.",
+          "Audited existing and emerging UI components within the Frostbite design system, reviewing both implemented and development-ready elements to ensure consistency with the Frostbite design language. Where discrepancies were identified, I prioritised them based on frequency, severity, and estimated cost of change to guide remediation efforts.",
       },
       {
         step: "Design system",
         detail:
-          "Built Frostbite's first cross-tool component library in Figma, covering tokens, layout grids, and interaction patterns. Contributed the spec to the engineering component library.",
+          "Contributed to the evolution of the Frostbite design system as part of the UX team, developing and refining components within the Figma library, including design tokens, layout grids, and interaction patterns. Partnered with engineering by providing detailed specifications to support accurate implementation within the component library.",
       },
       {
         step: "Validation",
         detail:
-          "Ran usability testing with developers using prototype builds. Iterated on 6 core workflows across two rounds before shipping.",
+          "Conducted usability testing sessions with developers using interactive prototypes to validate key workflows. Insights from testing were synthesised and used to iterate on core flows across two rounds of refinement prior to release.",
       },
     ],
     outcome:
-      "This work dramatically decreased the onboarding friction for new developers and increased the efficiency of critical workflows. But it wasn’t just about features; it helped establish UX as a true strategic partner in the development pipeline of Frostbite. Moving design from a finishing step to an integral part of how tools get built.",
+      "Across my contributions at EA Frostbite, I helped reduce onboarding friction for new developers and improve the efficiency of key workflows. More broadly, my work supported the establishment of UX as a strategic partner within the development pipeline, shifting its role from a finishing step to a core part of how tools and systems are designed and built.",
     // Add as many images as you like. caption is optional.
     images: [
       {
@@ -92,7 +92,7 @@ export const projects = [
     title: "Travel Planning App",
     subtitle: "Mobile App design",
     year: "2019",
-    tags: ["Product Design", "Mobile", "Interaction Design"],
+    tags: ["Product Design", "Mobile App", "Interaction Design"],
     thumbnail: "/Work/Intravel/Intravel-cover.png",
     accent: "#f8991d",
     size: "normal",
@@ -102,28 +102,28 @@ export const projects = [
     duration: "2 months",
     tools: ["Adobe XD", "Figma", "Miro", "Invision", "Adobe Illustrator"],
     overview:
-      "Intravel is a mobile-first travel planning app designed for independent travellers who want to build itineraries collaboratively, discover local experiences, and manage bookings in one place — without the rigidity of packaged tours.",
+      "Intravel is a mobile-first travel planning concept designed to help users plan trips collaboratively, discover local experiences, and manage itineraries in one place. The experience was primarily designed for business users looking to plan trips and generate travel quotes, alongside secondary independent traveller personas.",
     challenge:
-      "The market is crowded with generic itinerary tools. Intravel needed a product that felt like a local friend rather than a travel agent — opinionated, contextual, and genuinely useful when you're already on the ground.",
+      "The brief was to define a clear product direction for a travel planning and quotation experience in a highly competitive space. The focus was not on feature breadth, but on establishing a coherent information architecture, interaction model, and visual language that could support structured trip planning and quote generation while remaining flexible for different user needs.",
     approach: [
       {
         step: "Persona development",
         detail:
-          "Defined three core traveller archetypes through diary studies and interviews: the Solo Planner, the Group Coordinator, and the Spontaneous Explorer. Each needed a different entry point.",
+          "Defined key user types through interviews and exploratory research, with a primary focus on business users responsible for planning trips and requesting travel quotes, alongside secondary personas such as the Solo Planner and Group Coordinator. These personas informed how different workflows and entry points were structured.",
       },
       {
-        step: "Prototype & test",
+        step: "Information Architecture & Prototyping",
         detail:
-          "Built 3 divergent prototypes exploring different IA models. Ran moderated testing with 15 participants across two rounds to narrow down the winning direction.",
+          "Explored multiple information architecture models through three divergent low- to mid-fidelity prototypes. Conducted moderated usability testing with 15 participants across two rounds to evaluate navigation clarity, workflow efficiency, and quote-building logic, refining toward the most intuitive structure.",
       },
       {
         step: "Visual design",
         detail:
-          "Designed a warm, editorial visual language with a card-based layout that surfaces context (weather, local events, transport) alongside itinerary steps.",
+          "Developed a warm, editorial visual language supported by a card-based system that surfaced contextual information such as weather, local events, and transport alongside itinerary and quote-building steps. The design balanced clarity for structured planning with a sense of exploration.",
       },
     ],
     outcome:
-      "Delivered a production-ready design system and prototype to the engineering team. App launched on iOS with a 4.6 App Store rating in its first month.",
+      "Delivered a concept-level prototype and defined product direction for the Intravel travel planning and quotation experience. The work was well received by the client, with positive feedback on the clarity of the information architecture and the strength of the proposed design language and interaction model.",
     images: [
       {
         src: "/Work/Intravel/Wireframes.png",
@@ -148,7 +148,7 @@ export const projects = [
     slug: "officeworks-track-trace",
     index: "02",
     title: "Officeworks Track & Trace",
-    subtitle: "End-to-end parcel visibility for customers & ops",
+    subtitle: "End-to-end parcel visibility for customers and operations",
     year: "2018 - 2019",
     tags: ["UX Design", "Mobile", "Service Design"],
     thumbnail: "/Work/TrackTrace/TrackTrace-cover.png",
@@ -159,29 +159,33 @@ export const projects = [
     role: "UX Designer",
     duration: "6 months",
     tools: ["Adobe XD", "Axure RP", "UserTesting", "Miro", "Zeplin"],
+
     overview:
-      'Officeworks needed a unified parcel tracking experience spanning their web, app, and in-store channels. Customers had no real-time visibility into deliveries, leading to a high volume of "where is my order" contacts hitting the support team.',
+      "Officeworks needed a unified parcel tracking experience across web, mobile, and in-store channels. Customers had limited visibility into delivery status, which resulted in frequent customer support enquiries around order tracking.",
+
     challenge:
-      "Multiple carriers, inconsistent tracking data formats, and a legacy order management system made a clean front-end experience technically constrained. The solution had to work across all carriers without waiting for backend unification.",
+      "The experience was constrained by multiple carriers, inconsistent tracking data formats, and a legacy order management system. The key challenge was to design a coherent customer-facing experience without relying on backend unification.",
+
     approach: [
       {
         step: "Research",
         detail:
-          'Interviewed 20 customers and 8 support agents to map the full "WISMO" journey. Identified the 3 moments of highest anxiety: post-purchase silence, unexpected delays, and missed deliveries.',
+          "Interviewed 20 customers and 8 support agents to map the end-to-end WISMO journey. Identified three key moments of high user anxiety: post-purchase silence, unexpected delays, and missed deliveries.",
       },
       {
         step: "Service blueprint",
         detail:
-          "Mapped front-stage interactions against back-stage systems to identify where data gaps lived and what could be surfaced immediately vs. required engineering work.",
+          "Mapped front stage interactions against back stage systems to identify where data was available, where gaps existed, and what could be surfaced in the short term versus requiring longer term engineering work.",
       },
       {
         step: "Interaction design",
         detail:
-          "Designed a progressive tracking timeline that degrades gracefully when carrier data is incomplete — showing estimated windows rather than blank states.",
+          "Designed a progressive tracking timeline that gracefully handled incomplete carrier data by surfacing estimated delivery windows rather than empty or broken states.",
       },
     ],
+
     outcome:
-      "WISMO contact rate dropped 22% in the three months post-launch. Customer satisfaction scores for delivery experience increased by 14 points.",
+      "Customer support contact rates related to delivery tracking decreased by 30% in the first three months after launch, improving overall delivery experience efficiency and reducing operational load on support teams.",
     images: [
       {
         src: "/Work/TrackTrace/TrackTrace-prep.png",
@@ -274,7 +278,6 @@ export const projects = [
   },
 
   // The Reliance case study is intentionally minimal to show how you can adjust the level of detail based on the project. Follow the same structure for new projects, but feel free to expand or condense sections as appropriate for the story you want to tell.
-
   {
     slug: "reliance-sales-kit",
     index: "05",
@@ -290,24 +293,38 @@ export const projects = [
     role: "UX/UI Designer",
     duration: "3 months",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe After Effects"],
+
     overview:
-      "Reliance, a Canadian home heating and cooling provider with over 50 years in business, ran their entire sales process on paper brochures, printed spec sheets, and spreadsheets. Reps were improvising during client meetings, updates couldn't keep pace with new product lines, and the experience varied wildly depending on who was presenting. Reliance needed a tablet sales app that gave reps one consistent, interactive tool to guide every client conversation.",
+      "Reliance, a Canadian home heating and cooling provider with over 50 years in operation, relied on paper brochures, printed spec sheets, and spreadsheets to support its sales process. Sales representatives often improvised during client meetings, and inconsistencies in materials led to an uneven sales experience across the team. The goal was to design a tablet-based sales tool that provided a consistent, interactive experience to support client conversations.",
+
     challenge:
-      "The brief arrived with the project already behind schedule and the requirements unclear. The existing materials were outdated the moment they were printed, and reps had built their own workarounds, creating an inconsistent brand experience and losing deals on objections that better information could have solved. As the lead designer, I ran client workshops to clarify scope, mapped the gap between the paper-based process reps actually used and the digital experience we needed to design, and worked from client-provided materials to get a usable MVP defined fast.To help reps explain complex heating and cooling systems during a pitch, I also produced custom animations in After Effects, giving the sales conversation a level of visual clarity static diagrams couldn't match.",
+      "The project began under tight timelines with unclear requirements and outdated source materials. Sales representatives had already developed informal workarounds, resulting in inconsistent messaging and missed opportunities during client pitches. The challenge was to quickly define a usable MVP by aligning stakeholders, understanding the real sales workflow, and translating fragmented materials into a structured digital experience.",
+
     approach: [
       {
         step: "Sales journey mapping",
         detail:
-          "Interviewed 12 field reps and 4 sales managers to map the actual pitch flow: where clients engaged, where they dropped off, and what questions repeatedly derailed deals.",
+          "Interviewed 12 field sales representatives and 4 sales managers to map the real-world pitch flow, identifying key moments of engagement, drop-off points, and recurring objections that impacted deal conversion.",
       },
       {
-        step: "Interactive prototype",
+        step: "Information architecture and wireframing",
         detail:
-          "Designed a non-linear presentation tool that let reps navigate to any product area based on client interest, with custom After Effects animations and configurable spec sheets embedded inline.",
+          "Synthesised complex product and sales information into a structured, navigable tablet experience. Explored IA models that allowed non-linear navigation based on client interest, while introducing light gamification elements to provide a sense of progression and payoff during the sales pitch.",
+      },
+      {
+        step: "Visual design",
+        detail:
+          "Designed a clean, minimal interface focused on clarity and hierarchy of information. Due to outdated vendor-provided materials, I recreated mechanical system components as custom illustrations and SVG assets to ensure visual consistency across the experience.",
+      },
+      {
+        step: "Implementation and motion design",
+        detail:
+          "Produced supporting animations in After Effects to clarify complex system behaviour during the sales pitch, enhancing comprehension where static diagrams were insufficient.",
       },
     ],
+
     outcome:
-      "Deployed to field reps, the app increased sales by 40% and cut sales preparation time by 60%. Reps described it as a major step up from paper, and sales management saw a clear gain in pitch consistency across the team along with a shorter deal cycle for mid-market accounts.",
+      "The interactive sales kit was deployed to field teams, resulting in a 40% increase in sales performance and a 60% reduction in sales preparation time. Sales teams reported improved consistency across pitches and a smoother overall client experience, with shorter deal cycles for mid-market accounts.",
     images: [
       {
         src: "/Work/Reliance/EarlySketches.png",
