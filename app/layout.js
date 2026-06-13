@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/context/ThemeContext"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import "./globals.css"
 
 // title and description are used in the head of the document, and are important for SEO and accessibility. They provide information about the content of the page and help search engines understand what the page is about. The title is typically displayed in the browser tab and search engine results, while the description may be shown in search engine snippets.
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
       <body className="text-text-primary antialiased" suppressHydrationWarning>
         <div className="safari-sampler-override"></div>
         <ThemeProvider>{children}</ThemeProvider>
+        <GoogleAnalytics gaId="G-C167W1E85Y" />
       </body>
     </html>
   )
