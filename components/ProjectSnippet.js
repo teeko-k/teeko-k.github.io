@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 
-export default function ProjectCard({ project, index }) {
+export default function ProjectSnippet({ project, index }) {
   const [imgError, setImgError] = useState(false)
   const isEven = index % 2 === 0
 

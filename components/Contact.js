@@ -1,8 +1,9 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { socialLinks } from "../data/social"
-import SocialLink from "./SocialLink"
+import { socialLinks } from "@/data/social"
+import SocialLink from "@/components/SocialLink"
+import Overline from "@/components/Overline"
 
 export default function Contact() {
   const sectionRef = useRef(null)
@@ -65,12 +66,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
           {/* Left */}
           <div>
-            <span
-              className="font-mono text-text-secondary text-sm"
-              style={{ letterSpacing: "0.3em" }}
-            >
-              04 — Contact
-            </span>
+            <Overline sectionTitle={"04. Contact"} />
             <h2
               className="font-sans font-semibold text-5xl 2xl:text-6xl mt-4 mb-8 text-text-primary leading-tight"
               style={{ letterSpacing: "-0.01em" }}

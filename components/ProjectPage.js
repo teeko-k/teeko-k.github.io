@@ -111,7 +111,7 @@ export default function ProjectPage({ project, prev, next }) {
                 </div>
                 {project.images[0].caption && (
                   <p
-                    className="font-mono text-text-secondary text-sm mt-4"
+                    className="font-sans italic text-text-secondary text-sm mt-4"
                     style={{ letterSpacing: "0.15em", opacity: 0.4 }}
                   >
                     ↑ {project.images[0].caption}
@@ -183,7 +183,7 @@ export default function ProjectPage({ project, prev, next }) {
                 </div>
                 {project.images[1].caption && (
                   <p
-                    className="font-mono text-text-secondary text-sm mt-4"
+                    className="font-sans italic text-text-secondary text-sm mt-4"
                     style={{ letterSpacing: "0.15em", opacity: 0.4 }}
                   >
                     ↑ {project.images[1].caption}
@@ -209,7 +209,7 @@ export default function ProjectPage({ project, prev, next }) {
                 </div>
                 {project.images[2].caption && (
                   <p
-                    className="font-mono text-text-secondary text-sm mt-4"
+                    className="font-sans italic text-text-secondary text-sm mt-4"
                     style={{ letterSpacing: "0.15em", opacity: 0.4 }}
                   >
                     ↑ {project.images[2].caption}
@@ -235,7 +235,7 @@ export default function ProjectPage({ project, prev, next }) {
                 </div>
                 {project.images[3].caption && (
                   <p
-                    className="font-mono text-text-secondary text-sm mt-4"
+                    className="font-sans italic text-text-secondary text-sm mt-4"
                     style={{ letterSpacing: "0.15em", opacity: 0.4 }}
                   >
                     ↑ {project.images[3].caption}

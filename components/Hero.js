@@ -1,5 +1,7 @@
 "use client"
 
+import Overline from "@/components/Overline"
+
 // import Image from 'next/image'
 // import { useEffect, useRef } from 'react'
 
@@ -17,16 +19,7 @@ export default function Hero() {
       {/* Hero content */}
       <div className="relative z-10 px-8 md:px-12 pb-20 md:pb-24 2xl:max-w-[70%] 2xl:mx-auto flex flex-col items-start text-left">
         {/* Overline */}
-        <div className="reveal-text reveal-text-delay-1 flex md:items-center gap-4 mb-6">
-          {/* <span className="hidden md:visible w-8 h-px bg-text-secondary" /> */}
-          <span
-            className="font-mono text-text-secondary text-sm 2xl:text-lg"
-            style={{ letterSpacing: "0.3em" }}
-          >
-            01 - Intro
-          </span>
-          {/* <span className="w-8 h-px bg-text-secondary" /> */}
-        </div>
+        <Overline sectionTitle={"01. Intro"} />
 
         {/* Main heading */}
         <h1 className="font-display w-[80%] md:w-[55%] 2xl:w-[65%] leading-none mb-8">

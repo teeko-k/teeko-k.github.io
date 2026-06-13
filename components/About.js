@@ -1,8 +1,9 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import ExperienceTimeline from "./ExperienceTimeline"
-import StatsSection from "./StatsSection"
+import ExperienceTimeline from "@/components/ExperienceTimeline"
+import StatsSection from "@/components/StatsSection"
+import Overline from "@/components/Overline"
 
 export default function About() {
   const sectionRef = useRef(null)
@@ -50,32 +51,19 @@ export default function About() {
               />
               {/* Corner accent removed for circular frame */}
             </div>
-
-            {/* Floating label */}
-            {/* <div
-              className="absolute -bottom-6 -right-0 md:-right-6 bg-charcoal border px-6 py-4"
-              style={{ borderColor: 'rgba(201,169,110,0.2)' }}
-            >
-              <p
-                className="font-mono text-text-secondary text-xs"
-                style={{ letterSpacing: '0.2em' }}
-              >
-                Visual Artist
-              </p>
-              <p className="font-sans text-text-secondary text-xs mt-1 font-light">
-                Available for commissions
-              </p>
-            </div> */}
           </div>
 
           {/* Text */}
           <div className="fade-section md:col-start-2 md:row-start-1">
-            <span
+            {/* <span
               className="font-mono text-text-secondary text-sm"
               style={{ letterSpacing: "0.3em" }}
             >
               03 — About
-            </span>
+            </span> */}
+
+            <Overline sectionTitle={"03. About"} />
+
             <h2
               className="font-sans font-semibold text-4xl md:text-5xl 2xl:text-6xl mt-4 mb-8 text-text-primary leading-tight"
               style={{ letterSpacing: "-0.01em" }}

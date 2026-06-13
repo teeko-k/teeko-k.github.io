@@ -2,7 +2,8 @@
 
 import { useEffect, useRef } from "react"
 import { projects } from "@/data/projects"
-import ProjectCard02 from "./ProjectCard02"
+import ProjectSnippet from "@/components/ProjectSnippet"
+import Overline from "@/components/Overline"
 
 export default function Work02() {
   const sectionRef = useRef(null)
@@ -33,12 +34,14 @@ export default function Work02() {
     >
       {/* Section header */}
       <div className="fade-section mb-4 px-8 md:px-12">
-        <span
-          className="font-mono text-text-secondary text-sm 2xl:text-lg"
+        {/* <span
+          className="font-sans font-bold text-text-secondary text-sm 2xl:text-lg"
           style={{ letterSpacing: "0.3em" }}
         >
-          02 — Work
-        </span>
+          02. Work
+        </span> */}
+
+        <Overline sectionTitle={"02. Work"} />
         <h2
           className="font-sans font-semibold text-5xl 2xl:text-6xl mt-3 text-text-primary"
           style={{ letterSpacing: "-0.02em" }}
@@ -50,7 +53,7 @@ export default function Work02() {
       {/* Cards */}
       <div className="px-8 md:px-12">
         {projects.map((project, i) => (
-          <ProjectCard02 key={project.slug} project={project} index={i} />
+          <ProjectSnippet key={project.slug} project={project} index={i} />
         ))}
       </div>
     </section>
