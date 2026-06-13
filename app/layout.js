@@ -11,7 +11,7 @@ export const metadata = {
     description:
       "UX/UI | Product design | Designing products people actually want to use, across every screen and every scale",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-    url: "https://teeko-k.github.io",
+    url: "https://ahmedtaherkassem.com",
   },
   icons: {
     icon: "/favicon.ico",
