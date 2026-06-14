@@ -4,6 +4,23 @@ import { useEffect, useRef } from "react"
 import { socialLinks } from "@/data/social"
 import SocialLink from "@/components/SocialLink"
 import Overline from "@/components/Overline"
+import BorderButton from "@/components/BorderButton"
+
+const EmailIcon = () => (
+  <svg
+    width="15"
+    height="15"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+    <polyline points="22,6 12,13 2,6" />
+  </svg>
+)
 
 export default function Contact() {
   const sectionRef = useRef(null)
@@ -65,19 +82,11 @@ export default function Contact() {
               new, or simply want to connect, I'd be happy to hear from you.
             </p>
 
-            {/* Email CTA */}
-            <a
+            <BorderButton
               href="mailto:a.taher.kassem@gmail.com"
-              className="inline-flex items-center gap-4 group transition-all duration-300"
-            >
-              <span
-                className="font-mono text-sm text-color-accent group-hover:text-color-accent transition-colors duration-300"
-                style={{ letterSpacing: "0.25em" }}
-              >
-                Send me an email
-              </span>
-              <span className="block w-12 h-px bg-text-primary group-hover:w-20 group-hover:bg-color-accent transition-all duration-500" />
-            </a>
+              label="Send me an email"
+              icon={<EmailIcon />}
+            />
           </div>
 
           {/* Right — Socials */}

@@ -3,27 +3,44 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import BorderButton from "@/components/BorderButton"
+
+const ArrowIcon = () => (
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M5 12h14M12 5l7 7-7 7" />
+  </svg>
+)
 
 export default function ProjectSnippet({ project, index }) {
   const [imgError, setImgError] = useState(false)
   const isEven = index % 2 === 0
 
   return (
-    <Link
-      href={`/work/${project.slug}`}
-      className={`fade-section group flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-12 md:gap-16 items-center py-16 md:py-24 border-b`}
+    <div
+      className={`fade-section flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-12 md:gap-16 items-center py-16 md:py-24 border-b`}
       style={{
         borderColor:
           "color-mix(in srgb, var(--text-secondary) 15%, transparent)",
       }}
     >
       {/* Image */}
-      <div
-        className="relative overflow-hidden flex-shrink-0 w-full md:w-[55%]"
+      <Link
+        href={`/work/${project.slug}`}
+        className="relative overflow-hidden flex-shrink-0 w-full md:w-[55%] group"
         style={{
           background: project.accent,
           borderRadius: "12px",
           aspectRatio: "16/10",
+          display: "block",
         }}
       >
         {!imgError && (
@@ -36,7 +53,6 @@ export default function ProjectSnippet({ project, index }) {
             onError={() => setImgError(true)}
           />
         )}
-        {/* Index + year */}
         <span
           className="absolute top-4 left-4 font-mono text-xs"
           style={{ letterSpacing: "0.2em", color: "#fff", opacity: 0.6 }}
@@ -49,7 +65,7 @@ export default function ProjectSnippet({ project, index }) {
         >
           {project.year}
         </span>
-      </div>
+      </Link>
 
       {/* Content */}
       <div className="flex flex-col flex-1">
@@ -63,7 +79,7 @@ export default function ProjectSnippet({ project, index }) {
 
         {/* Title */}
         <h3
-          className="font-sans font-semibold text-3xl md:text-4xl text-text-primary group-hover:text-color-accent transition-colors duration-300 mb-4 leading-tight"
+          className="font-sans font-semibold text-3xl md:text-4xl text-text-primary mb-4 leading-tight"
           style={{ letterSpacing: "-0.02em" }}
         >
           {project.title}
@@ -71,7 +87,7 @@ export default function ProjectSnippet({ project, index }) {
 
         {/* Accent bar */}
         <div
-          className="w-8 h-[3px] rounded-full mb-6 transition-all duration-500 group-hover:w-14"
+          className="w-8 h-[3px] rounded-full mb-6"
           style={{ backgroundColor: project.accent }}
         />
 
@@ -109,16 +125,14 @@ export default function ProjectSnippet({ project, index }) {
         </div>
 
         {/* CTA */}
-        <div className="flex items-center gap-4">
-          <span
-            className="font-mono text-xs text-color-accent"
-            style={{ letterSpacing: "0.2em" }}
-          >
-            View case study
-          </span>
-          <span className="block h-px bg-color-accent transition-all duration-500 group-hover:w-12 w-6" />
+        <div>
+          <BorderButton
+            href={`/work/${project.slug}`}
+            label="View case study"
+            icon={<ArrowIcon />}
+          />
         </div>
       </div>
-    </Link>
+    </div>
   )
 }

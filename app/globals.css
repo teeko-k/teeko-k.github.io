@@ -291,3 +291,22 @@ body {
 .line-expand.visible {
   width: 100%;
 }
+
+/* Border Button styles */
+
+/* BorderButton sweep animation */
+.sweep-btn {
+  transition: border-color 0.3s ease;
+}
+.sweep-btn:hover {
+  border-color: var(--color-accent);
+}
+.sweep-btn:hover .sweep-fill {
+  transform: translateX(0);
+}
+.sweep-btn:hover .sweep-content {
+  color: var(--color-bg);
+}
+.sweep-content {
+  transition: color 0.3s ease;
+}
