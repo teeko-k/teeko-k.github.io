@@ -10,7 +10,9 @@ export default function BurgerButton({
       className="relative z-50 lg:flex lg:flex-row lg:gap-3"
       aria-label="Toggle navigation"
     >
-      <p className="hidden lg:block font-sans font-bold text-text-secondary">
+      <p
+        className={`hidden lg:block font-sans font-bold ${isProjectPage && !scrolled && !isOpen ? "text-text-primary" : "text-text-secondary"}`}
+      >
         menu
       </p>
       <div className="flex flex-col justify-center items-end gap-1.5 group">
