@@ -5,7 +5,7 @@ export default function Footer() {
       style={{ borderColor: "rgba(60,60,60,0.2)" }}
     >
       <p
-        className="font-mono text-text-secondary text-sm"
+        className="font-mono text-text-secondary text-sm text-center md:text-left"
         style={{ letterSpacing: "0.15em", opacity: 0.7 }}
       >
         © 2026 Ahmed Kassem. All rights reserved.
