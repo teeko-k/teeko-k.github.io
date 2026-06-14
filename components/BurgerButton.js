@@ -11,7 +11,7 @@ export default function BurgerButton({
       aria-label="Toggle navigation"
     >
       <p
-        className={`hidden lg:block font-sans font-bold ${isProjectPage && !scrolled && !isOpen ? "text-text-primary" : "text-text-secondary"}`}
+        className={`hidden lg:block font-sans font-bold ${isProjectPage && !scrolled && !isOpen ? "text-white" : "text-text-secondary"}`}
       >
         menu
       </p>
