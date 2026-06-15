@@ -4,7 +4,7 @@ import "./globals.css"
 
 // title and description are used in the head of the document, and are important for SEO and accessibility. They provide information about the content of the page and help search engines understand what the page is about. The title is typically displayed in the browser tab and search engine results, while the description may be shown in search engine snippets.
 export const metadata = {
-  metadataBase: new URL("https://ahmedtaherkassem"),
+  metadataBase: new URL("https://ahmedtaherkassem.com"),
   title: "Ahmed Kassem | UX / Product Designer",
   description:
     "UX/UI | Product design | Designing products people actually want to use, across every screen and every scale",
