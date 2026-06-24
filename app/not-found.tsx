@@ -7,8 +7,9 @@ import { FlowNode, Arrow } from "@/components/FlowNode"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Overline from "@/components/Overline"
+import { JSX } from "react/jsx-runtime"
 
-export default function NotFound() {
+export default function NotFound(): JSX.Element {
   return (
     <main>
       <Header />

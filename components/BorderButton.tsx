@@ -2,6 +2,14 @@
 
 import Link from "next/link"
 
+interface BorderButtonInt {
+  href: any;
+  onClick?: any;
+  label: any;
+  icon: any;
+  external?: boolean;
+}
+
 // Sweep span — slides in from left on hover
 const Sweep = () => (
   <span
@@ -21,7 +29,7 @@ export default function BorderButton({
   label,
   icon,
   external = false,
-}) {
+}: BorderButtonInt) {
   const base = `sweep-btn group relative inline-flex items-center overflow-hidden border px-6 py-3 font-sans text-sm font-medium`
   const style = {
     borderColor: "var(--text-secondary)",

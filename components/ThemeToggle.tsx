@@ -2,12 +2,17 @@
 
 import { useTheme } from '../context/ThemeContext'
 
+type ThemeToggleContext = {
+  theme: 'light' | 'dark'
+  toggleTheme: () => void
+}
+
 export default function ThemeToggle({
   inNav = false,
   isProjectHeader = false,
   scrolled = false,
 }) {
-  const { theme, toggleTheme } = useTheme()
+  const { theme, toggleTheme } = useTheme() as ThemeToggleContext
   const isDark = theme === 'dark'
 
   // On project pages before scroll, use white; otherwise normal colors

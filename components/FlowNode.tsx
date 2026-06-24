@@ -1,4 +1,13 @@
-function FlowNode({ type = "rect", label, accent = false, className = "" }) {
+import { JSX } from "react/jsx-runtime"
+
+interface FlowNodeInt {
+  type?: string
+  label?: string
+  accent?: boolean
+  className?: string
+}
+
+function FlowNode({ type = "rect", label, accent = false, className = "" }: FlowNodeInt): JSX.Element {
   if (type === "pill") {
     return (
       <div

@@ -5,7 +5,7 @@ import { projects } from "@/data/projects"
 import ProjectSnippet from "@/components/ProjectSnippet"
 import Overline from "@/components/Overline"
 
-export default function Work02() {
+export default function Work() {
   const sectionRef = useRef(null)
 
   useEffect(() => {

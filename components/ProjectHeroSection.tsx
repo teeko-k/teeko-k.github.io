@@ -4,8 +4,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { useTheme } from "../context/ThemeContext"
 
+type ThemeContextValue = {
+  theme: string
+}
+
 export default function ProjectHeroSection({ project }) {
-  const { theme } = useTheme()
+  const { theme } = useTheme() as ThemeContextValue
   const isDarkTheme = theme === "dark"
 
   return (
